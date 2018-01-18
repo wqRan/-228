@@ -1,0 +1,8 @@
+//通用函数
+
+$root:16px;
+@function pxToRem($px){
+	@return $px/$root * 1rem;
+}
+
+

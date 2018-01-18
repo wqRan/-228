@@ -1,0 +1,18 @@
+body,h1,h3,h2,h4,h5,h6,p,dl,dd,ul,li,ol,td,form,input,fieldset,legend{margin:0; padding:0;}
+
+li{list-style:none;}
+a{text-decoration:none; font-size:12px; color:#000;}
+body{color: #4c4c4c; background:#fff;
+	font:normal 12px/1.5 'arial', 'Tahoma','simsun','宋体'}
+img{display:block; border:none;}
+a,input{outline:none;}
+em,i{font-style:normal;}
+b,strong,h1,h2,h3,h4,h5,h6{font-weight:normal;}
+.clear:after{content:""; display:block; clear:both; height:0; visibility:hidden;}
+table{border-collapse:collapse;}
+
+.border0{border:none;}
+.fl{float:left;}
+.fr{float:right;}
+
+.w{width:1190px;}
