@@ -65,12 +65,21 @@
 						"mosueout":function(){}
 					}
 				*/
+
+
+				var _this = this;
+				this.ele.on("mouseover",function(){
+					clearInterval(_this.timer);
+				})
+				this.ele.on("mouseout",function(){
+					_this.autoplay();
+					
+				})
 				if(this.opts.autoplay){
 					this.autoplay();
 				}
 			},
 			moveTo:function(e){
-				
 				if(e instanceof Object){
 					var $btn = $(e.target);
 					out = index;//决定谁出厂;
@@ -86,6 +95,7 @@
 				}
 				
 				$btn.addClass("supperbanner_active")
+
 				.siblings()
 				.removeClass("supperbanner_active");
 				switch(this.opts.movement_mode){
@@ -110,9 +120,10 @@
 					_this.$ul.append($li);
 					//按钮；
 					var $span = $("<span></span>");
-					//$span.html(index);
+					$span.html(index + 1);
 					$btn_box.append($span);
 				})
+				
 				//console.log($ul[0]);
 				this.ele.append(this.$ul);
 				this.ele.append($btn_box);
