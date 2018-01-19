@@ -7,6 +7,8 @@ requirejs.config({
 		"pop":"scripts/pop",
 		"goodlist":"scripts/goodList",
 		"shop":"scripts/shoppingcart",
-		"mini":"scripts/mini"
+		"mini":"scripts/mini",
+		"input":"scripts/inputSearch",
+		"hot":"scripts/hotRecommend"
 	}
 })

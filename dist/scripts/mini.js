@@ -7,7 +7,7 @@ define(["jquery"],function(){
 		constructor:Mini,
 		init:function(){
 			this.cancel();
-			this.headfoot();
+			// this.headfoot();
 		},
 		//点击按钮使top中部 消失
 		cancel:function(){
@@ -19,33 +19,31 @@ define(["jquery"],function(){
 					display:"none"
 				})
 			})
-		},
-		// 点击按钮使图片放大和缩小
-		headfoot:function(){
-			var $pullc_btn = $(".pullc-btn");	
-			var $h_f_img1 = $(".h_f_img1");
-			var $h_f_img2 = $(".h_f_img2");
-			setTimeout(function(){
-				$h_f_img2.css({
-					display:"none"
-				})
-				$h_f_img1.css({
-					display:"block"
-				})
-				$pullc_btn.removeClass("pullc-on")
-				$pullc_btn.addClass("pullc-off")
-			},3000)
-			console.log($(".pullc-off"))			
-			$(".pullc-off").on("click",function(){
-				$h_f_img2.css({
-					display:"block"
-				})				
-			})
-			$pullc_btn.removeClass("pullc-off")
-			$pullc_btn.addClass("pullc-on")
-
-
 		}
+		// 点击按钮使图片放大和缩小
+		// headfoot:function(){
+		// 	var $pullc_btn = $(".pullc-btn");	
+		// 	var $h_f_img1 = $(".h_f_img1");
+		// 	var $h_f_img2 = $(".h_f_img2");
+		// 	setTimeout(function(){
+		// 		$h_f_img2.css({
+		// 			display:"none"
+		// 		})
+		// 		$h_f_img1.css({
+		// 			display:"block"
+		// 		})
+		// 		$pullc_btn.removeClass("pullc-on")
+		// 		$pullc_btn.addClass("pullc-off")
+		// 	},3000)
+		// 	console.log($(".pullc-off"))			
+		// 	$(".pullc-off").on("click",function(){
+		// 		$h_f_img2.css({
+		// 			display:"block"
+		// 		})				
+		// 	})
+		// 	$pullc_btn.removeClass("pullc-off")
+		// 	$pullc_btn.addClass("pullc-on")
+		// }
 	}
 
 	return new Mini();

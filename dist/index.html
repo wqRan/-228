@@ -134,9 +134,13 @@
 				</ul>
 			</div>
 			<!-- 搜索框部分 -->
-			<div id="index-search">		
+			<div id="index-search">
+				<ul class="searchlist">
+					<li></li><li></li><li></li><li></li><li></li><li></li><li></li><li class="li_last"></li>
+				</ul>		
 				<form class="search-main">
-				<input name="" type="text" id="search-text" autocomplete="off" class=	"	noborder"		 value="大河之舞">
+				<input name="" type="text" id="search-text" autocomplete="off" class=	"	noborder"		 value="大河之舞" onfocus="javascript:this.value=''" onblur="javascript:this.value='大河之舞'">
+				
 				</form>
 				<div class="search-hot-key clear">
 				<foot>热门：</foot>
@@ -290,16 +294,16 @@
 		</div>
 		<!-- right -->
 		<div class="b_right">
-				<h3>今日特惠</h3>
-				<dl>
-					<dt><img src="images/bannerright.jpg" title="加拿大太阳马戏《KOOZA》巡演北京站"></dt>
+				<h3 class="common_h3">今日特惠</h3>
+				<dl class="conmon_dl">
+					<dt class="commondt_dt" ><img src="images/bannerright.jpg" title="加拿大太阳马戏《KOOZA》巡演北京站"></dt>
 					<dd class="dis-title"><a href="javascript:;">[北京] 加拿大太阳马戏《KOOZA》</a></dd>
 					<dd class="dis-intro">新春大马戏超值套票优惠</dd>
 				</dl>
 				<ul class="mt10">
 					<li>[北京] 2018《西哈游记》两张8折</li>
 					<li>[北京] 音乐剧RENT8折早鸟票</li>
-				</ul><div class="cb"></div>
+				</ul>
 		</div>
 	</div>
 </div>	
@@ -308,17 +312,186 @@
 	<div class="recommend clear">
 		<!-- left -->
 		<div class="pr_left">
+			<!-- 推荐 -->
+			<div class="clear mb15">
+				<h2>热门推荐</h2>
+				<span>
+				<a name="__AD_1296644" href="javascript:;" class="mr10">郭德纲德云社</a>
+				<a name="__AD_1326892" href="javascript:;" class="mr10">开心麻花</a>
+				<a name="__AD_1327463" href="javascript:;" class="mr10">孟京辉</a>
+				<a name="__AD_1332785" href="javascript:;" class="mr10">杨丽萍</a>
+				<a name="__AD_1369229" href="javascript:;" class="mr10">邓紫棋</a>
+				<a name="__AD_1437924" href="javascript:;" class="mr10">万有音乐系</a>
+				<a name="__AD_1631264" href="javascript:;" class="mr10">林忆莲</a>
+				<a name="__AD_1728313" href="javascript:;" class="mr10">张韶涵</a>
+				<a name="__AD_1790555" href="javascript:;" class="mr10">杨宗纬</a>
+				<a name="__AD_1818518" href="javascript:;" class="mr10">全职高手</a>
+				<a name="__AD_1884266" href="javascript:;" class="mr10">跨年演唱会</a>
+				<a name="__AD_1884299" href="javascript:;" class="mr10">小野丽莎</a>
+				</span>
+			</div>
+			<!-- 选项卡 -->
+			<div class="hot-product">
+				<ul class="hot-product-list ui-tab">
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+			<!-- 图片列表 -->
+			<ul class="hot-product-tab">
+				<li class="hot_list">
 			
+				</li>
+			</ul>	
+
 		</div>
 		<!-- right -->
 		<div class="py_right">
-			
+				<div class="h3_warp">
+					<h3 class="common_h3">精彩专题</h3>
+					<span class="fr"><a href="javascript:;">	更多&gt;&gt;</a></span>
+				</div>
+				
+				<dl class="conmon_dl">
+					<dt class="commondt_dt"><img src="images/bannerright1.jpg" title="周周有低价，带你轻松看演出"></dt>
+					<dd class="dis-title"><a href="javascript:;">周周有低价，带你轻松看演出</a></dd>
+				</dl>
+				<ul class="mt10">
+					<li>小浦观剧：满177随机立减</li>
+					<li>荟萃蓉城：单张立减80！</li>
+					<li>交通银行：购票满150减30！</li>
+				</ul>
 		</div>
-
 	</div>
 </div>
 
+<!-- 。。。。。。。。。。。城市巡演 。。。。。。。。。。-->
+<div id="CityShow">
+	<div class="c_show clear">
+		<!-- left -->
+		<div class="showLeft">
+			<!-- 导航 -->
+			<ul class="city-list-uls lazyClickUl ui-tab">
+				<li><a class="selected" href="javascript:;">北京</a></li>
+				<li><a href="javascript:;">上海</a></li>
+				<li><a href="javascript:;">深圳</a></li>
+				<li><a href="javascript:;">广州</a></li>
+				<li><a href="javascript:;">天津</a></li>
+				<li><a href="javascript:;">武汉</a></li>
+				<li><a href="javascript:;">重庆</a></li>
+				<li><a href="javascript:;">成都</a></li>
+				<li><a href="javascript:;">西安</a></li>
+				<li><a href="javascript:;">南京</a></li>
+			</ul>
+			<!-- 二级菜单 -->
+			<div class="more fr">
+				<a class="city-links" href="javascript:;">更多城市</a>
+				<div class="allcity">					
+					<p><a title="郑州" href="javascript:s;">郑州</a><span>49</span></p>
+					<p><a title="长沙" href="javascript:s;">长沙</a><span>49</span></p>
+					<p><a title="合肥" href="javascript:s;">合肥</a><span>49</span></p>
+					<p><a title="济南" href="javascript:s;">济南</a><span>49</span></p>
+					<p><a title="佛山" href="javascript:s;">佛山</a><span>49</span></p>
+					<p><a title="无锡" href="javascript:s;">无锡</a><span>49</span></p>
+					<p><a title="苏州" href="javascript:s;">苏州</a><span>49</span></p>
+				</div>
+			</div>
+			<!-- 列表项 -->
+			<div class="total">
+				<p>目前北京共有演出项目431个，进入 <a class="lans" href="//www.228.com.cn/bj/" title="北京站">[ 北京站 ]</a>
+				</p>
+				<div class="city-product-list">
+					<dl class="com_dl_jsop">
+						<dt class="com_dt_jsop" >
+							<a href="" title="加拿大太阳马戏《KOOZA》巡演北京站">
+								<img src="images/hotpic1.jpg" >
+							</a>
+						</dt>
+						<dd>
+							<a href=""  title="加拿大太阳马戏《KOOZA》巡演北京站">加拿大太阳马戏《KOOZA》巡演北京站</a>
+						</dd>
+						<dd><span class="hsfh">¥</span> <span class="price">280</span> 起</dd>
+					</dl>
+				</div>
+			</div>
+		</div>
+		<!-- right -->
+		<div class="showRight">
+			<div class="h3_warp">
+					<h3 class="common_h3">即将开票/预定</h3>
+					<ul class="hot-product-list ui-tab">
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+			</div>
+				
+				<dl class="conmon_dl">
+					<dt class="commondt_dt"><img src="images/bannerright1.jpg" title="世界经典原版音乐剧《猫》"></dt>
+					<dd class="dis-title"><a href="javascript:;">世界经典原版音乐剧《猫》</a></dd>
+				</dl>
+				<ul class="mt10">
+					<li>[北京] 2017-2018中国职业男子篮球联赛（CBA）北京首钢VS吉林</li>
+					<li>[深圳] 2017-2018中国女子排球超级联赛广东深圳赛区（ 广东恒大VS天津）！</li>
+					<li>2019年篮球世界杯吉祥物初选入围盛典</li>
+					<li>[武汉] 《聆响·行歌》中国新诗百年音乐诗朗诵会</li>
+				</ul>
+		</div>
+	</div>
+</div>
+<!-- 。。。。。。。。。。。全国热门巡演 。。。。。。。。。。-->
+<div id="Hot_Tour">
+	<div class="h_tour clear">
+		<div class="channel-t clear">
+			<h2><a href="javascript:;">全国热门巡演</a></h2>
+		</div>
+		<ul class="star-list">
+			<li class="x1">
+				<a href="javascript:;" title="2018热门大牌明星巡回演唱会，永乐票务为您精细梳理，密切追踪！">
+				<img src="" ><div class="over"></div><h3 class="over-text">
+				2018热门大牌明星巡回演唱会，永乐票务为您精细梳理，密切追踪！</h3></a>	
+			</li>
+			<li class="x2">
+				<a href="javascript:;" title="全球华人引颈期盼，“歌神”张学友的全新“A CLASSIC TOUR学友·经典世界巡回演唱会”首站于去年10月在北京盛大展开，张学友带着暌违5年的全新的世界巡回演唱会归来，创造一场属于全球华人的音乐盛事。">
+				<img src="" ><div class="over"></div><h3 class="over-text">全球华人引颈期盼，“歌神”张学友的全新“A CLASSIC TOUR学友·经典世界巡回演唱会”首站于去年10月在北京盛大展开，张学友带着暌违5年的全新的世界巡回演唱会归来，创造一场属于全球华人的音乐盛事。</h3></a>		
+			</li>
+			<li class="x3">
+				<a href="javascript:;" title="中国观众音乐剧启蒙，最受观众喜爱的剧目 2003年、2008年两度来华一票难求！万人空巷！ 阔别十年2018世界经典原版音乐剧《猫》再度来华">
+				<img src="" ><div class="over"></div>
+				<h3 class="over-text">中国观众音乐剧启蒙，最受观众喜爱的剧目 2003年、2008年两度来华一票难求！万人空巷！ 阔别十年2018世界经典原版音乐剧《猫》再度来华</h3>
+				</a>
+			</li>
+			<li class="x4">
+				<a href="javascript:;" title="跨世纪40年，超过2000场演出，现场观众600万，电视观众数以亿计……理查德•克莱德曼2017年再度开启中国巡演！">
+				<img src="" ><div class="over"></div><h3 class="over-text">跨世纪40年，超过2000场演出，现场观众600万，电视观众数以亿计……理查德•克莱德曼2017年再度开启中国巡演！</h3>
+				</a>
+			</li>
+			<li class="x5">
+				<a href="javascript:;" title="加州除了旅馆还有Foster The People，首次来华五站开唱">
+				<img src="" ><div class="over"></div><h3 class="over-text">加州除了旅馆还有Foster The People，首次来华五站开唱</h3>
+				</a>			
+			</li>
+			<li class="x6">
+				<a href="javascript:;" title="这是一个关于荣耀的故事——《全职高手》官方舞台剧2018年开启全国巡演！">
+				<img src="" ><div class="over"></div><h3 class="over-text">这是一个关于荣耀的故事——《全职高手》官方舞台剧2018年开启全国巡演！</h3>
+				</a>
+			</li>
 
+			<li class="x7">
+				<a href="javascript:;" title="2018年我们的心跳将因她再次跃动，舞台化为她的城堡，麦克风作为她的权杖。她将用声音和坚持为我们的内心带来最震撼的感动。她就是G.E.M.邓紫棋，她是Queen of Hearts">
+				<img src="" ><div class="over"></div><h3 class="over-text">2018年我们的心跳将因她再次跃动，舞台化为她的城堡，麦克风作为她的权杖。她将用声音和坚持为我们的内心带来最震撼的感动。她就是G.E.M.邓紫棋，她是Queen of Hearts</h3>			
+				</a>
+			</li>
+
+			<li class="x8">
+				<a href="javascript:;" title="林忆莲 她，是香港史上艺术高成就的女歌手之一 她，用细腻而铿锵的嗓音唱出故事 她，用高超的唱腔震撼舞台">
+				<img src="" ><div class="over"></div><h3 class="over-text">林忆莲 她，是香港史上艺术高成就的女歌手之一 她，用细腻而铿锵的嗓音唱出故事 她，用高超的唱腔震撼舞台</h3>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
 
 
 

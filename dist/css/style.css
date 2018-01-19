@@ -9,7 +9,7 @@ li {
 a {
   text-decoration: none;
   font-size: 12px;
-  color: #000; }
+  color: #4c4c4c; }
 
 body {
   color: #4c4c4c;
@@ -51,13 +51,80 @@ table {
 .w {
   width: 1190px; }
 
-.h_top, .h_foot, .h_search, .nav, .banner, .recommend {
+#headTop, #headMiddle, #headFoot, #Header_search, #Banner, #Popular, #CityShow, #Hot_Tour {
+  background: #f5f5f5;
+  width: 100%; }
+
+.h_top, .h_foot, .h_search, .nav, .banner, .recommend, .c_show, .h_tour {
   width: 75rem;
   margin-left: auto;
   margin-right: auto; }
 
+.common_h3 {
+  color: #ba1414;
+  font-size: 16px;
+  font-family: Microsoft YaHei;
+  margin-bottom: 13px; }
+
+.conmon_dl {
+  text-align: center;
+  border-bottom: 1px dotted #B1B1B1;
+  padding-bottom: 10px;
+  color: #4c4c4c; }
+  .conmon_dl .commondt_dt {
+    height: 131px; }
+  .conmon_dl .dis-title {
+    height: 42px;
+    overflow: hidden; }
+    .conmon_dl .dis-title:hover a {
+      color: #c11b1b; }
+
+.mt10 {
+  margin-top: 10px;
+  color: #4c4c4c; }
+  .mt10 li {
+    padding-left: 15px;
+    float: left;
+    margin-bottom: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 195px;
+    background: url(../images/sprite-iocn.png) no-repeat -5px -305px; }
+    .mt10 li:hover {
+      background: url(../images/sprite-iocn.png) no-repeat -5px -580px;
+      color: #ba1414; }
+
+.com_dl_jsop {
+  width: 150px;
+  margin-right: 32px;
+  float: left;
+  text-align: center; }
+
+.com_dt_jsop {
+  width: 150px;
+  height: 209px;
+  position: relative;
+  margin-bottom: 5px; }
+
+.hot-product-list {
+  width: 65px;
+  height: 15px;
+  position: absolute;
+  left: 866px;
+  top: 24px; }
+  .hot-product-list li {
+    float: left;
+    width: 15px;
+    height: 15px;
+    margin-right: 4px;
+    background: url(../images/sprite-iocn.png) no-repeat 0 -269px; }
+    .hot-product-list li:hover {
+      background: url(../images/sprite-iocn.png) no-repeat 0 -291px; }
+  .hot-product-list .selected {
+    background: url(../images/sprite-iocn.png) no-repeat 0 -246px; }
+
 #headTop {
-  width: 100%;
   background: #fbfbfb;
   height: 1.875rem;
   border-bottom: 1px solid #e0e0e0; }
@@ -242,7 +309,6 @@ table {
           background: #fbfbfb; }
 
 #headMiddle {
-  width: 100%;
   color: #666;
   padding-top: 4px;
   padding-bottom: 5px;
@@ -270,26 +336,24 @@ table {
       float: right;
       margin-right: 8px; }
 
-#headFoot {
-  width: 100%; }
-  #headFoot .h_foot {
-    position: relative; }
-    #headFoot .h_foot .pullc-btn {
-      width: 21px;
-      height: 53px;
-      cursor: pointer;
-      position: absolute;
-      right: 0px;
-      top: 0px;
-      z-index: 11; }
-    #headFoot .h_foot .pullc-on {
-      background: url(../images/adBtn.png) no-repeat left top; }
-    #headFoot .h_foot .pullc-off {
-      background: url(../images/adBtn.png) no-repeat 0 -53px; }
+#headFoot .h_foot {
+  position: relative; }
+  #headFoot .h_foot .pullc-btn {
+    width: 21px;
+    height: 53px;
+    cursor: pointer;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: 11; }
+  #headFoot .h_foot .pullc-on {
+    background: url(../images/adBtn.png) no-repeat left top; }
+  #headFoot .h_foot .pullc-off {
+    background: url(../images/adBtn.png) no-repeat 0 -53px; }
 
 #Header_search {
-  width: 100%;
-  height: 118px; }
+  height: 118px;
+  background: #fff; }
 
 .h_search .logo {
   width: 209px;
@@ -462,6 +526,23 @@ table {
     .h_search #quick-guide ul .undb {
       display: none; }
 
+.h_search .searchlist {
+  position: absolute;
+  width: 411px;
+  top: 34px;
+  z-index: 999;
+  background: #fff;
+  display: none; }
+  .h_search .searchlist li {
+    height: 34px;
+    line-height: 34px;
+    padding: 0 8px; }
+    .h_search .searchlist li:hover {
+      background: pink; }
+  .h_search .searchlist .li_last {
+    text-align: right;
+    border-top: 1px solid #ccc; }
+
 #Nav {
   height: 43px;
   line-height: 43px;
@@ -486,17 +567,16 @@ table {
         overflow: hidden; }
 
 #Banner {
-  width: 100%;
   height: 360px;
-  background: #f5f5f5;
-  position: relative; }
+  position: relative;
+  padding-bottom: 23px; }
   #Banner .b_left {
     width: 200px;
     float: left;
     z-index: 200;
     position: relative;
     top: -43px;
-    z-index: 10; }
+    z-index: 999; }
     #Banner .b_left .sort-title {
       width: 200px;
       height: 43px;
@@ -564,6 +644,7 @@ table {
           display: none;
           width: 117px;
           position: absolute;
+          z-index: 9999;
           left: 197px;
           top: 0;
           border: 1px solid #a5a5a5; }
@@ -645,51 +726,19 @@ table {
     border-radius: 2px;
     padding: 15px 14px;
     overflow: hidden; }
-    #Banner .b_right h3 {
-      color: #ba1414;
-      font-size: 16px;
-      font-family: Microsoft YaHei;
-      text-align: center;
-      margin-bottom: 13px;
-      background: url(../images/sprite-bg.png) no-repeat 0 10px; }
-    #Banner .b_right dl {
-      text-align: center;
-      border-bottom: 1px dotted #B1B1B1;
-      padding-bottom: 10px;
-      height: 195px;
+    #Banner .b_right .common_h3 {
+      background: url(../images/sprite-bg.png) no-repeat 0 10px;
+      text-align: center; }
+    #Banner .b_right .dis-intro {
+      height: 21px;
       overflow: hidden;
-      color: #4c4c4c; }
-      #Banner .b_right dl dt {
-        height: 131px; }
-      #Banner .b_right dl .dis-title {
-        height: 42px;
-        overflow: hidden; }
-        #Banner .b_right dl .dis-title:hover a {
-          color: #c11b1b; }
-      #Banner .b_right dl .dis-intro {
-        height: 21px;
-        overflow: hidden;
-        color: #c11b1b; }
-    #Banner .b_right .mt10 {
-      margin-top: 10px;
-      color: #4c4c4c; }
-      #Banner .b_right .mt10 li {
-        padding-left: 15px;
-        float: left;
-        margin-bottom: 5px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        width: 195px;
-        background: url(../images/sprite-iocn.png) no-repeat -5px -305px; }
-        #Banner .b_right .mt10 li:hover {
-          background: url(../images/sprite-iocn.png) no-repeat -5px -580px;
-          color: #ba1414; }
+      color: #c11b1b; }
 
 #Popular {
-  background: #f5f5f5;
-  width: 100%;
-  height: 332px; }
+  height: 332px;
+  padding-bottom: 23px; }
+  #Popular .recommend {
+    position: relative; }
   #Popular .pr_left {
     padding: 19px 16px;
     width: 916px;
@@ -698,8 +747,53 @@ table {
     background: #fff;
     z-index: 10;
     border-radius: 2px;
-    left: -200px;
-    overflow: hidden; }
+    overflow: hidden;
+    position: absolute;
+    left: 0; }
+    #Popular .pr_left .mb15 {
+      margin-bottom: 15px; }
+      #Popular .pr_left .mb15 h2 {
+        font-size: 18px;
+        font-family: "Microsoft YaHei";
+        font-weight: normal;
+        color: #ba1414;
+        float: left;
+        padding-left: 20px;
+        margin-right: 20px;
+        background: url(../images/sprite-iocn.png) no-repeat 0 -122px; }
+      #Popular .pr_left .mb15 .mr10 {
+        margin-right: 10px;
+        line-height: 27px;
+        display: inline-block; }
+        #Popular .pr_left .mb15 .mr10:hover {
+          color: #ba1414; }
+    #Popular .pr_left .hot-product-tab {
+      position: absolute;
+      height: 300px;
+      left: 19px;
+      padding-left: 16px; }
+      #Popular .pr_left .hot-product-tab li {
+        margin-right: -40px;
+        width: 956px;
+        float: left; }
+        #Popular .pr_left .hot-product-tab li dl dt .booking {
+          width: 56px;
+          height: 56px;
+          display: block;
+          position: absolute;
+          z-index: 100;
+          left: -2px;
+          top: -2px;
+          background: url(../images/sprite-button.png) no-repeat 0 -135px; }
+        #Popular .pr_left .hot-product-tab li dl dt img {
+          width: 100%;
+          height: 100%; }
+        #Popular .pr_left .hot-product-tab li dl dd {
+          display: block;
+          height: 38px;
+          overflow: hidden; }
+          #Popular .pr_left .hot-product-tab li dl dd:hover a {
+            color: #ba1414; }
   #Popular .py_right {
     width: 210px;
     height: 300px;
@@ -708,5 +802,140 @@ table {
     float: right;
     border-radius: 2px;
     padding: 15px 14px;
+    overflow: hidden; }
+    #Popular .py_right .h3_warp {
+      height: 34px;
+      width: 210px; }
+      #Popular .py_right .h3_warp .common_h3 {
+        float: left; }
+      #Popular .py_right .h3_warp .fr {
+        float: right; }
+
+.c_show {
+  padding-bottom: 20px; }
+  .c_show .showLeft {
+    width: 948px;
+    height: 392px;
+    border: 1px #d5d5d5 solid;
+    background: #fff;
+    float: left;
     overflow: hidden;
-    position: relative; }
+    border-radius: 2px; }
+    .c_show .showLeft .city-list-uls {
+      width: 948px;
+      height: 44px;
+      background: url(../images/sprite-repeat-bg.png) repeat-x 0 -43px; }
+      .c_show .showLeft .city-list-uls li {
+        float: left;
+        width: 78px;
+        line-height: 38px;
+        font-size: 14px;
+        font-family: "Microsoft YaHei";
+        font-weight: normal;
+        text-align: center;
+        color: #4c4c4c;
+        position: relative;
+        z-index: 10;
+        background: url(../images/sprite-repeat-bg.png) no-repeat 63px -132px; }
+        .c_show .showLeft .city-list-uls li a {
+          font-size: 14px; }
+        .c_show .showLeft .city-list-uls li:hover {
+          background: url(../images/sprite-button.png) no-repeat -91px -186px; }
+        .c_show .showLeft .city-list-uls li:hover a {
+          color: #fff; }
+      .c_show .showLeft .city-list-uls li:nth-of-type(1) {
+        position: relative;
+        top: -1px;
+        height: 44px;
+        background: url(../images/sprite-button.png) no-repeat -91px -186px; }
+        .c_show .showLeft .city-list-uls li:nth-of-type(1) a {
+          color: #fff; }
+    .c_show .showLeft .more {
+      float: right;
+      position: relative; }
+      .c_show .showLeft .more .city-links {
+        width: 168px;
+        font-size: 12px;
+        height: 38px;
+        position: relative;
+        color: #4c4c4c;
+        display: block;
+        text-align: center;
+        line-height: 38px;
+        top: -44px;
+        background: url(../images/sprite-button.png) 0 0; }
+      .c_show .showLeft .more .allcity {
+        width: 455px;
+        border: 2px #C51F1F solid;
+        position: absolute;
+        top: -6px;
+        left: -301px;
+        z-index: 100;
+        background: #fff;
+        padding: 20px 0 5px 10px;
+        display: none; }
+        .c_show .showLeft .more .allcity p {
+          width: 70px;
+          float: left;
+          margin: 0 7px 13px 7px; }
+          .c_show .showLeft .more .allcity p span {
+            color: #ccc;
+            margin-left: 5px; }
+    .c_show .showLeft .total {
+      width: 948px;
+      height: 41px;
+      clear: both;
+      border-top: 1px #c0c0c0 solid;
+      position: relative;
+      top: -44px; }
+      .c_show .showLeft .total p {
+        padding-left: 19px;
+        line-height: 41px;
+        width: 929px;
+        height: 41px;
+        color: #4c4c4c;
+        background: url(../images/sprite-repeat-bg.png) repeat-x 0 -86px; }
+        .c_show .showLeft .total p .lans {
+          color: #3399cc; }
+      .c_show .showLeft .total .city-product-list {
+        margin: 20px 0 0 0;
+        padding-left: 35px; }
+        .c_show .showLeft .total .city-product-list dl dt img {
+          width: 100%;
+          height: 100%; }
+        .c_show .showLeft .total .city-product-list dl .hsfh {
+          color: #cb0101;
+          font-size: 12px !important;
+          overflow: hidden; }
+        .c_show .showLeft .total .city-product-list dl .price {
+          font-size: 16px;
+          color: #cc0000;
+          font-weight: bold;
+          font-family: "Tahoma"; }
+  .c_show .showRight {
+    width: 210px;
+    height: 362px;
+    border: 1px #d5d5d5 solid;
+    background: #fff;
+    float: right;
+    border-radius: 2px;
+    padding: 15px 14px;
+    position: relative;
+    left: 10px;
+    overflow: hidden; }
+    .c_show .showRight .hot-product-list {
+      position: absolute;
+      top: 20px;
+      left: 160px; }
+
+#Hot_Tour .channel-t {
+  width: 100%;
+  border-bottom: 2px #333 solid;
+  padding-bottom: 5px;
+  margin-bottom: 19px; }
+  #Hot_Tour .channel-t h2 {
+    font-size: 18px;
+    font-family: "Microsoft YaHei";
+    float: left;
+    padding-left: 19px;
+    background: url(../images/sprite-iocn.png) no-repeat 0 -154px; }

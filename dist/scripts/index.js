@@ -1,6 +1,7 @@
 // 业务逻辑模块
 require(["scripts/config.js"],function(){
-	require(["jquery","mini","supperbanner","pop","goodlist","shop"],function($,mini,banner,pop,goodlist,shop){
+	require(["jquery","mini","supperbanner","pop","goodlist","shop","input","hot"],
+		function($,mini,banner,pop,goodlist,shop,input,hot){
 		$(".container").supperBanner({
 			src:[
 			"images/banner1.jpg",
@@ -27,6 +28,12 @@ require(["scripts/config.js"],function(){
 		// goodlist.init($(".goodslist li"));
 
 		shop.init($(".goodslist li button"));
+
+		// 模糊搜索
+		input.init();
+
+		// 人们推荐
+		hot.init();
 
 	})
 	

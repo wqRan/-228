@@ -5,16 +5,100 @@
 
 
 // 公共部分
-.h_top,.h_foot,.h_search,.nav,.banner,.recommend{
+
+// 宽度100%部分
+#headTop,#headMiddle,#headFoot,#Header_search,#Banner,#Popular,#CityShow,#Hot_Tour{
+    background:$bg;
+    width:$wid;
+}
+//居中自适应部分 
+.h_top,.h_foot,.h_search,.nav,.banner,.recommend,.c_show,.h_tour{
 	width:pxToRem(1200px);
 	@include block_center;
 }
 
+
+    // 右边的专题
+    .common_h3{
+        color: #ba1414;
+        font-size: 16px;
+        font-family: Microsoft YaHei;       
+        margin-bottom: 13px;        
+        }
+    .conmon_dl{
+        text-align: center;
+        border-bottom: 1px dotted #B1B1B1;
+        padding-bottom: 10px;
+        color:#4c4c4c;
+        .commondt_dt {
+            height:131px;
+        }
+        .dis-title{
+            height: 42px;
+            overflow: hidden;
+            &:hover a{
+            color:#c11b1b;
+            }
+        }        
+    }
+    .mt10{
+        margin-top: 10px;
+        color:#4c4c4c;
+        li{
+            padding-left: 15px;
+            float: left;
+            margin-bottom: 5px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            width: 195px;
+            background: url(../images/sprite-iocn.png) no-repeat -5px -305px;
+        &:hover{
+            background: url(../images/sprite-iocn.png) no-repeat -5px -580px;
+            color:#ba1414;
+            }
+        }
+    } 
+    // 左边的列表详情
+    .com_dl_jsop{
+        width: 150px;
+        margin-right: 32px;
+        float:left;
+        text-align: center;
+    }
+    .com_dt_jsop{
+        width: 150px;
+        height: 209px;
+        position: relative;
+        margin-bottom: 5px;
+    }
+
+    // 选项卡
+    .hot-product-list{
+        width: 65px;
+        height: 15px;
+        position: absolute;
+        left: 866px;
+        top: 24px;
+        li{
+            float:left;
+            width: 15px;
+            height: 15px;
+            margin-right: 4px;
+            background:url(../images/sprite-iocn.png) no-repeat 0 -269px;
+            &:hover{
+                background:url(../images/sprite-iocn.png) no-repeat 0 -291px;
+                }
+            }
+        .selected{
+            background:url(../images/sprite-iocn.png) no-repeat 0 -246px;
+            }
+       
+        }
 	
 // -------------------头部--------------------
 // ---one----
 #headTop{
-	width:100%;
 	background: #fbfbfb;
 	height:pxToRem(30px);
 	border-bottom: 1px solid #e0e0e0;
@@ -246,7 +330,6 @@
 
 // ---two----
 #headMiddle{
-	width:100%;
 	color: #666;
     padding-top: 4px;
     padding-bottom: 5px;
@@ -277,7 +360,6 @@
 }
 // ---three----
 #headFoot{
-	width:100%;
 	.h_foot{
 		position:relative;
 		.pullc-btn{
@@ -303,8 +385,8 @@
 
 // --------------------head-search---------------
 #Header_search{
-	width:100%;
 	height:118px;
+    background:#fff;
 }
 .h_search{
 	// logo部分
@@ -433,8 +515,9 @@
     		display: inline-block;
     		text-align: start;
     		font: 400 13.3333px Arial;   		
-    	}
-    }
+    	   }
+
+        } 
     .search-hot-key{
     	padding-top:5px;
     	a{
@@ -444,10 +527,8 @@
     			color: #cc0001;
     		}
     	}
-
-    }
-    
-	}
+    }   
+	}    
 	// 积分商城
 	#quick-guide{
 		width: 223px;
@@ -521,6 +602,27 @@
 		}
 		
     }
+    // 模糊搜索
+    .searchlist{
+        position:absolute;
+        width:411px;
+        top:34px;
+        z-index:999;
+        background:#fff;
+        display:none;
+        li{
+            height:34px; 
+            line-height:34px;
+            padding:0 8px;
+            &:hover{
+                background:pink;
+            }              
+        }
+        .li_last{
+            text-align:right;
+            border-top:1px solid #ccc;
+        }
+    }
 }
 
 // ----------------------Nav------------------
@@ -556,11 +658,9 @@
 
 // ----------------------Banner------------------
 #Banner{
-	width:$wid;
 	height:360px;
-	background:$bg;
     position:relative;
-    // padding-bottom:23px;
+    padding-bottom:23px;
 // --left
 .b_left{
 	width: 200px;
@@ -568,7 +668,7 @@
     z-index: 200;
     position: relative;
     top: -43px;
-    z-index: 10;
+    z-index:999;
     .sort-title{
     	width: 200px;
     	height: 43px;
@@ -628,6 +728,7 @@
     			display: none;
     			width: 117px;
     			position: absolute;
+                z-index:9999;
     			left: 197px;
     			top: 0;
     			border: 1px solid #a5a5a5;
@@ -728,94 +829,272 @@
     border-radius: 2px;
     padding: 15px 14px;
     overflow: hidden;
-    h3{
-        color: #ba1414;
-        font-size: 16px;
-        font-family: Microsoft YaHei;
-        text-align: center;
-        margin-bottom: 13px;
+    .common_h3{
         background: url(../images/sprite-bg.png) no-repeat 0 10px;
-        }
-    dl{
         text-align: center;
-        border-bottom: 1px dotted #B1B1B1;
-        padding-bottom: 10px;
-        height: 195px;
-        overflow: hidden;
-        color:#4c4c4c;
-        dt {
-            height:131px;
-        }
-        .dis-title{
-            height: 42px;
-            overflow: hidden;
-            &:hover a{
-            color:#c11b1b;
-            }
-        }
-        .dis-intro{
+    }
+    .dis-intro{
             height: 21px;
             overflow: hidden;
             color: #c11b1b;
         }
     }
-    .mt10{
-        margin-top: 10px;
-        color:#4c4c4c;
-        li{
-            padding-left: 15px;
-            float: left;
-            margin-bottom: 5px;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            width: 195px;
-            background: url(../images/sprite-iocn.png) no-repeat -5px -305px;
-        &:hover{
-            background: url(../images/sprite-iocn.png) no-repeat -5px -580px;
-            color:#ba1414;
-        }
-
-        }
-        } 
-    }
 }
 
 // ----------------------热门推荐------------------
 #Popular{
-    background:$bg;
-    width:$wid;
     height:332px;
-.recommend{
-    // position:relative;
-    // z-index :1;
-    // top:23px;
+    padding-bottom:23px;
+    .recommend{
+        position:relative;
+    }
+    // left
+    .pr_left{
+        padding: 19px 16px;
+        width: 916px;
+        height: 292px;
+        border: 1px #d5d5d5 solid;
+        background: #fff;
+        z-index: 10;
+        border-radius: 2px;
+        overflow:hidden;
+        position:absolute;
+        left:0;
+    // 推荐
+    .mb15 {
+        margin-bottom: 15px;   
+        h2{
+            font-size: 18px;
+            font-family: "Microsoft YaHei";
+            font-weight: normal;
+            color: #ba1414;
+            float: left;
+            padding-left: 20px;
+            margin-right: 20px;
+            background: url(../images/sprite-iocn.png) no-repeat 0 -122px;
+            }
+        .mr10{
+            margin-right: 10px;
+            line-height:27px;
+            display:inline-block;
+        &:hover{
+            color:#ba1414;
+            }
+        }
+    }
     
+    // 图片列表
+    .hot-product-tab{
+        position: absolute;
+        height: 300px;
+        left: 19px;
+        padding-left: 16px;
+        li{
+            margin-right: -40px;
+            width: 956px;
+            float:left;
+            dl{               
+                dt{                    
+                    .booking{
+                        width: 56px;
+                        height: 56px;
+                        display: block;
+                        position: absolute;
+                        z-index: 100;
+                        left: -2px;
+                        top: -2px;
+                        background: url(../images/sprite-button.png) no-repeat 0 -135px;
+                        }
+                    img{width:100%;height:100%;}
+                }    
+                    dd{
+                        display: block;
+                        height: 38px;
+                        overflow: hidden;
+                        &:hover a{color:#ba1414;}
+                    }               
+            }
+        }
+    }
+    }
+    // right
+    .py_right{
+        width: 210px;
+        height: 300px;
+        border: 1px #d5d5d5 solid;
+        background: #fff;
+        float: right;
+        border-radius: 2px;
+        padding: 15px 14px;
+        overflow: hidden;
+        .h3_warp{
+            height: 34px;
+            width: 210px;
+            .common_h3{
+                float:left;
+            }
+            .fr{float: right;}
+        }   
+    }
 }
 
-.pr_left{
-    padding: 19px 16px;
-    width: 916px;
-    height: 292px;
-    border: 1px #d5d5d5 solid;
-    background: #fff;
-    // float: left;
-    z-index: 10;
-    // position:relative;
-    border-radius: 2px;
-    // box-sizing:border-box;
-    left:-200px;
-    overflow:hidden;
+// -----------------城市巡演--------------------
+
+.c_show{
+    padding-bottom:20px;
+    .showLeft{
+        width: 948px;
+        height: 392px;
+        border: 1px #d5d5d5 solid;
+        background: #fff;
+        float: left;
+        overflow: hidden;
+        border-radius: 2px;
+        // 导航
+        .city-list-uls{
+            width: 948px;
+            height: 44px;
+            background: url(../images/sprite-repeat-bg.png) repeat-x 0 -43px;
+            li{
+                float: left;
+                width: 78px;
+                line-height: 38px;
+                font-size: 14px;
+                font-family: "Microsoft YaHei";
+                font-weight: normal;
+                text-align: center;
+                color: #4c4c4c;
+                position: relative;
+                z-index: 10;
+                background: url(../images/sprite-repeat-bg.png) no-repeat 63px -132px;
+                a{
+                    font-size:14px;
+                }
+                &:hover{
+                    background: url(../images/sprite-button.png) no-repeat -91px -186px;
+                }
+                &:hover a{
+                    color:#fff;
+                }
+            }
+            li:nth-of-type(1){
+                position: relative;
+                top: -1px;
+                height: 44px;
+                background: url(../images/sprite-button.png) no-repeat -91px -186px;
+                a{ 
+                    color: #fff;
+                }
+            }
+        }
+        // 二级菜单
+        .more{
+            float:right;
+            position: relative;
+            .city-links{
+                width: 168px;
+                font-size: 12px;
+                height: 38px;
+                position: relative;
+                color: #4c4c4c;
+                display: block;
+                text-align: center;
+                line-height: 38px;
+                top: -44px;
+                background: url(../images/sprite-button.png) 0 0;
+            }
+            .allcity{
+                width: 455px;
+                border: 2px #C51F1F solid;
+                position: absolute;
+                top: -6px;
+                left: -301px;
+                z-index: 100;
+                background: #fff;
+                padding: 20px 0 5px 10px;
+                display: none;
+                p{
+                    width: 70px;
+                    float: left;
+                    margin: 0 7px 13px 7px;
+                    span{   color: #ccc;
+                            margin-left: 5px;}
+                }
+                }
+        }
+        // 列表项
+        .total{
+            width: 948px;
+            height: 41px;
+            clear: both;
+            border-top: 1px #c0c0c0 solid;
+            position: relative;
+            top: -44px;
+            p{
+                padding-left: 19px;
+                line-height: 41px;
+                width: 929px;
+                height: 41px;
+                color: #4c4c4c;
+                background: url(../images/sprite-repeat-bg.png) repeat-x 0 -86px;
+                .lans{color: #3399cc;}
+            }
+            .city-product-list{
+                margin: 20px 0 0 0;
+                padding-left: 35px;
+                dl{
+                    dt{
+                        img{width:100%;height:100%;}
+                    }
+                    .hsfh{
+                            color: #cb0101;
+                            font-size: 12px !important;
+                            overflow:hidden;
+                        }
+                    .price{
+                        font-size: 16px;
+                        color: #cc0000;
+                        font-weight: bold;
+                        font-family: "Tahoma";
+                        }
+                }
+            }
+        }
+    }
+    // right
+    .showRight{
+        width: 210px;
+        height: 362px;
+        border: 1px #d5d5d5 solid;
+        background: #fff;
+        float: right;
+        border-radius: 2px;
+        padding: 15px 14px;
+        position: relative;
+        left: 10px;
+        overflow: hidden;
+        .hot-product-list{
+            position:absolute;
+            top: 20px;
+            left: 160px;
+        }
+    }
 }
-.py_right{
-    width: 210px;
-    height: 300px;
-    border: 1px #d5d5d5 solid;
-    background: #fff;
-    float: right;
-    border-radius: 2px;
-    padding: 15px 14px;
-    overflow: hidden;
-    position:relative;
-}
+
+// -----------------全国热门巡演--------------------
+#Hot_Tour{
+
+    .channel-t{
+        width: 100%;
+        border-bottom: 2px #333 solid;
+        padding-bottom: 5px;
+        margin-bottom: 19px;
+        h2{
+            font-size: 18px;
+            font-family: "Microsoft YaHei";
+            float: left;
+            padding-left: 19px;
+            background: url(../images/sprite-iocn.png) no-repeat 0 -154px;
+        }
+    }
 }

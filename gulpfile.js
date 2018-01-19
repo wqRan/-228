@@ -27,6 +27,12 @@ gulp.task("image",()=>{
 				.pipe(gulp.dest("dist/images"))
 })
 
+gulp.task("json",()=>{
+	return gulp
+				.src(["json/**"])
+				.pipe(gulp.dest("dist/scripts"))
+})
+
 
 gulp.task("watch",()=>{
 	gulp.watch(["**/*.html","!module/**/*"],["html"]);//前面的文件发生变化，只有html文件改动
@@ -34,6 +40,8 @@ gulp.task("watch",()=>{
 	gulp.watch(["es6/*.js","!module/**/*"],["es6"]);
 	gulp.watch(["scss/*.scss"],["sass"]);
 	gulp.watch(["img/**"],["image"]);
+	gulp.watch(["json/**"],["json"]);
+
 
 })
 
