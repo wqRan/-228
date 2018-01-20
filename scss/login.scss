@@ -1,0 +1,107 @@
+@import "reset";
+@import "function";
+@import "mixin";
+
+// ------------logo--------------
+#Logo{
+	width:$wid;
+	border-bottom: 3px solid #cc0001;
+	.logo{
+		width:pxToRem(1000px);
+		height:pxToRem(88px);
+		@include block_center;
+		 a {
+		    width:pxToRem(208px);
+		    height:pxToRem(59px);
+		    background: url(../images/logo.png);
+		    display: block;
+		    float: left;
+		    margin-top: 19px;
+		}
+	}
+}
+
+// ------------container-----------
+#container{
+	width:$wid;
+	.loginBox{
+		width: 1000px;
+	    margin: 30px auto 0 auto;
+	    // left
+	    .login-left{
+	    	float: left;
+		    width: 600px;
+		    height: 358px;
+		    border: 1px dotted #ececec;
+		    margin-right: 20px;
+		    text-align: center;
+	    }
+	    // right
+	    .login-right{
+	    	float: left;
+    		position: relative;
+			.cont-righta {
+			    width: 300px;
+			    height: 46px;
+			    text-align: right;
+			    line-height: 57px;
+			    background: url(../images/newproduct-more.png) no-repeat transparent;
+			    display: block;
+			    overflow: hidden;
+			    background-position: -40px -264px;
+			    a{
+			    	margin-right: 20px;
+				    text-decoration: none;
+				    color: #3399cc;
+			    }
+			}
+			.cont-rightb {
+			    width: 258px;
+			    height: auto;
+			    position: relative;
+			    zoom: 1;
+			    border-left: 1px solid #dcdcdc;
+			    border-right: 1px solid #dcdcdc;
+			    padding: 15px 0 5px 40px;
+			     input{
+					    border: 1px solid #dfdfdf;
+					    height: 28px;
+					    outline: none;
+					    text-indent: 5px;
+    					line-height: 28px;
+    					width:218px;
+					}
+			    .rightb-email {
+				    position: relative;
+				    zoom: 1;
+				    z-index: 300;
+				    width: 220px;
+				    height: 30px;
+				   
+					.login-cont-inp1 {
+					    width: 218px;
+					    height: 28px;
+					    border: 1px solid #c8c8c8;
+					    color: #a5a5a5;
+					    text-indent: 5px;
+					    line-height: 28px;
+					}
+					.login-cont-rightb-close{
+					    width: 12px;
+					    height: 12px;
+					    background: url(../images/newproduct-more.png) no-repeat -319px -229px;
+					    position: absolute;
+					    z-index:999;
+					    right: 7px;
+					    top: 9px;
+					    cursor: pointer;
+					}
+				}
+				.mt15{
+					margin-top: 15px;
+				}
+			}
+
+	    }
+	}
+}

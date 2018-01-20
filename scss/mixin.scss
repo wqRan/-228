@@ -13,3 +13,43 @@ $wid:100%;
 	-moz-transition:$arguments;
 	transition:$arguments;
 }
+
+@mixin button($arguments:20px 10px blue #fff){
+	background:nth($arguments,3);
+	padding:nth($arguments,2) nth($arguments,1);
+	border:none;
+	color:nth($arguments,4);
+	font-size:20px;
+	border-radius:5%;
+}
+
+@mixin x($arguments:0 0 0 0){
+	width:nth($arguments,1);
+    height:nth($arguments,2);
+    left:nth($arguments,3);
+    top:nth($arguments,4);
+}
+@mixin a_x($arguments:0){
+    height:nth($arguments,1);
+    }
+ 
+@mixin text($arguments:0 100%){	
+    width:nth($arguments,1);
+    height:100%;
+    left:-320px;
+    top:0;
+    overflow:hidden;
+    position:absolute;
+    @include transitionall(left 0.5s);
+
+}
+@mixin commont-line($arguments:#ccc){
+    border-bottom: 2px nth($arguments,1) solid;
+}
+@mixin common-h2($arguments:0 0){
+    background: url(../images/sprite-iocn.png) no-repeat nth($arguments,1) nth($arguments,2); 
+}
+// a不同
+@mixin aColor($arguments:#000){
+    color:nth($arguments,1);
+}

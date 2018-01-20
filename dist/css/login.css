@@ -1,0 +1,136 @@
+@charset "UTF-8";
+body, h1, h3, h2, h4, h5, h6, p, dl, dd, ul, li, ol, td, form, input, fieldset, legend {
+  margin: 0;
+  padding: 0; }
+
+li {
+  list-style: none; }
+
+a {
+  text-decoration: none;
+  font-size: 12px;
+  color: #4c4c4c; }
+
+body {
+  color: #4c4c4c;
+  background: #fff;
+  font: normal 12px/1.5 'arial', 'Tahoma','simsun','宋体'; }
+
+img {
+  display: block;
+  border: none; }
+
+a, input {
+  outline: none; }
+
+em, i {
+  font-style: normal; }
+
+b, strong, h1, h2, h3, h4, h5, h6 {
+  font-weight: normal; }
+
+.clear:after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden; }
+
+table {
+  border-collapse: collapse; }
+
+.border0 {
+  border: none; }
+
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
+.w {
+  width: 1190px; }
+
+#Logo {
+  width: 100%;
+  border-bottom: 3px solid #cc0001; }
+  #Logo .logo {
+    width: 62.5rem;
+    height: 5.5rem;
+    margin-left: auto;
+    margin-right: auto; }
+    #Logo .logo a {
+      width: 13rem;
+      height: 3.6875rem;
+      background: url(../images/logo.png);
+      display: block;
+      float: left;
+      margin-top: 19px; }
+
+#container {
+  width: 100%; }
+  #container .loginBox {
+    width: 1000px;
+    margin: 30px auto 0 auto; }
+    #container .loginBox .login-left {
+      float: left;
+      width: 600px;
+      height: 358px;
+      border: 1px dotted #ececec;
+      margin-right: 20px;
+      text-align: center; }
+    #container .loginBox .login-right {
+      float: left;
+      position: relative; }
+      #container .loginBox .login-right .cont-righta {
+        width: 300px;
+        height: 46px;
+        text-align: right;
+        line-height: 57px;
+        background: url(../images/newproduct-more.png) no-repeat transparent;
+        display: block;
+        overflow: hidden;
+        background-position: -40px -264px; }
+        #container .loginBox .login-right .cont-righta a {
+          margin-right: 20px;
+          text-decoration: none;
+          color: #3399cc; }
+      #container .loginBox .login-right .cont-rightb {
+        width: 258px;
+        height: auto;
+        position: relative;
+        zoom: 1;
+        border-left: 1px solid #dcdcdc;
+        border-right: 1px solid #dcdcdc;
+        padding: 15px 0 5px 40px; }
+        #container .loginBox .login-right .cont-rightb input {
+          border: 1px solid #dfdfdf;
+          height: 28px;
+          outline: none;
+          text-indent: 5px;
+          line-height: 28px;
+          width: 218px; }
+        #container .loginBox .login-right .cont-rightb .rightb-email {
+          position: relative;
+          zoom: 1;
+          z-index: 300;
+          width: 220px;
+          height: 30px; }
+          #container .loginBox .login-right .cont-rightb .rightb-email .login-cont-inp1 {
+            width: 218px;
+            height: 28px;
+            border: 1px solid #c8c8c8;
+            color: #a5a5a5;
+            text-indent: 5px;
+            line-height: 28px; }
+          #container .loginBox .login-right .cont-rightb .rightb-email .login-cont-rightb-close {
+            width: 12px;
+            height: 12px;
+            background: url(../images/newproduct-more.png) no-repeat -319px -229px;
+            position: absolute;
+            z-index: 999;
+            right: 7px;
+            top: 9px;
+            cursor: pointer; }
+        #container .loginBox .login-right .cont-rightb .mt15 {
+          margin-top: 15px; }
