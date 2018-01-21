@@ -22,8 +22,10 @@
 }
 
 // ------------container-----------
+
 #container{
 	width:$wid;
+	margin-bottom:40px;
 	.loginBox{
 		width: 1000px;
 	    margin: 30px auto 0 auto;
@@ -34,12 +36,13 @@
 		    height: 358px;
 		    border: 1px dotted #ececec;
 		    margin-right: 20px;
-		    text-align: center;
+		    text-align:center;
 	    }
 	    // right
 	    .login-right{
 	    	float: left;
     		position: relative;
+    		// right a
 			.cont-righta {
 			    width: 300px;
 			    height: 46px;
@@ -53,8 +56,12 @@
 			    	margin-right: 20px;
 				    text-decoration: none;
 				    color: #3399cc;
+				    &:hover{
+				    	color:#CD0000;
+				    }
 			    }
 			}
+			// right b
 			.cont-rightb {
 			    width: 258px;
 			    height: auto;
@@ -71,6 +78,7 @@
     					line-height: 28px;
     					width:218px;
 					}
+				// 用户名
 			    .rightb-email {
 				    position: relative;
 				    zoom: 1;
@@ -97,11 +105,143 @@
 					    cursor: pointer;
 					}
 				}
+				// 密码
 				.mt15{
 					margin-top: 15px;
 				}
+				// 忘记密码
+				.login-error-cont {
+				    width: 220px;
+				    margin-top: 10px;
+				    .fr {
+					    float: right;
+					    color: #3399cc;
+					    &:hover{
+					    	color:#CD0000;
+					    }
+					}
+				}
+				// 登录按钮
+				.pt10 {
+				    padding-top: 26px;
+				    .login-submit {
+					    width: 220px;
+					    height: 34px;
+					    background: url(../images/newproduct-more.png) no-repeat -120px -327px;
+					    border: none;
+					    cursor: pointer;
+					    &:hover{
+					    background: url(../images/newproduct-more.png) no-repeat -120px -362px;
+					    }
+					}
+				}
+				// 合作账号登录
+				.login-hezuo {
+				    border-bottom: 1px dotted #d4d4d4;
+				    margin-top: 30px;
+				    color: #666;
+				    padding-bottom: 20px;
+				    width:220px;
+				    .login-hezuo-ul {
+					    margin-top: 5px;
+					    display:inline-block;
+					     li {
+						    float: left;
+						    margin-right: 10px;
+						    a{
+						    	display:block;
+						    	width:16px;
+						    	height:16px;
+						    }
+						    .qq{
+								@include login-a(-272px -229px);
+						    }
+						    .weibo{
+								@include login-a(-251px -229px);											
+						    }
+						    .zhifubao{
+								@include login-a(-322px -67px);
+						    }
+						    .renren{
+								@include login-a(-293px -229px);
+						    }
+						    .baidu{
+								@include login-a(-15px -777px);
+						    }
+						    .weixin{
+								@include login-a(-42px -777px);
+						    }
+						}
+					}	    
+				}
+			}
+			// right c
+			.cont-rightc {
+			    width: 300px;
+			    height: 7px;
+			    background: url(../images/newproduct-more.png) no-repeat transparent;
+			    display: block;
+			    overflow: hidden;
+			    background-position: -40px -315px;
 			}
 
 	    }
 	}
 }
+
+// ------------foot-----------
+
+#Foot{
+	width:$wid;
+	padding-bottom:25px;
+	.foot{
+		width:pxToRem(1000px);
+		@include block_center;
+	}
+	.pb15{
+		margin-bottom: 15px;
+		height: 35px;
+	    background-color: #f0f0f0;
+	    line-height: 35px;
+	    text-align: center;
+	    a,span{	    	
+	        color: #999;
+	    }
+	}
+	.copyright {
+	    text-align: center;
+	    p{
+		    margin-bottom: 5px;
+		}
+		a,p{
+		    color: #999;			
+		}
+		.credit {
+		    height: 28px;
+		    padding-left: 35px;
+		    display: inline-block;
+		    line-height: 28px;
+		    background: url(../images/sprite-iocn.png) no-repeat  5px -476px;
+		}
+		.icp {
+		    height: 28px;
+		    padding-left: 10px;
+		    display: inline-block;
+		    zoom: 1;
+		    line-height: 28px;
+		    margin: 0 20px;
+		}
+		.green_web {
+		    height: 28px;
+		    padding-left: 25px;
+		    display: inline-block;
+		    zoom: 1;
+		    line-height: 28px;
+		    background: url(../images/sprite-iocn.png) no-repeat  5px -552px;
+		}
+	}
+	
+}
+
+
+

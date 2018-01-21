@@ -9,6 +9,7 @@ requirejs.config({
 		"shop":"scripts/shoppingcart",
 		"mini":"scripts/mini",
 		"input":"scripts/inputSearch",
-		"hot":"scripts/hotRecommend"
+		"hot":"scripts/hotRecommend",
+		"resgiter":"scripts/resgiterMain"
 	}
 })

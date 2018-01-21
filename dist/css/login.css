@@ -68,7 +68,8 @@ table {
       margin-top: 19px; }
 
 #container {
-  width: 100%; }
+  width: 100%;
+  margin-bottom: 40px; }
   #container .loginBox {
     width: 1000px;
     margin: 30px auto 0 auto; }
@@ -95,6 +96,8 @@ table {
           margin-right: 20px;
           text-decoration: none;
           color: #3399cc; }
+          #container .loginBox .login-right .cont-righta a:hover {
+            color: #CD0000; }
       #container .loginBox .login-right .cont-rightb {
         width: 258px;
         height: auto;
@@ -134,3 +137,98 @@ table {
             cursor: pointer; }
         #container .loginBox .login-right .cont-rightb .mt15 {
           margin-top: 15px; }
+        #container .loginBox .login-right .cont-rightb .login-error-cont {
+          width: 220px;
+          margin-top: 10px; }
+          #container .loginBox .login-right .cont-rightb .login-error-cont .fr {
+            float: right;
+            color: #3399cc; }
+            #container .loginBox .login-right .cont-rightb .login-error-cont .fr:hover {
+              color: #CD0000; }
+        #container .loginBox .login-right .cont-rightb .pt10 {
+          padding-top: 26px; }
+          #container .loginBox .login-right .cont-rightb .pt10 .login-submit {
+            width: 220px;
+            height: 34px;
+            background: url(../images/newproduct-more.png) no-repeat -120px -327px;
+            border: none;
+            cursor: pointer; }
+            #container .loginBox .login-right .cont-rightb .pt10 .login-submit:hover {
+              background: url(../images/newproduct-more.png) no-repeat -120px -362px; }
+        #container .loginBox .login-right .cont-rightb .login-hezuo {
+          border-bottom: 1px dotted #d4d4d4;
+          margin-top: 30px;
+          color: #666;
+          padding-bottom: 20px;
+          width: 220px; }
+          #container .loginBox .login-right .cont-rightb .login-hezuo .login-hezuo-ul {
+            margin-top: 5px;
+            display: inline-block; }
+            #container .loginBox .login-right .cont-rightb .login-hezuo .login-hezuo-ul li {
+              float: left;
+              margin-right: 10px; }
+              #container .loginBox .login-right .cont-rightb .login-hezuo .login-hezuo-ul li a {
+                display: block;
+                width: 16px;
+                height: 16px; }
+              #container .loginBox .login-right .cont-rightb .login-hezuo .login-hezuo-ul li .qq {
+                background: url(../images/newproduct-more.png) -272px -229px; }
+              #container .loginBox .login-right .cont-rightb .login-hezuo .login-hezuo-ul li .weibo {
+                background: url(../images/newproduct-more.png) -251px -229px; }
+              #container .loginBox .login-right .cont-rightb .login-hezuo .login-hezuo-ul li .zhifubao {
+                background: url(../images/newproduct-more.png) -322px -67px; }
+              #container .loginBox .login-right .cont-rightb .login-hezuo .login-hezuo-ul li .renren {
+                background: url(../images/newproduct-more.png) -293px -229px; }
+              #container .loginBox .login-right .cont-rightb .login-hezuo .login-hezuo-ul li .baidu {
+                background: url(../images/newproduct-more.png) -15px -777px; }
+              #container .loginBox .login-right .cont-rightb .login-hezuo .login-hezuo-ul li .weixin {
+                background: url(../images/newproduct-more.png) -42px -777px; }
+      #container .loginBox .login-right .cont-rightc {
+        width: 300px;
+        height: 7px;
+        background: url(../images/newproduct-more.png) no-repeat transparent;
+        display: block;
+        overflow: hidden;
+        background-position: -40px -315px; }
+
+#Foot {
+  width: 100%;
+  padding-bottom: 25px; }
+  #Foot .foot {
+    width: 62.5rem;
+    margin-left: auto;
+    margin-right: auto; }
+  #Foot .pb15 {
+    margin-bottom: 15px;
+    height: 35px;
+    background-color: #f0f0f0;
+    line-height: 35px;
+    text-align: center; }
+    #Foot .pb15 a, #Foot .pb15 span {
+      color: #999; }
+  #Foot .copyright {
+    text-align: center; }
+    #Foot .copyright p {
+      margin-bottom: 5px; }
+    #Foot .copyright a, #Foot .copyright p {
+      color: #999; }
+    #Foot .copyright .credit {
+      height: 28px;
+      padding-left: 35px;
+      display: inline-block;
+      line-height: 28px;
+      background: url(../images/sprite-iocn.png) no-repeat 5px -476px; }
+    #Foot .copyright .icp {
+      height: 28px;
+      padding-left: 10px;
+      display: inline-block;
+      zoom: 1;
+      line-height: 28px;
+      margin: 0 20px; }
+    #Foot .copyright .green_web {
+      height: 28px;
+      padding-left: 25px;
+      display: inline-block;
+      zoom: 1;
+      line-height: 28px;
+      background: url(../images/sprite-iocn.png) no-repeat 5px -552px; }

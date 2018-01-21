@@ -53,3 +53,8 @@ $wid:100%;
 @mixin aColor($arguments:#000){
     color:nth($arguments,1);
 }
+
+// 登录页的a
+@mixin login-a($arguments:0 0){
+    background: url(../images/newproduct-more.png) nth($arguments,1) nth($arguments,2); 
+}

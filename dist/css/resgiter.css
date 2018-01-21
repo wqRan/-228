@@ -52,7 +52,7 @@ table {
   width: 1190px; }
 
 .h_top, .h_foot {
-  width: 75rem;
+  width: 62.5rem;
   margin-left: auto;
   margin-right: auto; }
 
@@ -269,3 +269,177 @@ table {
       cursor: pointer;
       float: right;
       margin-right: 8px; }
+
+#Logo {
+  width: 100%;
+  border-bottom: 3px solid #cc0001; }
+  #Logo .logo {
+    width: 62.5rem;
+    height: 5.5rem;
+    margin-left: auto;
+    margin-right: auto; }
+    #Logo .logo a {
+      width: 13rem;
+      height: 3.6875rem;
+      background: url(../images/logo.png);
+      display: block;
+      float: left;
+      margin-top: 19px; }
+
+#container {
+  width: 100%;
+  background: url(../images/seat-online8.jpg) repeat-x transparent;
+  padding: 20px 0 50px; }
+  #container .resginterBox {
+    width: 62.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #d7d7d7;
+    height: auto;
+    background-color: #fff;
+    padding-bottom: 70px;
+    color: #4c4c4c; }
+    #container .resginterBox .regisiter-cont-h1 {
+      width: 880px;
+      font-size: 21px;
+      color: #cc0001;
+      font-family: microsoft yahei;
+      font-weight: normal;
+      margin-left: 60px;
+      margin-top: 30px;
+      border-bottom: 2px solid #dcdcdc;
+      padding-bottom: 5px;
+      text-indent: 10px;
+      position: relative;
+      zoom: 1; }
+    #container .resginterBox .regisiter-cont-tab {
+      margin-left: 172px;
+      margin-top: 30px; }
+      #container .resginterBox .regisiter-cont-tab p {
+        margin-bottom: 18px;
+        line-height: 32px;
+        position: relative;
+        zoom: 1;
+        z-index: 500;
+        overflow: hidden;
+        height: 32px; }
+        #container .resginterBox .regisiter-cont-tab p .regisiter-sp {
+          float: left; }
+        #container .resginterBox .regisiter-cont-tab p b {
+          position: absolute;
+          padding-left: 25px;
+          left: 325px;
+          color: #cd1414; }
+        #container .resginterBox .regisiter-cont-tab p .onCorrect1, #container .resginterBox .regisiter-cont-tab p .onCorrect2, #container .resginterBox .regisiter-cont-tab p .onCorrect3, #container .resginterBox .regisiter-cont-tab p .onCorrect4 {
+          background: url(../images/onCorrect.gif) 0 no-repeat;
+          width: 22px;
+          height: 28px;
+          display: none; }
+        #container .resginterBox .regisiter-cont-tab p .email11, #container .resginterBox .regisiter-cont-tab p .email21, #container .resginterBox .regisiter-cont-tab p .email31, #container .resginterBox .regisiter-cont-tab p .email41 {
+          display: none;
+          background: url(../images/regisiter.png) 0 -64px no-repeat; }
+        #container .resginterBox .regisiter-cont-tab p .email12, #container .resginterBox .regisiter-cont-tab p .email22, #container .resginterBox .regisiter-cont-tab p .email32, #container .resginterBox .regisiter-cont-tab p .email13, #container .resginterBox .regisiter-cont-tab p .email23, #container .resginterBox .regisiter-cont-tab p .email33, #container .resginterBox .regisiter-cont-tab p .email42, #container .resginterBox .regisiter-cont-tab p .email43 {
+          display: none;
+          background: url(../images/onError.gif) 0 no-repeat; }
+        #container .resginterBox .regisiter-cont-tab p input {
+          border: 1px solid #c8c8c8;
+          text-indent: 5px;
+          line-height: 28px;
+          margin-left: 3px;
+          height: 28px;
+          width: 250px; }
+        #container .resginterBox .regisiter-cont-tab p .regisiter-yzm {
+          position: absolute;
+          left: 254px;
+          top: 5px; }
+        #container .resginterBox .regisiter-cont-tab p .phone-input-left {
+          width: 118px;
+          overflow: hidden;
+          padding-left: 5px;
+          margin-right: 10px; }
+      #container .resginterBox .regisiter-cont-tab .reisiter-submit {
+        height: 30px;
+        border: none;
+        line-height: 30px;
+        margin-left: 63px;
+        cursor: pointer;
+        width: 120px;
+        background: url(../images/newproduct-more.png) no-repeat -220px -406px;
+        overflow: hidden; }
+        #container .resginterBox .regisiter-cont-tab .reisiter-submit:hover {
+          background: url(../images/newproduct-more.png) no-repeat -220px -438px; }
+      #container .resginterBox .regisiter-cont-tab .regisiter-shem {
+        margin-top: 60px;
+        position: relative;
+        zoom: 1; }
+        #container .resginterBox .regisiter-cont-tab .regisiter-shem .regisiter-shenm-conts {
+          width: 550px;
+          height: 200px;
+          border: 1px solid #c8c8c8;
+          padding: 10px;
+          margin-top: 5px;
+          overflow: auto; }
+          #container .resginterBox .regisiter-cont-tab .regisiter-shem .regisiter-shenm-conts mb20 {
+            margin-bottom: 20px; }
+          #container .resginterBox .regisiter-cont-tab .regisiter-shem .regisiter-shenm-conts .tc {
+            text-align: center; }
+          #container .resginterBox .regisiter-cont-tab .regisiter-shem .regisiter-shenm-conts strong {
+            font-weight: bold; }
+
+#Foot {
+  width: 100%;
+  padding-bottom: 25px; }
+  #Foot .foot {
+    width: 62.5rem;
+    margin-left: auto;
+    margin-right: auto; }
+  #Foot .pb15 {
+    margin-bottom: 15px;
+    height: 35px;
+    background-color: #f0f0f0;
+    line-height: 35px;
+    text-align: center; }
+    #Foot .pb15 a, #Foot .pb15 span {
+      color: #999; }
+      #Foot .pb15 a:hover, #Foot .pb15 span:hover {
+        color: #cd1414; }
+  #Foot .copyright {
+    text-align: center; }
+    #Foot .copyright p {
+      margin-bottom: 5px; }
+    #Foot .copyright a, #Foot .copyright p {
+      color: #999; }
+      #Foot .copyright a:hover, #Foot .copyright p:hover {
+        color: #cd1414; }
+    #Foot .copyright .common {
+      height: 28px;
+      display: inline-block;
+      zoom: 1;
+      line-height: 28px; }
+    #Foot .copyright .credit {
+      padding-left: 35px;
+      background: url(../images/sprite-iocn.png) no-repeat 5px -476px; }
+    #Foot .copyright .icp {
+      padding-left: 10px;
+      margin: 0 15px; }
+    #Foot .copyright .green_web {
+      padding-left: 25px;
+      margin-right: 20px;
+      background: url(../images/sprite-iocn.png) no-repeat 5px -552px; }
+    #Foot .copyright .police {
+      padding-left: 25px;
+      background: url(../images/record-icon.png) 0 5px no-repeat; }
+    #Foot .copyright .market {
+      padding-left: 35px;
+      background: url(../images/report.png) no-repeat; }
+  #Foot .footImg {
+    margin-top: 20px;
+    text-align: center; }
+    #Foot .footImg .imglist {
+      display: inline-block;
+      margin-right: 10px;
+      margin-left: 10px;
+      vertical-align: middle; }
+      #Foot .footImg .imglist img {
+        width: 83px;
+        height: 30px; }

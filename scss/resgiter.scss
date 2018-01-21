@@ -6,7 +6,7 @@
 
 // 公共部分
 .h_top,,.h_foot{
-	width:pxToRem(1200px);
+	width:pxToRem(1000px);
 	@include block_center;
 }
 
@@ -272,4 +272,227 @@
 				margin-right:8px;
 			}		
 	}
+}
+
+// ------------logo--------------
+#Logo{
+	width:$wid;
+	border-bottom: 3px solid #cc0001;
+	.logo{
+		width:pxToRem(1000px);
+		height:pxToRem(88px);
+		@include block_center;
+		 a {
+		    width:pxToRem(208px);
+		    height:pxToRem(59px);
+		    background: url(../images/logo.png);
+		    display: block;
+		    float: left;
+		    margin-top: 19px;
+		}
+	}
+}
+
+
+// --------------container-----------
+#container{
+	width:100%;
+	background: url(../images/seat-online8.jpg) repeat-x transparent;
+    padding: 20px 0 50px;
+
+    .resginterBox{
+    	width:pxToRem(1000px);
+    	@include block_center;
+    	border: 1px solid #d7d7d7;
+	    height: auto;
+	    background-color: #fff;
+	    padding-bottom: 70px;
+	    color: #4c4c4c;
+	    .regisiter-cont-h1 {
+		    width: 880px;
+		    font-size: 21px;
+		    color: #cc0001;
+		    font-family: microsoft yahei;
+		    font-weight: normal;
+		    margin-left: 60px;
+		    margin-top: 30px;
+		    border-bottom: 2px solid #dcdcdc;
+		    padding-bottom: 5px;
+		    text-indent: 10px;
+		    position: relative;
+		    zoom: 1;
+		}
+		.regisiter-cont-tab {
+		    margin-left: 172px;
+		    margin-top: 30px;
+		    p {
+			    margin-bottom: 18px;
+			    line-height: 32px;
+			    position: relative;
+			    zoom: 1;
+			    z-index: 500;
+			    overflow: hidden;
+			    height: 32px;
+			    .regisiter-sp {
+				    float: left;
+				}
+				b{
+				    position:absolute;
+				    padding-left: 25px;
+				    left:325px;
+				    color:#cd1414;
+				    }
+				.onCorrect1,.onCorrect2,.onCorrect3,.onCorrect4 {
+				    background: url(../images/onCorrect.gif) 0 no-repeat;
+				    width:22px;
+				    height:28px;
+				    display:none;
+				}
+				.email11,.email21,.email31,.email41{
+					display:none;
+					background: url(../images/regisiter.png) 0 -64px no-repeat;
+				}
+				.email12,.email22,.email32,.email13,.email23,.email33,.email42,.email43{
+					display:none;
+					background: url(../images/onError.gif) 0 no-repeat;
+				}
+				input {
+				    border: 1px solid #c8c8c8;
+				    text-indent: 5px;
+				    line-height: 28px;
+				    margin-left: 3px;
+				    height: 28px;
+				    width:250px;
+				   
+				}
+			.regisiter-yzm {
+			    position: absolute;
+			    left: 254px;
+			    top: 5px;
+			}
+			.phone-input-left {
+			    width: 118px;
+			    overflow: hidden;
+			    padding-left: 5px;
+			    margin-right: 10px;
+			}
+			}
+			// 确认登录
+			.reisiter-submit{
+				height: 30px;
+				border:none;
+				line-height:30px;
+			    margin-left: 63px;
+			    cursor: pointer;
+			    width: 120px;
+			    background: url(../images/newproduct-more.png) no-repeat -220px -406px;
+			    overflow: hidden;
+			    &:hover{
+			    background: url(../images/newproduct-more.png) no-repeat -220px -438px;
+			    }
+			}
+			// 服务协议
+			.regisiter-shem{
+			    margin-top: 60px;
+			    position: relative;
+			    zoom: 1;
+			    .regisiter-shenm-conts {
+				    width: 550px;
+				    height: 200px;
+				    border: 1px solid #c8c8c8;
+				    padding: 10px;
+				    margin-top: 5px;
+				    overflow: auto;
+				    mb20 {
+					    margin-bottom: 20px;
+					}
+					.tc {
+					    text-align: center;
+					}
+					strong{
+						font-weight:bold;
+					}
+				}
+			}
+		}
+    }
+}
+
+// ------------foot-----------
+
+#Foot{
+	width:$wid;
+	padding-bottom:25px;
+	.foot{
+		width:pxToRem(1000px);
+		@include block_center;
+	}
+	.pb15{
+		margin-bottom: 15px;
+		height: 35px;
+	    background-color: #f0f0f0;
+	    line-height: 35px;
+	    text-align: center;
+	    a,span{	    	
+	        color: #999;
+	    &:hover{
+	    	color:#cd1414;
+	    }
+	    }
+	}
+	.copyright {
+	    text-align: center;
+	    p{
+		    margin-bottom: 5px;
+		}
+		a,p{
+		    color: #999;
+		    &:hover{
+	    	color:#cd1414;
+	    }			
+		}
+		.common{
+			height: 28px;
+			display: inline-block;
+		    zoom: 1;
+			line-height: 28px;
+		}
+		.credit {		    
+		    padding-left: 35px;		    		    
+		    background: url(../images/sprite-iocn.png) no-repeat  5px -476px;
+		}
+		.icp {
+		    padding-left: 10px;
+		    margin: 0 15px;
+		}
+		.green_web {
+		    padding-left: 25px;
+		    margin-right:20px;
+		    background: url(../images/sprite-iocn.png) no-repeat  5px -552px;
+		}
+		.police{
+			padding-left: 25px;
+			background:url(../images/record-icon.png) 0 5px no-repeat;
+		}
+		.market{
+			padding-left:35px;
+			background:url(../images/report.png) no-repeat;
+
+		}
+	}
+	.footImg{
+	        margin-top: 20px;
+	        text-align: center;
+	        .imglist {
+	            display: inline-block;
+	            margin-right: 10px;
+	            margin-left: 10px;
+	            vertical-align: middle;
+	            img{
+	                width:83px;
+	                height:30px;
+	            }
+	        }
+	       
+	    }
 }

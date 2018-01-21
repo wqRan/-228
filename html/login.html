@@ -3,7 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>永乐票务统一认证中心</title>
+	<title>我的</title>
+	<!-- 永乐票务统一认证中心 -->
 	<link rel="stylesheet" href="css/login.css">
 	<!-- <link rel="shortcut icon" href="images/main.png"> -->
 </head>
@@ -15,12 +16,12 @@
 	</div>
 </div>
 <!-- ********** container ********** -->
-<div id="container">
+<div id="container" class="clear">
 	<div class="loginBox">
 		<!-- left -->
 		<div class="login-left">
 			<a href="javascript:;">
-				<img src="images/loginpic.jpg" height="340" alt="登陆页面图片更换" title="登陆页面图片更换">
+				<img src="images/loginpic.jpg" style="display: inline;" height="340" alt="登陆页面图片更换" title="登陆页面图片更换">
 			</a>
 		</div>
 		<!-- right -->
@@ -40,14 +41,61 @@
 					<div class="mt15">
 						<input id="password" name="password" type="password" value="" class="login-cont-inp1" tabindex="2" placeholder="请输入密码">
 					</div>
+					<!-- 忘记密码 -->
+					<div id="errorLogin" class="login-error-cont clearfix">
+						<span id="msg" class="login_error_false1 error-info"></span>
+						<a class="blue fr" href="javascript:;">忘记密码？</a>
+					</div>
+					<!-- 登录按钮 -->
+					<div class="pt10"><input type="button" class="login-submit" id="loginsubmit"		tabindex="4" value="">
+					</div>
+					<!-- 合作登录 -->
+					<div class="login-hezuo">
+						<p>合作账号登录</p>
+						<ul class="login-hezuo-ul clearfix">
+							<li><a class="qq" href="javascript:;" title="QQ"></a></li>
+							<li><a class="weibo" href="javascript:;" title="新浪微博"></a></li>
+							<li><a class="zhifubao" href="javascript:;" title="支付宝"></a></li>
+							<li><a class="renren" href="javascript:;" title="人人"></a></li>
+							<li><a class="baidu" href="javascript:;" title="百度"></a></li>
+							<li><a class="weixin" href="javascript:;" title="微信"></a></li>
+						</ul>
+					</div>					
 				</div>
+
 				<div class="cont-rightc"></div>
 			</form>
 		</div>
 	</div>
 </div>
-
-
+<!-- ********** foot ********** -->
+<div id="Foot">
+	<div class="foot">
+		<div class="pb15">
+			<a title="关于永乐"  href="javascript:;">关于永乐</a><span>丨</span>
+			<a title="永乐大事记" href="javascript:;">永乐大事记</a><span>丨</span>
+			<a title="品牌识别"  href="javascript:;">品牌识别</a><span>丨</span>
+			<a title="合作招商"  href="javascript:;">合作招商</a><span>丨</span>
+			<a title="服务协议"  href="javascript:;">服务协议</a><span>丨</span>
+			<a title="隐私声明"  href="javascript:;">隐私声明</a><span>丨</span>
+			<a title="诚聘英才" href="javascript:;">招聘信息</a><span>丨</span>
+			<a title="联系我们" href="javascript:;">联系我们</a><span>丨</span>
+			<a title="友情链接" href="javascript:;">友情链接</a><span>丨</span>
+			<a title="合作伙伴" href="javascript:;">合作伙伴</a><span>丨</span>
+			<a title="网站地图" href="javascript:;">网站地图</a><span>丨</span>
+			<a title="官方微博" href="javascript:;">官方微博</a>
+		</div>
+		<div class="copyright">
+			<p class="mb5">版权所有 <a title="永乐票务" class="c3" href="//www.228.com.cn/">永乐票务</a> Copyright©2003-2018 All Rights Reserved 北京春秋永乐文化传播股份有限公司</p>
+			<p>中国最大的演出门票预订综合性票务网站。为您提供各类演出门票网上订票服务。 </p>
+			<div class="copyright-more">
+				<a title="网站信用良好" href="javascript:;" class="credit">网站信用良好</a>
+				<a href="javascript:;" title="京icp" class="icp">京ICP证030942号</a>
+				<a title="360绿色网站" class="green_web">360绿色网站</a>
+			</div>
+		</div>
+	</div>
+</div>
 
 
 </body>

@@ -1,6 +1,6 @@
 // 业务逻辑模块
 require(["scripts/config.js"],function(){
-	require(["jquery","mini","supperbanner","pop","goodlist","shop","input","hot"],
+	require(["jquery","mini","supperbanner","pop","goodlist","shop","input","hot","require"],
 		function($,mini,banner,pop,goodlist,shop,input,hot){
 		$(".container").supperBanner({
 			src:[
