@@ -10,6 +10,8 @@ requirejs.config({
 		"mini":"scripts/mini",
 		"input":"scripts/inputSearch",
 		"hot":"scripts/hotRecommend",
-		"resgiter":"scripts/resgiterMain"
+		"resgiter":"scripts/resgiterMain",
+		"login":"scripts/loginMain",
+		"place":"scripts/placeName"
 	}
 })

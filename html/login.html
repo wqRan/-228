@@ -3,10 +3,9 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>我的</title>
-	<!-- 永乐票务统一认证中心 -->
+	<title>永乐票务统一认证中心</title>	
 	<link rel="stylesheet" href="css/login.css">
-	<!-- <link rel="shortcut icon" href="images/main.png"> -->
+	<link rel="shortcut icon" href="images/main.png">
 </head>
 <body>
 <!-- ************ logo *********** -->
@@ -26,16 +25,16 @@
 		</div>
 		<!-- right -->
 		<div class="login-right">
-			<form id="fm1" class="cookieForm">
+			<form id="fm1" class="cookieForm" action="http://localhost:88/index.html">
 				<div class="cont-righta">
-					<a class="blue" href="javascript:;">新用户注册</a>
+					<a class="blue" href="resgiter.html">新用户注册</a>
 				</div>
 				<div class="cont-rightb">
 					<!-- 用户名 -->
 					<div class="rightb-email">
 						<input id="username" name="username" class="required login-cont-inp1" tabindex="1" accesskey="u" type="text" value="" size="25" autocomplete="false" placeholder="用户名/邮箱/手机号">
-						<p id="loginclose" class="login-cont-rightb-close login-single-ps" onclick="delcookie()">
-						</p>
+						<!-- <p id="loginclose" class="login-cont-rightb-close login-single-ps" onclick="delcookie()">
+						</p> -->
 					</div>
 					<!-- 密码 -->
 					<div class="mt15">
@@ -47,7 +46,7 @@
 						<a class="blue fr" href="javascript:;">忘记密码？</a>
 					</div>
 					<!-- 登录按钮 -->
-					<div class="pt10"><input type="button" class="login-submit" id="loginsubmit"		tabindex="4" value="">
+					<div class="pt10"><input type="submit" class="login-submit" id="loginsubmit"		tabindex="4" value="">
 					</div>
 					<!-- 合作登录 -->
 					<div class="login-hezuo">
@@ -94,9 +93,12 @@
 				<a title="360绿色网站" class="green_web">360绿色网站</a>
 			</div>
 		</div>
+		
 	</div>
 </div>
 
 
 </body>
+<script src="scripts/require.js"></script>
+<script src="scripts/resgiter.js"></script>
 </html>

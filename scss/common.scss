@@ -1,0 +1,562 @@
+@import "reset";
+@import "function";
+@import "mixin";
+
+#headTop{
+	background: #fbfbfb;
+	height:pxToRem(30px);
+	border-bottom: 1px solid #e0e0e0;
+	.h_top{
+		color:#000;
+		line-height:30px;
+		p{
+			line-height:30px;
+			float:left;
+			// 登录 注册
+			.collect{
+				margin: 0 5px;
+				cursor: pointer;
+				&:hover{
+					color:#cd0000;
+				}
+			}
+			.top_login_reg a{
+				&:hover{
+					color:#cd0000;
+				}
+			}
+		}
+		// 我的永乐
+		.login-info-my{
+			float:left;
+		    padding-left: 15px;
+		    position: relative;
+		    zoom: 1;
+		    z-index: 2000;
+		    .my-yongle{
+				padding-right: 26px;
+				background: url(../images/sprite-iocn.png) no-repeat 52px -359px;
+                }
+			&:hover .my-yongle{
+				background: url(../images/sprite-iocn.png) no-repeat 52px -391px;
+				color:#cd0000;					
+			}		
+		
+		    
+		    .bg{
+		    	width: 78px;
+			    height: 27px;
+			    border: 3px solid #ddd;
+			    border-bottom: 0;
+			    position: absolute;
+			    background-color: #fff;
+			    top: 3px;
+			    left: 5px;
+			    overflow: hidden;
+			    z-index: -1;
+			    display:none;
+		    }
+		    .my-yongle-box{
+		    	display: none;
+			    border: 3px solid #ddd;
+			    border-top: 0 none;
+			    position: absolute;
+			    z-index: 1;
+			    position: absolute;
+			    background: #FFF;
+			    top: 31px;
+			    width: 78px;
+			    left: 5px;
+			    z-index: 1000;
+			    text-indent: 7px;
+			    height: auto;
+			    overflow: hidden;
+			    line-height: 20px;
+			    >li{
+			    	height:26px;
+			    }
+			    li a:hover{
+			    	color:#cd0000;
+			    }
+		    }
+		    &:hover .bg,&:hover .my-yongle-box{
+		    	display:block;
+		    }   
+		}
+.top_right{
+	float:right;
+	>li{
+		float:left;
+		width:69px;
+		text-align:center;	
+	}
+	>li:nth-of-type(1){
+		position:relative;
+		z-index:9000;
+		text-align:left;
+		width:68px;
+    	>a{
+    		background: url(../images/sprite-iocn.png) no-repeat 52px -359px;
+    		padding-right:20px;
+    		position: relative;
+        	z-index: 5200;
+        	text-align: center;					
+    	}
+    	&:hover >a{
+    		background: url(../images/sprite-iocn.png) no-repeat 52px -391px;		
+    		}
+    	// 永乐导航的二级菜单
+    	.guide-list{
+            display: none;
+        	border: 3px solid #ddd;
+        	position: absolute;
+        	z-index: 1;
+        	line-height: 200%;
+        	position: absolute;
+        	background: #FFF;
+        	top: 30px;
+        	width: 350px;
+        	left: -7px;
+        	padding: 10px 10px 0 15px;
+        	z-index: 5100;
+        	.bg{
+        		width: 75px;
+       			height: 27px;
+       			border: 3px solid #ddd;
+       			border-bottom: 0;
+       			position: absolute;
+       			background-color: #fff;
+       			top: -30px;
+       			left: -3px;
+       			overflow: hidden;
+        	}
+        	dl{
+    		    overflow: hidden;
+    		    zoom: 1;
+    		    background: #fff;
+    		    border-bottom: 1px #b2b2b2 dotted;
+    		    width: 355px;
+    		    margin-bottom: 10px;
+    		    padding: 0 0 10px 0;
+    		    dt{
+    		    	width: 50px;
+    			    float: left;
+    			    padding-left: 5px;
+    			    font-weight: bold;
+    			    color: #4c4c4c;
+    		    }
+    		    dd{
+    		    	width: 300px;
+        			float: left;
+        			li{
+        				float: left;
+        				width: 69px;
+        				height: 30px;
+        				text-align: center;
+        			}
+    		    }
+        	}	
+    	}
+    	&:hover .guide-list{
+    		display:block;
+    	}
+    }
+
+	// 手机永乐
+	>li:nth-of-type(2){
+		position:relative;
+		z-index:9000;
+		>a{
+			position:relative;
+			z-index:9000;
+		}
+		.guide-list{
+			display: none;
+    		border: 3px solid #ddd;
+    		position: absolute;
+    		z-index: 1;
+    		line-height: 200%;
+    		position: absolute;
+    		background: #FFF;
+    		top: 30px;
+    		width: 355px;
+    		left: 3px;
+    		padding: 10px 10px 0 15px;
+    		z-index: 5100;
+    		width: 100px;
+    		padding: 10px 10px 5px;
+    		text-align: center;
+    		.bg{
+    			width: 60px;
+   				height: 27px;
+   				border: 3px solid #ddd;
+   				border-bottom: 0;
+   				position: absolute;
+   				background-color: #fff;
+   				top: -30px;
+   				left: -3px;
+   				overflow: hidden;
+    		}
+    		>p{
+    			width:100%;
+    			line-height:22px;
+				text-align:center;
+    		}
+		}
+		&:hover .guide-list{
+			display:block;
+		}
+	}
+	li:nth-of-type(3):hover a,li:nth-of-type(4):hover a{
+		color: #cc0001;
+	}
+	>li:nth-of-type(5){
+		margin-top:4px;
+		height:22px;
+		line-height:21px;
+		box-sizing:border-box;
+		background:#efefef;	
+		border-radius:8%;
+		border:1px solid #ddd;
+		>a{
+
+			color: #1582bd;
+			background:url(../images/bg_flbtn.png) no-repeat -191px -2px;
+			padding-left:20px;
+		}
+		&:hover{
+			background:#fbfbfb;
+		}
+	}		
+	}	
+	}
+
+}
+
+// ---two----
+#headMiddle{
+	color: #666;
+    padding-top: 4px;
+    padding-bottom: 5px;
+    text-align: center;
+    background-color: #FFFBEF;
+    overflow: hidden;
+	.h_middle{
+		width:1000px;
+		@include block_center;
+		.left_msg{
+			@include block_center;
+			width:980px;
+		    color: #cc0001;
+		    text-align:center;
+		    font-weight:bold;
+		    height:23px;
+		    line-height:23px;
+			float:left;			
+		}
+		.cancel{
+				padding-top: 6px;
+				display:inline-block;
+				cursor: pointer;
+				float:right;
+				margin-right:8px;
+			}		
+	}
+}
+// ---three----
+#headFoot{
+	.h_foot{
+		position:relative;
+		.pullc-btn{
+    		width: 21px;
+    	    height: 53px;
+    	    cursor: pointer;
+    	    position: absolute;
+    	    right: 0px;
+    	    top: 0px;
+    	    z-index:11;
+		}
+		.pullc-on{
+			background: url(../images/adBtn.png) no-repeat left top;
+		}
+		.pullc-off{
+			background: url(../images/adBtn.png) no-repeat 0 -53px;
+		}
+
+	}
+
+}
+
+// --------------------head-search---------------
+#Header_search{
+	height:118px;
+    background:#fff;
+}
+.h_search{
+	// logo部分
+	.logo{
+		width: 209px;
+    	height: 60px;
+    	background: url(../images/logo.png);
+    	float: left;
+    	margin: 19px 100px 0 0;
+	}
+	// 切换城市部分
+	.logoRight{
+		position: relative;
+    	padding-right: 40px;
+    	width:100px;
+    	float:left;
+    	>span{
+    		font-size: 14px;
+    		font-family: "Microsoft YaHei";
+    		color: #4c4c4c;
+    		position: absolute;
+    		width: 100px;
+    		left: 8px;
+    		top: 28px;
+    	}
+
+    	.index_city{
+    		width: 74px;
+    		height: 28px;
+    		position: relative;
+    		float: left;
+    		z-index: 10;
+    		zoom: 1;
+    		.change-city {
+        		width: 74px;
+        		height: 22px;
+        		padding-left: 7px;
+        		display: block;
+        		top: 53px;
+        		margin: 0 0 0 5px;
+        		line-height: 22px; 
+        		font-size: 12px;
+        		position: relative;
+        		z-index: 11;
+        		zoom: 1;
+        		color: #a5a5a5;
+        		cursor: pointer;
+        		z-index: 10000;
+        		overflow: hidden;
+        		background: url(../images/sprite-h-f.png) no-repeat -253px -39px;   		
+    		}    		
+    		.change-city-list{
+			    display: none;
+    			position: absolute;
+    			width: 625px;
+    			border: 2px #88756E solid;
+    			left: 5px;
+    			top: 75px;
+    			z-index : 10;
+    			background: #FFF;
+    			color:#4c4c4c;
+    			padding: 5px 6px 3px 13px;
+    			z-index: 10000;
+    			.city-dl{
+    				padding: 13px 0px 0px 70px;
+				    line-height: 14px;
+				    border-bottom: 1px dotted #ccc;
+				    dt{
+				    	width: 48px;
+					    margin-left: -70px;
+					    padding-right: 12px;
+					    float: left;
+					    background: url(../images/cityArr.png) no-repeat right center;
+				    }
+				    dd{
+				    	width: 75px;
+    					float: left;
+    					padding-bottom: 15px;
+    					padding-right: 5px;
+						i{
+							font-style: normal;
+    						color: #676767;
+    						padding-left: 5px;
+						}
+				    }
+    			}
+    		}
+    	
+    	&:hover .change-city{
+    		background: url(../images/sprite-h-f.png) no-repeat -253px -66px;
+    	}
+    	&:hover .change-city-list{
+				display:block;
+    		}
+	}
+}
+}
+
+	// 搜索框
+	#index-search{
+    	float: left;
+        top: 0;
+        left: 110px;
+        width: 411px;
+        height: 60px;
+        margin-top: 28px;
+        position: absolute;
+        .search-main{
+        	background: url(../images/sprite-h-f.png) no-repeat;
+        	overflow: hidden;
+        	width: 411px;
+        	height: 34px;
+        	position: relative;
+        	z-index: 1;
+        	#search-text{
+        		width: 329px;
+        		height: 28px;
+        		border: 0;
+        		position: absolute;
+        		left: 3px;
+        		top: 3px;
+        		line-height: 28px;
+        		text-indent: 5px;
+        		color:rgb(204, 204, 204);
+        		display: inline-block;
+        		text-align: start;
+        		font: 400 13.3333px Arial;   		
+        	   }
+
+            } 
+        .search-hot-key{
+        	padding-top:5px;
+        	a{
+        		margin-right: 6px;
+        		color: #a5a5a5;
+        		&:hover{
+        			color: #cc0001;
+        		}
+        	}
+        }   
+	}    
+	// 积分商城
+	#quick-guide{
+		width: 223px;
+    	height: 68px;
+    	float: right;
+    	position: relative;
+    	right: 6px;   
+		.quick-arrow{
+    		position: absolute;
+    		left: 205px;
+    		top: 33px;
+    		width: 13px;
+    		height: 14px;
+    		z-index: 100;
+    		background:url(../images/sprite-iocn.png) no-repeat 0 -417px;
+    		&:hover{
+    			background:url(../images/sprite-iocn.png) no-repeat 0 -436px;   		
+    		}
+    			&:hover ul{
+    			border:1px #E0E0E0 solid;
+    			box-shadow:1px 1px 1px #eee;
+    			margin-top:7px;
+    			padding:20px 15px 0 14px;   		
+    			}
+    		}
+	
+		ul{		
+		position: absolute;
+    	background: #fff;
+    	padding: 20px 15px 0;
+    	width: 193px;
+    	margin-top: 8px;
+        z-index:99;
+    	li{
+    		float:left;
+    		a{
+    			width: 61px;
+    			height: 38px;
+    			overflow: hidden;
+    			float: left;
+    			text-align: center;
+    			color: #999;
+    			padding-top: 37px;
+    			display: block;
+    			p{margin-top: 2px;}
+    		}
+    		.qg1a{    			
+    			background: url(../images/sprite-h-f1.png) no-repeat 10px -466px;
+    		}
+    		.qg2a{    			
+    			background: url(../images/sprite-h-f1.png) no-repeat 10px -638px;
+    		}
+    		.qg3a{    			
+    			background: url(../images/sprite-h-f1.png) no-repeat 10px -812px;
+    		}
+
+    		.qg4a{    			
+    			background: url(../images/sprite-h-f1.png) no-repeat 10px -987px;
+    		}
+    		.qg5a{    			
+    			background: url(../images/sprite-h-f1.png) no-repeat 10px -1159px;
+    		}
+
+    	&:hover a{
+    	color:#ff4747;
+    		}
+    	}
+    	.undb{
+    	display:none;
+    	}
+    	
+		}	
+    }
+    // 模糊搜索
+    .searchlist{
+        position:absolute;
+        width:411px;
+        top:34px;
+        z-index:999;
+        background:#fff;
+        display:none;
+        li{
+            height:34px; 
+            line-height:34px;
+            padding:0 8px;
+            &:hover{
+                background:pink;
+            }              
+        }
+        .li_last{
+            text-align:right;
+            border-top:1px solid #ccc;
+        }
+    }
+
+// ----------------------Nav------------------
+#Nav{
+    height: 43px;
+    line-height: 43px;
+    background: url(../images/sprite-nav.png) 0 -377px;
+    overflow: hidden;
+    .f14{
+    	padding-left: 200px;
+
+    	li{
+    		float: left;
+    		text-align: center;
+    		margin: 0 8px;
+    		height:43px; 
+    		a{
+    			font-family: "微软雅黑";
+    			color: #fff;
+   				display: inline-block;
+   				height: 43px;
+   				padding: 0 10px;
+   				font-size: 14px;
+
+    		}
+    	&:hover{
+    		background: url(../images/sprite-h-f.png) no-repeat -338px -39px;
+    		overflow: hidden;
+    		}
+    	}
+    }
+}
+
+// ---------------banner------------
+

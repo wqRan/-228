@@ -5,7 +5,7 @@
 
 
 // 公共部分
-.h_top,,.h_foot{
+.h_top,.h_foot{
 	width:pxToRem(1000px);
 	@include block_center;
 }
@@ -48,11 +48,12 @@
 		    .my-yongle{
 				padding-right: 26px;
 				background: url(../images/sprite-iocn.png) no-repeat 52px -359px;
-				&:hover{
-					background: url(../images/sprite-iocn.png) no-repeat 52px -391px;
-					color:#cd0000;					
-				}		
-		    }
+			}
+			&:hover .my-yongle{
+				background: url(../images/sprite-iocn.png) no-repeat 52px -391px;
+				color:#cd0000;					
+			}		
+		   
 		    
 		    .bg{
 		    	width: 78px;
@@ -342,17 +343,17 @@
 				    left:325px;
 				    color:#cd1414;
 				    }
-				.onCorrect1,.onCorrect2,.onCorrect3,.onCorrect4 {
+				.onCorrect1,.onCorrect2,.onCorrect3,.onCorrect4,.onCorrect5  {
 				    background: url(../images/onCorrect.gif) 0 no-repeat;
 				    width:22px;
 				    height:28px;
 				    display:none;
 				}
-				.email11,.email21,.email31,.email41{
+				.email11,.email21,.email31,.email41,.email51{
 					display:none;
 					background: url(../images/regisiter.png) 0 -64px no-repeat;
 				}
-				.email12,.email22,.email32,.email13,.email23,.email33,.email42,.email43{
+				.email12,.email22,.email32,.email13,.email24,.email23,.email33,.email42,.email43,.email52,.email53{
 					display:none;
 					background: url(../images/onError.gif) 0 no-repeat;
 				}
@@ -367,8 +368,14 @@
 				}
 			.regisiter-yzm {
 			    position: absolute;
+			    width:60px;
+			    height:28px;
+			    background:url(../images/yanzheng.bmp) 0 repeat-x;
 			    left: 254px;
-			    top: 5px;
+			    top: 3px;
+			    font-weight:bold;
+			    font-size:18px;
+			    text-align:center;
 			}
 			.phone-input-left {
 			    width: 118px;

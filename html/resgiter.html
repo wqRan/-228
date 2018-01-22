@@ -3,8 +3,9 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>会员注册</title>
+	<title>会员注册-永乐票务</title>
 	<link rel="stylesheet" href="css/resgiter.css">
+	<link rel="shortcut icon" href="images/main.png">
 </head>
 <body>
 <!-- 。。。。。。。。。。头部。。。。。。。。。。。 -->
@@ -66,10 +67,76 @@
 						<dd>
 						  <ul class="top_city">
 						  	<li><a href="###">北京</a></li>
-						  	<li><a href="###">北京</a></li>
-						  	<li><a href="###">北京</a></li>
-						  	<li><a href="###">北京</a></li>
-						  	<li><a href="###">北京</a></li>
+						  	<li><a href="###">上海</a></li>
+						  	<li><a href="###">广州</a></li>
+						  	<li><a href="###">深圳</a></li>
+						  	<li><a href="###">天津</a></li>
+						  	<li><a href="###">南京</a></li>
+						  	<li><a href="###">成都</a></li>
+						  	<li><a href="###">重庆</a></li>
+						  	<li><a href="###">郑州</a></li>
+						  	<li><a href="###">西安</a></li>
+						  	<li><a href="###">武汉</a></li>
+						  	<li><a href="###">长沙</a></li>
+						  	<li><a href="###">合肥</a></li>
+						  	<li><a href="###">济南</a></li>
+						  	<li><a href="###">佛山</a></li>
+						  	<li><a href="###">无锡</a></li>
+						  	<li><a href="###">苏州</a></li>
+						  	<li><a href="###">香港</a></li>
+						  	<li><a href="###">杭州</a></li>
+						  	<li><a href="###">青岛</a></li>
+						  	<li><a href="###">大连</a></li>
+						  	<li><a href="###">芜湖</a></li>
+						  	<li><a href="###">贵阳</a></li>
+						  	<li><a href="###">绍兴</a></li>
+						  	<li><a href="###">洛阳</a></li>
+						  	<li><a href="###">石家庄</a></li>
+						  	<li><a href="###">常州</a></li>
+						  	<li><a href="###">宁波</a></li>
+							<li><a href="###">温州</a></li>
+							<li><a href="###">南昌</a></li>
+							<li><a href="###">威海</a></li>
+							<li><a href="###">厦门</a></li>
+							<li><a href="###">珠海</a></li>
+							<li><a href="###">福州</a></li>
+							<li><a href="###">西宁</a></li>
+							<li><a href="###">湛江</a></li>
+							<li><a href="###">昆明</a></li>
+							<li><a href="###">哈尔滨</a></li>
+							<li><a href="###">澳门</a></li>
+							<li><a href="###">南宁</a></li>
+							<li><a href="###">呼和浩特</a></li>
+							<li><a href="###">马鞍山</a></li>
+							<li><a href="###">太原</a></li>
+							<li><a href="###">扬州</a></li>
+							<li><a href="###">潍坊</a></li>
+							<li><a href="###">泰州</a></li>
+							<li><a href="###">泉州</a></li>
+							<li><a href="###">梅州</a></li>
+							<li><a href="###">镇江</a></li>
+							<li><a href="###">沈阳</a></li>
+							<li><a href="###">曲靖</a></li>
+							<li><a href="###">东莞</a></li>
+							<li><a href="###">揭阳市</a></li>
+							<li><a href="###">三亚</a></li>
+							<li><a href="###">桂林市</a></li>
+							<li><a href="###">宜昌</a></li>
+							<li><a href="###">黄冈</a></li>
+							<li><a href="###">中山</a></li>
+							<li><a href="###">江门</a></li>
+							<li><a href="###">包头</a></li>
+							<li><a href="###">中山</a></li>
+							<li><a href="###">长春</a></li>
+							<li><a href="###">株洲</a></li>
+							<li><a href="###">唐山</a></li>
+							<li><a href="###">宝鸡</a></li>
+							<li><a href="###">台州</a></li>
+							<li><a href="###">烟台</a></li>
+							<li><a href="###">淄博</a></li>
+							<li><a href="###">本溪</a></li>
+							<li><a href="###">济宁</a></li>
+							<li><a href="###">聊城</a></li>	
 						  </ul>
 						</dd>
 					  </dl>
@@ -107,7 +174,7 @@
 <div id="container">
 	<div class="resginterBox">
 		<h1 class="regisiter-cont-h1">新用户注册<s></s></h1>
-		<form class="regisiterform" action="" method="post">
+		<form class="regisiterform" action="http://localhost:88/login.html">
 			<div class="regisiter-cont-tab">
 				<!-- 邮箱地址 -->
 				<p>
@@ -127,6 +194,7 @@
 					<span>
 						<b class="email21">请输入手机号</b>
 						<b class="email22">手机号不能为空</b>
+						<b class="email24">该手机号已经被注册，请更换其他账号</b>
 						<b class="email23">请输入正确的手机号码</b>
 						<b class="onCorrect2"> </b>
 					</span>	
@@ -145,28 +213,34 @@
 				<!-- 确认密码 -->
 				<p>
 					<span class="regisiter-sp"><label>确认密码：</label></span>
-					<input type="text" id="regisConfirm" maxlength="30" autocomplete="off">
-					<b class="email41">请重复输入密码</b>
-					<b class="email42">确认密码不能为空</b>
-					<b class="email43">两次密码输入不一致，请重复输入 </b>
-					<b class="onCorrect4"> </b>
+					<input type="password" id="regisConfirm" maxlength="30" autocomplete="off">
+					<span>
+						<b class="email41">请重复输入密码</b>
+						<b class="email42">确认密码不能为空</b>
+						<b class="email43">两次密码输入不一致，请重复输入 </b>
+						<b class="onCorrect4"> </b>
+					</span>
 				</p>
 				<!-- 验证码 -->
 				<p>
 					<span class="regisiter-sp"><label>验&nbsp;&nbsp;证&nbsp;&nbsp;码：</label></span>
 					<input type="text" style="width:150px;" name="checkCode" id="registcheckCode" maxlength="4" >
 					<span class="regisiter-yzm">
-					<a href="javaScript:;">
-					<img id="imageCoderegist" align="middle" src="//www.228.com.cn/jsp/common/image.jsp?rd=2018-01-21 12:47:27" class="imagCode">
-					</a>
 					</span>
+					<span>
+						<b class="email51">请输入验证码</b>
+						<b class="email52">验证码不能为空</b>
+						<b class="email53">验证码输入错误，请重复输入 </b>
+						<b class="onCorrect5"> </b>
+					</span>
+
 				</p>
 				<!-- 短信验证 -->
-				<p>
+				<!-- <p>
 					<span class="regisiter-sp"><label>短信验证：</label></span>
 					<input type="text" class="phone-input-left" id="smsCode" name="smsCode" maxlength="6" style="color: rgb(153, 153, 153);">
 					<input type="button" class="phone-button" id="sendPhoneSMS" value="免费获取验证码" disabled="disabled" style="width: 100px;">
-				</p>
+				</p> -->
 				<!-- 确认登录 -->
 				<div>
 					<input type="submit" class="reisiter-submit"  id="registsubmit" value="">

@@ -1,0 +1,239 @@
+@import "reset";
+@import "function";
+@import "mixin";
+@import "common";
+
+
+#headTop,#headMiddle,#headFoot,#Container
+{
+    // background:$bg;
+    width:$wid;
+}
+
+.h_top,.h_middle,.h_foot,.h_search,.nav,.container{
+	width:pxToRem(1000px);
+	@include block_center;
+}
+
+#Header_search{
+	.h_search{
+		.logo{
+			margin: 19px 20px 0 0;
+		}
+		.logoRight{
+
+		}
+	}
+}
+
+#Container{
+    // height:360px;
+    
+    // padding-bottom:23px;
+    
+    .container{
+    	position:relative;
+    }
+    // 隐藏的导航
+    .b_left{
+        width: 200px;
+        float: left;
+        z-index: 200;
+        position: relative;
+        top: -43px;
+        z-index:999;
+        .sort-title{
+            width: 200px;
+            height: 43px;
+            font-size: 15px;
+            font-family: Microsoft YaHei;
+            font-weight: bold;
+            text-align: center;
+            line-height: 43px;
+            color: #fff;
+            background: url(../images/sprite-h-f.png) no-repeat -223px -122px;
+        }
+        .list{
+            border: 2px solid #AB9F99;
+            border-top: 0;
+            height: 358px;
+            width: 196px;
+            background: #fff;
+            display:none;
+            .item{          
+                h3{
+                    position: relative;
+                    z-index: 100;
+                    width: 196px;
+                    height: 39px;
+                    line-height: 39px;
+                    font-size: 14px;
+                    font-family: "Microsoft YaHei";
+                    border-top: 1px #EEEEEE solid;
+                    background-position: 160px -305px;
+                    background-repeat: no-repeat;
+                    a{
+                        color: #676767;
+                        width: 136px;
+                        height: 39px;
+                        padding-left: 60px;
+                        display: block;
+                        font-size: 14px;
+                    }
+                    .list-1{background: url(../images/sprite-nav.png) no-repeat 26px -1px;}                     
+                    .list-2{background: url(../images/sprite-nav.png) no-repeat 26px -78px;}                       
+                    .list-3{background: url(../images/sprite-nav.png) no-repeat 26px -39px;}
+                    .list-4{background: url(../images/sprite-nav.png) no-repeat 26px -117px;}
+                    .list-5{background: url(../images/sprite-nav.png) no-repeat 26px -156px;}                       
+                    .list-6{background: url(../images/sprite-nav.png) no-repeat 26px -273px;}                      
+                    .list-7{background: url(../images/sprite-nav.png) no-repeat 26px -234px;}
+                    .list-8{background: url(../images/sprite-nav.png) no-repeat 26px -195px;}       
+
+                &:hover{background:#88766E;}
+                &:hover .outbox{display:block;}             
+                &:nth-of-type(9):hover{
+                    background:#fff;
+                    height:37px;
+                }
+                &:hover >a{color:#fff;font-weight:bold;}                            
+                &:nth-of-type(9):hover a{color:#4c4c4c;font-weight:normal;  }
+
+                .outbox{
+                    display: none;
+                    width: 117px;
+                    position: absolute;
+                    z-index:9999;
+                    left: 197px;
+                    top: 0;
+                    border: 1px solid #a5a5a5;
+                    li{
+                        height: 32px;
+                        background: url(../images/sprite-hf.png) no-repeat -306px -173px; 
+                        padding: 0 8px;
+                        line-height: 32px;
+                        a{  
+                            font-size: 13px;
+                            color: #888;
+                            border-bottom: 1px #b2b2b2 dotted;
+                            width: 70px;
+                            height: 30px;
+                            display: block;
+                            padding-left: 32px;
+                            overflow: hidden;
+                        &:hover{color:#cc0001;}             
+                        }
+                    &:hover{
+                        background: url(../images/sprite-hf.png) no-repeat -306px -393px; 
+                        }
+                    }
+                }       
+                }
+            }
+        }    
+    }
+    .common-tit {
+	    margin: 10px auto;
+	    position:absolute;
+	    left:0;
+	}
+	// 商品详情框
+	.bor {
+	    border: 1px solid #ebebeb;
+		}
+	.main {
+	    position: relative;
+	    width: 958px;
+	    height: auto;
+	    overflow: hidden;
+	    margin: 0 auto 10px auto;
+	    padding: 20px;
+	    color: #4c4c4c;
+	    // 题目
+	    .clearfloat{
+	    	.main h1 {
+			    margin-bottom: 20px;
+			    font: bold 18px/33px 'Microsoft YaHei','simsun';
+			    color: #4c4c4c;		    
+			}
+			.f1{
+				float:left;		
+			}
+			.red{
+				font-size: 18px;
+			    font-size: bold;
+			    vertical-align: middle;
+			    color: #cc0001;
+			    font-family: 'Microsoft YaHei';
+			    font-weight: bold;
+			}
+			.like{
+				display: inline-block;
+			    position: static;
+			    vertical-align: middle;
+			    margin-left: 5px;
+			    left: 420.188px;
+			    top: 19px;
+			    width: 94px;
+			    height: 30px;
+				background: url(../images/pro-common.png) no-repeat -160px -200px;
+				s{
+				    line-height: 30px;
+				    padding-left: 54px;
+				    text-decoration:none;
+				}
+			}
+	    }
+	    //图片信息
+	    .main-l {
+		    float: left;
+		    width: 295px;
+		    img{
+		    	width: 288px;
+    			height: 384px;
+		    }
+		    .mt10 {
+			    margin-top: 10px;
+			    .weibo-l {
+				    float: left;
+				    margin-top: 13px;
+				    font: 12px 'Microsoft YaHei';
+				}
+				#bds_count{
+					background:url(../images/sc.png) no-repeat 0 -60px;
+					width:48px;
+				}
+				a {
+				    float: left;
+				    width: 32px;
+				    line-height: 32px;
+				    height: 32px;
+				    background: url(../images/icons_0_32.png);
+				    background-repeat: no-repeat;
+				    cursor: pointer;
+				    margin: 6px 6px 6px 0;
+				    text-indent: -100em;
+				    overflow: hidden;
+				    color: #3a8ceb;
+				}
+				a:nth-of-type(1){
+					background-position: 0 -104px;
+				}
+				a:nth-of-type(2){
+					background-position: 0 -1612px;
+				}
+				a:nth-of-type(3){
+					background-position: 0 -52px;
+				}
+				a:nth-of-type(4){
+					background-position: 0 -468px;
+				}
+				a:nth-of-type(5){
+					background-position: 0 -2444px;
+				}
+				
+			}
+		}
+
+	}
+	
+}

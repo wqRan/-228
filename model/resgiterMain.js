@@ -1,4 +1,4 @@
-define(["jquery","cookie"],function(){
+define(["jquery","cookie"],function($,cookie){
 	function Resgiter(){
 
 	}
@@ -11,6 +11,7 @@ define(["jquery","cookie"],function(){
 			this.Confirm = $("#regisConfirm");
 			this.CheckCode = ("#registcheckCode");
 			this.Img = $("#imageCoderegist");
+			this.Check = $("#registcheckCode");
 			// 邮箱验证
 			this.Email.on("focus",$.proxy(this.tip1,this));
 			this.Email.on("blur",$.proxy(this.email,this));
@@ -23,104 +24,48 @@ define(["jquery","cookie"],function(){
 			// 确认密码
 			this.Confirm.on("focus",$.proxy(this.tip4,this));
 			this.Confirm.on("blur",$.proxy(this.confirm,this));
+			// 打开页面自动生成验证码,并验证
+			this.Check.on("focus",$.proxy(this.tip5,this));
+			this.Check.on("blur",$.proxy(this.check,this));
+			this.yzm = $(".regisiter-yzm");
+			this.checkCode();
+			// 设置一个标志
+			this.Submit = $("#registsubmit");
+			this.Submit.on("click",$.proxy(this.submit,this))
+			this.resginter = [this.Email,this.Phone,this.Confirm,this.Pass,this.Check];
 		},
 		tip1:function(){
 			this.tip(".email11");
 		},
 		email:function(){
-			
-			var res = this.Email.val();
-			// console.log(res)
-			var reg = /^[a-z]\w{4,19}@[a-z]{1,4}\.[a-z]{1,5}$/gi;
-			if (reg.test(res)) {
-				// console.log(1)
-				// console.log($(".onCorrect"));
-				$(".onCorrect1").css({
-					display:"inline-block"
-				})
-				.siblings().css({
-				display:"none"
-				})
-			}else if (res == "") {
-				$(".email12").css({
-					display:"inline-block"
-				})
-				.siblings().css({
-					display:"none"
-				})
-			}else {
-				$(".email13").css({
-					display:"inline-block"
-				})
-				.siblings().css({
-					display:"none"
-				})
-			}
+			this.main1(this.Email.val(),/^[a-z]\w{4,19}@[a-z]{1,4}\.[a-z]{1,5}$/gi,".onCorrect1",".email12",".email13",this.Email);
 		},
 		tip2:function(){
 			this.tip(".email21");
 		},
 		phone:function(){
-			var res = this.Phone.val();
-			var reg = /^0?(13|14|15|18)[0-9]{9}$/g;
-			if (reg.test(res)) {
-				$(".onCorrect2").css({
-					display:"inline-block"
-				})
-				.siblings().css({
-				display:"none"
-				})
-			}else if(res == ""){
-				$(".email22").css({
-					display:"inline-block"
-				})
-				.siblings().css({
-					display:"none"
-				})
-			}else {
-				$(".email23").css({
-					display:"inline-block"
-				})
-				.siblings().css({
-					display:"none"
-				})
-			}
+			this.main1(this.Phone.val(),/^0?(13|14|15|18)[0-9]{9}$/g,".onCorrect2",".email22",".email23",this.Phone);
+
 		},
 		tip3:function(){
 			this.tip(".email31");
 		},
 		pass:function(){
-			this.main(this.Pass.val() ".onCorrect3" "/^[^/\\\*<>\|\?]{6,18}$/" ".email32" ".email33"  )
-			var res = this.Pass.val();
-			var reg = /^[^ /\\\*<>\|\?]{6,18}$/;	
-			if (reg.test(res)) {
-				$(".onCorrect3").css({
-					display:"inline-block"
-				})
-				.siblings().css({
-				display:"none"
-				})
-			}else if(res == ""){
-				$(".email32").css({
-					display:"inline-block"
-				})
-				.siblings().css({
-					display:"none"
-				})
-			}else{
-				$(".email33").css({
-					display:"inline-block"
-				})
-				.siblings().css({
-					display:"none"
-				})
-			}
+
+			this.main1(this.Pass.val(),/^[^/\\\*<>\|\?]{6,18}$/g,".onCorrect3",".email32",".email33",this.Pass);
+			
 		},
 		tip4:function(){
 			this.tip(".email41");
 		},
 		confirm:function(){
-
+			this.main2(this.Confirm.val(),this.Pass.val(),".onCorrect4",".email42",".email43",this.Confirm);
+		},
+		tip5:function(){
+			this.tip(".email51");
+		},
+		check:function(){
+			this.main2(this.Check.val(),this.yzm.text(),".onCorrect5",".email52",".email53",this.Check);
 		},
 		tip:function(dom){
 			$(dom).css({
@@ -130,10 +75,16 @@ define(["jquery","cookie"],function(){
 				display:"none"
 			})
 		},
-		main:function(res,reg,dom1,dom2,dom3){
-			var res = res;
-			var reg = reg.replace(/^\"|\"$/g,'');	
-
+		main1:function(res,reg,dom1,dom2,dom3,dom4){
+			if(res == "") {
+				$(dom2).css({
+					display:"inline-block"
+				})
+				.siblings().css({
+					display:"none"
+				})
+				dom4.count = false;
+			}
 			if (reg.test(res)) {
 				$(dom1).css({
 					display:"inline-block"
@@ -141,21 +92,103 @@ define(["jquery","cookie"],function(){
 				.siblings().css({
 				display:"none"
 				})
-			}else if(res == ""){
-				$(dom2).css({
-					display:"inline-block"
-				})
-				.siblings().css({
-					display:"none"
-				})
-			}else{
+				dom4.count = true;
+			}
+			else if (!(reg.test(res))){
 				$(dom3).css({
 					display:"inline-block"
 				})
 				.siblings().css({
 					display:"none"
 				})
+				dom4.count = false;
 			}
+		},
+		main2:function(res,reg,dom1,dom2,dom3,dom4){
+			if(res == "") {
+				$(dom2).css({
+					display:"inline-block"
+				})
+				.siblings().css({
+					display:"none"
+				})
+				dom4.count = false;
+			}
+			if ((res == reg)) {
+				$(dom1).css({
+					display:"inline-block"
+				})
+				.siblings().css({
+				display:"none"
+				})
+				dom4.count = true;
+			}
+			else if (!(res == reg)){
+				$(dom3).css({
+					display:"inline-block"
+				})
+				.siblings().css({
+					display:"none"
+				})
+				dom4.count = false;
+			}
+		},
+		checkCode:function(){
+			// 获取随机4位验证码
+			var str = "abcdefghijklmnopqrstuvwxyz1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+			var res = "";
+			for(var i = 0 ; i < 4 ; i++){
+				res += str.charAt(Math.round(Math.random()*62));
+				this.yzm.html(res);
+			}
+			// 获取span中的value;
+			// console.log(this.yzm.text());
+
+		},
+		submit:function(event){
+			var evt = event || window.event;
+			var flag = true;
+			// 当所有验证都为true时提交页面进入登录页
+			for(var i = 0 ; i < this.resginter.length ; i++){
+				console.log(i,this.resginter[i].count)
+				if (!this.resginter[i].count) {
+					flag = false;
+					break;
+					}
+			}	
+			// 当为false时阻止页面提交
+				if (flag == false) {
+					evt.preventDefault();
+				}else{
+					// 并把注册的信息存入cookie
+					this.setCookie();
+				}
+			
+		},
+		setCookie:function(event){
+			var evt = event || window.event;
+			if ($.cookie(this.Phone.val())) {
+				// 判断是否账号是否存在
+				var scookie = $.cookie("logins");
+				var acookie = JSON.parse(scookie);
+				acookie.forEach(function(item){
+					if (item.id == this.Phone.val()) {
+						evt.preventDefault();
+						$(".email14").css({
+							display:"inline-block"
+						})
+						.siblings().css({
+							display:"none"
+						})
+					}
+				})
+
+			}else{
+				// 存入一个cookie
+				$.cookie("logins",'{"id":"'+this.Phone.val()+ '","user":"'+this.Pass.val()+'"}')
+				// let zh = '{"userphone":"'+userphone+'","password":"'+password+'"}';
+			}
+			
 		}
 
 	}
