@@ -134,7 +134,8 @@ table {
             z-index: 999;
             right: 7px;
             top: 9px;
-            cursor: pointer; }
+            cursor: pointer;
+            display: none; }
         #container .loginBox .login-right .cont-rightb .mt15 {
           margin-top: 15px; }
         #container .loginBox .login-right .cont-rightb .login-error-cont {

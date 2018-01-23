@@ -1,7 +1,8 @@
 // 业务逻辑模块
 require(["scripts/config.js"],function(){
-	require(["jquery","mini","supperbanner","pop","goodlist","shop","input","hot","require"],
-		function($,mini,banner,pop,goodlist,shop,input,hot){
+	require(["jquery","mini","supperbanner","pop","goodlist","shop",
+		"input","hot","place"],
+		function($,mini,banner,pop,goodlist,shop,input,hot,place){
 		$(".container").supperBanner({
 			src:[
 			"images/banner1.jpg",
@@ -17,8 +18,8 @@ require(["scripts/config.js"],function(){
 			autoplay:true,
 			movement_mode:"fade",
 		})
-
-		// mini.init();
+		//首页头部小功能集合
+		mini.init();
 		//console.log(pop);
 
 		$(".btn").on("click",function(){
@@ -34,6 +35,8 @@ require(["scripts/config.js"],function(){
 
 		// 人们推荐
 		hot.init();
+
+		// place.init();
 
 	})
 	

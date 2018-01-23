@@ -51,83 +51,57 @@ table {
 .w {
   width: 1190px; }
 
-#headTop, #headMiddle, #headFoot,
-#Header_search, #Banner, #Popular,
-#CityShow, #Hot_Tour, #clsaaity,
-#hotUp, #hidden-meun, #Foot {
-  background: #f5f5f5;
-  width: 100%; }
+body, h1, h3, h2, h4, h5, h6, p, dl, dd, ul, li, ol, td, form, input, fieldset, legend {
+  margin: 0;
+  padding: 0; }
 
-.h_top, .h_foot, .h_search, .nav,
-.banner, .recommend, .c_show, .hot-up,
-.h_tour, .meun, .foot {
-  width: 75rem;
-  margin-left: auto;
-  margin-right: auto; }
+li {
+  list-style: none; }
 
-.common_h3 {
-  color: #ba1414;
-  font-size: 16px;
-  font-family: Microsoft YaHei;
-  margin-bottom: 13px; }
-
-.conmon_dl {
-  text-align: center;
-  border-bottom: 1px dotted #B1B1B1;
-  padding-bottom: 10px;
+a {
+  text-decoration: none;
+  font-size: 12px;
   color: #4c4c4c; }
-  .conmon_dl .commondt_dt {
-    height: 131px; }
-  .conmon_dl .dis-title {
-    height: 42px;
-    overflow: hidden; }
-    .conmon_dl .dis-title:hover a {
-      color: #c11b1b; }
 
-.mt10 {
-  margin-top: 10px;
-  color: #4c4c4c; }
-  .mt10 li {
-    padding-left: 15px;
-    float: left;
-    margin-bottom: 5px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    width: 195px;
-    background: url(../images/sprite-iocn.png) no-repeat -5px -305px; }
-    .mt10 li:hover {
-      background: url(../images/sprite-iocn.png) no-repeat -5px -580px;
-      color: #ba1414; }
+body {
+  color: #4c4c4c;
+  background: #fff;
+  font: normal 12px/1.5 'arial', 'Tahoma','simsun','宋体'; }
 
-.com_dl_jsop {
-  width: 150px;
-  margin-right: 32px;
-  float: left;
-  text-align: center; }
+img {
+  display: block;
+  border: none; }
 
-.com_dt_jsop {
-  width: 150px;
-  height: 209px;
-  position: relative;
-  margin-bottom: 5px; }
+a, input {
+  outline: none; }
 
-.hot-product-list {
-  width: 65px;
-  height: 15px;
-  position: absolute;
-  left: 866px;
-  top: 24px; }
-  .hot-product-list li {
-    float: left;
-    width: 15px;
-    height: 15px;
-    margin-right: 4px;
-    background: url(../images/sprite-iocn.png) no-repeat 0 -269px; }
-    .hot-product-list li:hover {
-      background: url(../images/sprite-iocn.png) no-repeat 0 -291px; }
-  .hot-product-list .selected {
-    background: url(../images/sprite-iocn.png) no-repeat 0 -246px; }
+em, i {
+  font-style: normal; }
+
+b, strong, h1, h2, h3, h4, h5, h6 {
+  font-weight: normal; }
+
+.clear:after {
+  content: "";
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden; }
+
+table {
+  border-collapse: collapse; }
+
+.border0 {
+  border: none; }
+
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
+.w {
+  width: 1190px; }
 
 #headTop {
   background: #fbfbfb;
@@ -155,9 +129,9 @@ table {
       #headTop .h_top .login-info-my .my-yongle {
         padding-right: 26px;
         background: url(../images/sprite-iocn.png) no-repeat 52px -359px; }
-        #headTop .h_top .login-info-my .my-yongle:hover {
-          background: url(../images/sprite-iocn.png) no-repeat 52px -391px;
-          color: #cd0000; }
+      #headTop .h_top .login-info-my:hover .my-yongle {
+        background: url(../images/sprite-iocn.png) no-repeat 52px -391px;
+        color: #cd0000; }
       #headTop .h_top .login-info-my .bg {
         width: 78px;
         height: 27px;
@@ -440,7 +414,7 @@ table {
     .h_search .logoRight .index_city:hover .change-city-list {
       display: block; }
 
-.h_search #index-search {
+#index-search {
   float: left;
   top: 0;
   left: 110px;
@@ -448,14 +422,14 @@ table {
   height: 60px;
   margin-top: 28px;
   position: absolute; }
-  .h_search #index-search .search-main {
+  #index-search .search-main {
     background: url(../images/sprite-h-f.png) no-repeat;
     overflow: hidden;
     width: 411px;
     height: 34px;
     position: relative;
     z-index: 1; }
-    .h_search #index-search .search-main #search-text {
+    #index-search .search-main #search-text {
       width: 329px;
       height: 28px;
       border: 0;
@@ -468,21 +442,21 @@ table {
       display: inline-block;
       text-align: start;
       font: 400 13.3333px Arial; }
-  .h_search #index-search .search-hot-key {
+  #index-search .search-hot-key {
     padding-top: 5px; }
-    .h_search #index-search .search-hot-key a {
+    #index-search .search-hot-key a {
       margin-right: 6px;
       color: #a5a5a5; }
-      .h_search #index-search .search-hot-key a:hover {
+      #index-search .search-hot-key a:hover {
         color: #cc0001; }
 
-.h_search #quick-guide {
+#quick-guide {
   width: 223px;
   height: 68px;
   float: right;
   position: relative;
   right: 6px; }
-  .h_search #quick-guide .quick-arrow {
+  #quick-guide .quick-arrow {
     position: absolute;
     left: 205px;
     top: 33px;
@@ -490,22 +464,23 @@ table {
     height: 14px;
     z-index: 100;
     background: url(../images/sprite-iocn.png) no-repeat 0 -417px; }
-    .h_search #quick-guide .quick-arrow:hover {
+    #quick-guide .quick-arrow:hover {
       background: url(../images/sprite-iocn.png) no-repeat 0 -436px; }
-    .h_search #quick-guide .quick-arrow:hover ul {
+    #quick-guide .quick-arrow:hover ul {
       border: 1px #E0E0E0 solid;
       box-shadow: 1px 1px 1px #eee;
       margin-top: 7px;
       padding: 20px 15px 0 14px; }
-  .h_search #quick-guide ul {
+  #quick-guide ul {
     position: absolute;
-    background: none;
+    background: #fff;
     padding: 20px 15px 0;
     width: 193px;
-    margin-top: 8px; }
-    .h_search #quick-guide ul li {
+    margin-top: 8px;
+    z-index: 99; }
+    #quick-guide ul li {
       float: left; }
-      .h_search #quick-guide ul li a {
+      #quick-guide ul li a {
         width: 61px;
         height: 38px;
         overflow: hidden;
@@ -514,37 +489,37 @@ table {
         color: #999;
         padding-top: 37px;
         display: block; }
-        .h_search #quick-guide ul li a p {
+        #quick-guide ul li a p {
           margin-top: 2px; }
-      .h_search #quick-guide ul li .qg1a {
+      #quick-guide ul li .qg1a {
         background: url(../images/sprite-h-f1.png) no-repeat 10px -466px; }
-      .h_search #quick-guide ul li .qg2a {
+      #quick-guide ul li .qg2a {
         background: url(../images/sprite-h-f1.png) no-repeat 10px -638px; }
-      .h_search #quick-guide ul li .qg3a {
+      #quick-guide ul li .qg3a {
         background: url(../images/sprite-h-f1.png) no-repeat 10px -812px; }
-      .h_search #quick-guide ul li .qg4a {
+      #quick-guide ul li .qg4a {
         background: url(../images/sprite-h-f1.png) no-repeat 10px -987px; }
-      .h_search #quick-guide ul li .qg5a {
+      #quick-guide ul li .qg5a {
         background: url(../images/sprite-h-f1.png) no-repeat 10px -1159px; }
-      .h_search #quick-guide ul li:hover a {
+      #quick-guide ul li:hover a {
         color: #ff4747; }
-    .h_search #quick-guide ul .undb {
+    #quick-guide ul .undb {
       display: none; }
 
-.h_search .searchlist {
+.searchlist {
   position: absolute;
   width: 411px;
   top: 34px;
   z-index: 999;
   background: #fff;
   display: none; }
-  .h_search .searchlist li {
+  .searchlist li {
     height: 34px;
     line-height: 34px;
     padding: 0 8px; }
-    .h_search .searchlist li:hover {
+    .searchlist li:hover {
       background: pink; }
-  .h_search .searchlist .li_last {
+  .searchlist .li_last {
     text-align: right;
     border-top: 1px solid #ccc; }
 
@@ -570,6 +545,84 @@ table {
       #Nav .f14 li:hover {
         background: url(../images/sprite-h-f.png) no-repeat -338px -39px;
         overflow: hidden; }
+
+#headTop, #headMiddle, #headFoot,
+#Header_search, #Banner, #Popular,
+#CityShow, #Hot_Tour, #clsaaity,
+#hotUp, #hidden-meun, #Foot {
+  background: #f5f5f5;
+  width: 100%; }
+
+.h_top, .h_foot, .h_search, .nav,
+.banner, .recommend, .c_show, .hot-up,
+.h_tour, .meun, .foot {
+  width: 75rem;
+  margin-left: auto;
+  margin-right: auto; }
+
+.common_h3 {
+  color: #ba1414;
+  font-size: 16px;
+  font-family: Microsoft YaHei;
+  margin-bottom: 13px; }
+
+.conmon_dl {
+  text-align: center;
+  border-bottom: 1px dotted #B1B1B1;
+  padding-bottom: 10px;
+  color: #4c4c4c; }
+  .conmon_dl .commondt_dt {
+    height: 131px; }
+  .conmon_dl .dis-title {
+    height: 42px;
+    overflow: hidden; }
+    .conmon_dl .dis-title:hover a {
+      color: #c11b1b; }
+
+.mt10 {
+  margin-top: 10px;
+  color: #4c4c4c; }
+  .mt10 li {
+    padding-left: 15px;
+    float: left;
+    margin-bottom: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 195px;
+    background: url(../images/sprite-iocn.png) no-repeat -5px -305px; }
+    .mt10 li:hover {
+      background: url(../images/sprite-iocn.png) no-repeat -5px -580px;
+      color: #ba1414; }
+
+.com_dl_jsop {
+  width: 150px;
+  margin-right: 32px;
+  float: left;
+  text-align: center; }
+
+.com_dt_jsop {
+  width: 150px;
+  height: 209px;
+  position: relative;
+  margin-bottom: 5px; }
+
+.hot-product-list {
+  width: 65px;
+  height: 15px;
+  position: absolute;
+  left: 866px;
+  top: 24px; }
+  .hot-product-list li {
+    float: left;
+    width: 15px;
+    height: 15px;
+    margin-right: 4px;
+    background: url(../images/sprite-iocn.png) no-repeat 0 -269px; }
+    .hot-product-list li:hover {
+      background: url(../images/sprite-iocn.png) no-repeat 0 -291px; }
+  .hot-product-list .selected {
+    background: url(../images/sprite-iocn.png) no-repeat 0 -246px; }
 
 #Banner {
   height: 360px;
@@ -1593,7 +1646,8 @@ table {
   right: 10px;
   z-index: 1000000;
   width: 96px;
-  width: 30px; }
+  width: 30px;
+  display: none; }
   .float-navgation li {
     width: 34px;
     height: 38px;
