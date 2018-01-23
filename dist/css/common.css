@@ -410,7 +410,7 @@ table {
     top: 33px;
     width: 13px;
     height: 14px;
-    z-index: 100;
+    z-index: 900;
     background: url(../images/sprite-iocn.png) no-repeat 0 -417px; }
     #quick-guide .quick-arrow:hover {
       background: url(../images/sprite-iocn.png) no-repeat 0 -436px; }

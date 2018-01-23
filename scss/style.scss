@@ -8,8 +8,8 @@
 // 公共部分
 
 // 宽度100%部分
-#headTop,#headMiddle,#headFoot,
-#Header_search,#Banner,#Popular,
+
+#Banner,#Popular,
 #CityShow,#Hot_Tour,#clsaaity,
 #hotUp,#hidden-meun,#Foot{
     background:$bg;
@@ -79,11 +79,12 @@
         margin-bottom: 5px;
     }
 
-    // 选项卡
-    .hot-product-list{
+    // 选项卡1
+    .hot-product-list,.choice-btn{
         width: 65px;
         height: 15px;
         position: absolute;
+        z-index:99;
         left: 866px;
         top: 24px;
         li{
@@ -102,6 +103,10 @@
        
         }
 	
+    // 选项卡1
+    
+
+
 
 // ----------------------Banner------------------
 #Banner{
@@ -494,17 +499,35 @@
                     dt{
                         img{width:100%;height:100%;}
                     }
-                    .hsfh{
+                    .title-main{
+                       width:100%;
+                       overflow:hidden;
+                       text-overflow:ellipsis;
+                       -webkit-line-clamp:2;
+                       -webkit-box-orient:vertical;
+                       display:-webkit-box;
+                       height:42px;
+                       a{
+                        line-height:21px;
+                        display:inline-block;
+                       } 
+                    }
+                    dd{
+                            color: #a5a5a5;
+                        .hsfh{
                             color: #cb0101;
                             font-size: 12px !important;
                             overflow:hidden;
                         }
-                    .price{
-                        font-size: 16px;
-                        color: #cc0000;
-                        font-weight: bold;
-                        font-family: "Tahoma";
+                        .price{
+                            font-size: 16px;
+                            color: #cc0000;
+                            font-weight: bold;
+                            font-family: "Tahoma";
                         }
+
+                    }
+                    
                 }
             }
         }
@@ -521,7 +544,17 @@
         position: relative;
         left: 10px;
         overflow: hidden;
-        .hot-product-list{
+        .choice{
+            position:relative;
+            dl{
+                position:absolute;
+                display:none;            }
+        }
+        .mt10{
+            
+            li{line-height:20px;}
+        }
+        .choice-btn{
             position:absolute;
             top: 20px;
             left: 160px;
@@ -766,7 +799,8 @@
         float: right;
         position: relative;
         // ul 部分
-        .classsity-ul{
+        .classsity-ul1,.classsity-ul2,.classsity-ul3,
+        .classsity-ul4,.classsity-ul5,.classsity-ul6,{
             position: absolute;
             width: 35px;
             height: 245px;
@@ -802,16 +836,16 @@
                     color:#ba1414;
                 }
             }
-            .t1 {
+            .t1,.t4,.t7,.t10,.t12,.t14{
                 position: relative;
             }
-            .t2{
+            .t2,.t5,.t8,.t11,.t13{
                 position: relative;
                 z-index: 2000;
                 top: -6px;
                 
             }
-            .t3{
+            .t3,.t6,.t9{
                 position: relative;
                 top: -6px;
             }
@@ -1089,7 +1123,7 @@
     overflow: hidden;
     border: 1px solid #d5d5d5;
     padding: 20px;
-    display: block;
+    display: none;
     width:1159px;
     .link_hot {
         padding-bottom: 5px;
@@ -1246,11 +1280,12 @@
                 margin: 0;
             }
         }
+        
+        }
         .cur1 {
                 background: #EF3E53;
                 color: #fff;
             }
-        }
     .topbtn {
         display: block;
         width: 26px;

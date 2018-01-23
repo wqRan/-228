@@ -15,7 +15,7 @@
 			<!-- 左边 -->
 			<p>Hi，欢迎来永乐！
 				<span class="collect">添加收藏</a> </span>
-				<span class="top_login_reg"> [ <a href="###" id="top-login-btn" rel="nofollow">登录</a>&nbsp;<a href="###" id="top-regist-btn" target="_blank" rel="nofollow">注册</a>] </span>
+				<span class="top_login_reg"> [ <a href="http://localhost:88/login.html" id="top-login-btn" rel="nofollow">登录</a>&nbsp;<a href="http://localhost:88/resgiter.html" id="top-regist-btn" target="_blank" rel="nofollow">注册</a>] </span>
 			</p>
 			<div class="login-info-my">
 		  		<a href="#javaScript" class="my-yongle" rel="nofollow">
@@ -222,7 +222,9 @@
 			</div>		
 		</div>
 		<!-- 积分商城 -->
-		<div id="quick-guide"> 
+		<div id="quick-guide" > 
+			<!-- <div style="border:1px solid #ccc; height: 170px;width: 230px; position: relative; z-index:99; top:10px;background: #fff; ">
+			 -->
 			<a href="#" name="__AD_quickarrow" class="quick-arrow"></a>
 			<ul class="ul_wrap">				
 				<li><a href="javascript:;" class="qg1a"><p>积分商城</p></a></li>
@@ -232,7 +234,9 @@
 					<p>新闻资讯</p></a></li>
 				<li class="undb"><a href="javascript:;" class="qg5a">
 					<p>场馆库</p>	</a></li>
-			</ul></div>					
+			</ul>
+		<!-- </div> -->
+		</div>					
 	</div>
 </div>
 <!-- 。。。。。。。。。。。。nav。。。。。。。。。。。 -->
@@ -398,7 +402,7 @@
 			</div>
 			<!-- 选项卡 -->
 			<div class="hot-product">
-				<ul class="hot-product-list ui-tab">
+				<ul class="hot-product-list">
 					<li></li>
 					<li></li>
 					<li></li>
@@ -438,7 +442,7 @@
 		<!-- left -->
 		<div class="showLeft">
 			<!-- 导航 -->
-			<ul class="city-list-uls lazyClickUl ui-tab">
+			<ul class="city-list-uls lazyClickUl">
 				<li><a class="selected" href="javascript:;">北京</a></li>
 				<li><a href="javascript:;">上海</a></li>
 				<li><a href="javascript:;">深圳</a></li>
@@ -465,20 +469,20 @@
 			</div>
 			<!-- 列表项 -->
 			<div class="total">
-				<p>目前北京共有演出项目431个，进入 <a class="lans" href="//www.228.com.cn/bj/" title="北京站">[ 北京站 ]</a>
+				<p>目前北京共有演出项目431个，进入 <a class="lans" href="Commodity-details.html" title="北京站">[ 北京站 ]</a>
 				</p>
 				<div class="city-product-list">
-					<dl class="com_dl_jsop">
+					<!-- <dl class="com_dl_jsop">
 						<dt class="com_dt_jsop" >
 							<a href="" title="加拿大太阳马戏《KOOZA》巡演北京站">
 								<img src="images/hotpic1.jpg" >
 							</a>
 						</dt>
-						<dd>
+						<dd class="title-main">
 							<a href=""  title="加拿大太阳马戏《KOOZA》巡演北京站">加拿大太阳马戏《KOOZA》巡演北京站</a>
 						</dd>
 						<dd><span class="hsfh">¥</span> <span class="price">280</span> 起</dd>
-					</dl>
+					</dl> -->
 				</div>
 			</div>
 		</div>
@@ -486,17 +490,27 @@
 		<div class="showRight">
 			<div class="h3_warp">
 					<h3 class="common_h3">即将开票/预定</h3>
-					<ul class="hot-product-list ui-tab">
+					<ul class="choice-btn">
 						<li></li>
 						<li></li>
 						<li></li>
 					</ul>
 			</div>
-				
-				<dl class="conmon_dl">
-					<dt class="commondt_dt"><img src="images/bannerright1.jpg" title="世界经典原版音乐剧《猫》"></dt>
+
+			<div class="choice-show clear">
+				<dl class="conmon_dl clear" style="display: block;">
+					<dt class="commondt_dt"><img src="images/bannerright2.jpg" title="音术"></dt>
+					<dd class="dis-title"><a href="javascript:;">[北京]音术</a></dd>
+				</dl>
+				<dl class="conmon_dl clear" style="display:none;">
+					<dt class="commondt_dt"><img src="images/bannerright3.jpg" title="世界经典原版音乐剧《猫》"></dt>
 					<dd class="dis-title"><a href="javascript:;">世界经典原版音乐剧《猫》</a></dd>
 				</dl>
+				<dl class="conmon_dl clear" style="display:none;">
+					<dt class="commondt_dt"><img src="images/bannerright4.jpg" title="[杭州]汪峰杭州音乐会"></dt>
+					<dd class="dis-title"><a href="javascript:;">[杭州]汪峰杭州音乐会</a></dd>
+				</dl>
+			</div>				
 				<ul class="mt10">
 					<li>[北京] 2017-2018中国职业男子篮球联赛（CBA）北京首钢VS吉林</li>
 					<li>[深圳] 2017-2018中国女子排球超级联赛广东深圳赛区（ 广东恒大VS天津）！</li>
@@ -582,19 +596,19 @@
 		</dl>
 		<!-- three -->
 		<div class="classsity">
-			<ul class="classsity-ul">
-				<li class="t1" id="liuxing">
+			<ul class="classsity-ul1">
+				<li class="t1">
 					<a href="javascript:void(0);" class="selecte-a"><h3>流行</h3></a>
 				</li>
-				<li class="t2" id="yaogun">
+				<li class="t2">
 					<a href="javascript:void(0);" ><h3>摇滚</h3></a>
 				</li>
-				<li class="t3" id="minzu">
+				<li class="t3">
 					<a href="javascript:void(0);" ><h3>日韩</h3></a>
 				</li>
 			</ul>
 			<div class="classsity-cont">
-				<div class="classsity-nav-show" id="liuxinglist">
+				<div class="classsity-nav-show1" id="liuxinglist">
 					<dl>
 						<dt>
 						<a href="javascript:;" title="纪念邓丽君逝世23周年“今夜想起你”经典金曲-梁竹上海演唱会">
@@ -646,7 +660,7 @@
 
 <!-- 。。。。。。。。。。。分类：话剧舞台剧。。。。。。。。。。-->
 <div id="clsaaity">
-<div class="channel play item" id="concert">
+<div class="channel play item " id="drama">
 	<!-- left -->
 	<div class="channel-main">
 		<!-- one -->
@@ -658,7 +672,7 @@
 		<dl class="focus">
 			<dt>
 				<a href="javascript:;" title="谭咏麟银河岁月 40 载中国巡回演唱会">
-				<img src="images/concert1.jpg" alt="">
+				<img src="images/hotpic9.jpg" alt="">
 				</a>
 			</dt>
 			<dd>
@@ -667,19 +681,19 @@
 		</dl>
 		<!-- three -->
 		<div class="classsity">
-			<ul class="classsity-ul">
-				<li class="t1" id="liuxing">
+			<ul class="classsity-ul2">
+				<li class="t4">
 					<a href="javascript:void(0);" class="selecte-a"><h3>话剧</h3></a>
 				</li>
-				<li class="t2" id="yaogun">
+				<li class="t5">
 					<a href="javascript:void(0);" ><h3>歌剧</h3></a>
 				</li>
-				<li class="t3" id="minzu">
+				<li class="t6">
 					<a href="javascript:void(0);" ><h3>音乐剧</h3></a>
 				</li>
 			</ul>
 			<div class="classsity-cont">
-				<div class="classsity-nav-show" id="liuxinglist">
+				<div class="classsity-nav-show2" id="liuxinglist">
 					<dl>
 						<dt>
 						<a href="javascript:;" title="纪念邓丽君逝世23周年“今夜想起你”经典金曲-梁竹上海演唱会">
@@ -704,7 +718,7 @@
 		<dl class="tc">
 			<dt>
 				<a href="javascript:;" title="2017-2018朴树“好好地ii”中国巡回演唱会-重庆站">
-				<img src="images/concert2.jpg" alt="2017-2018朴树“好好地ii”中国巡回演唱会-重庆站" >
+				<img src="images/hotpic7.jpg" alt="2017-2018朴树“好好地ii”中国巡回演唱会-重庆站" >
 				<span class="no1"></span></a>			
 			</dt>
 			<dd>
@@ -731,7 +745,7 @@
 
 <!-- 。。。。。。。。。。。分类：音乐&舞蹈。。。。。。。。。。-->
 <div id="clsaaity">
-<div class="channel music item" id="concert">
+<div class="channel music item " id="dance">
 	<!-- left -->
 	<div class="channel-main">
 		<!-- one -->
@@ -743,7 +757,7 @@
 		<dl class="focus">
 			<dt>
 				<a href="javascript:;" title="谭咏麟银河岁月 40 载中国巡回演唱会">
-				<img src="images/concert1.jpg" alt="">
+				<img src="images/hotpic13.jpg" alt="">
 				</a>
 			</dt>
 			<dd>
@@ -752,19 +766,19 @@
 		</dl>
 		<!-- three -->
 		<div class="classsity">
-			<ul class="classsity-ul">
-				<li class="t1" id="liuxing">
-					<a href="javascript:void(0);" class="selecte-a"><h3>话剧</h3></a>
+			<ul class="classsity-ul3">
+				<li class="t7">
+					<a href="javascript:void(0);" class="selecte-a"><h3>音乐会</h3></a>
 				</li>
-				<li class="t2" id="yaogun">
-					<a href="javascript:void(0);" ><h3>歌剧</h3></a>
+				<li class="t8">
+					<a href="javascript:void(0);" ><h3>芭蕾舞</h3></a>
 				</li>
-				<li class="t3" id="minzu">
-					<a href="javascript:void(0);" ><h3>音乐剧</h3></a>
+				<li class="t9">
+					<a href="javascript:void(0);" ><h3>现代舞</h3></a>
 				</li>
 			</ul>
 			<div class="classsity-cont">
-				<div class="classsity-nav-show" id="liuxinglist">
+				<div class="classsity-nav-show3" id="liuxinglist">
 					<dl>
 						<dt>
 						<a href="javascript:;" title="纪念邓丽君逝世23周年“今夜想起你”经典金曲-梁竹上海演唱会">
@@ -789,7 +803,7 @@
 		<dl class="tc">
 			<dt>
 				<a href="javascript:;" title="2017-2018朴树“好好地ii”中国巡回演唱会-重庆站">
-				<img src="images/concert2.jpg" alt="2017-2018朴树“好好地ii”中国巡回演唱会-重庆站" >
+				<img src="images/countryshow1.jpg" alt="2017-2018朴树“好好地ii”中国巡回演唱会-重庆站" >
 				<span class="no1"></span></a>			
 			</dt>
 			<dd>
@@ -816,7 +830,7 @@
 
 <!-- 。。。。。。。。。。。分类：戏曲综艺。。。。。。。。。。-->
 <div id="clsaaity">
-<div class="channel opera item" id="concert">
+<div class="channel opera item " id="xiqu">
 	<!-- left -->
 	<div class="channel-main">
 		<!-- one -->
@@ -828,7 +842,7 @@
 		<dl class="focus">
 			<dt>
 				<a href="javascript:;" title="谭咏麟银河岁月 40 载中国巡回演唱会">
-				<img src="images/concert1.jpg" alt="">
+				<img src="images/citypic9.jpg" alt="">
 				</a>
 			</dt>
 			<dd>
@@ -837,19 +851,16 @@
 		</dl>
 		<!-- three -->
 		<div class="classsity">
-			<ul class="classsity-ul">
-				<li class="t1" id="liuxing">
-					<a href="javascript:void(0);" class="selecte-a"><h3>话剧</h3></a>
+			<ul class="classsity-ul4">
+				<li class="t10">
+					<a href="javascript:void(0);" class="selecte-a"><h3>相声综艺</h3></a>
 				</li>
-				<li class="t2" id="yaogun">
-					<a href="javascript:void(0);" ><h3>歌剧</h3></a>
-				</li>
-				<li class="t3" id="minzu">
-					<a href="javascript:void(0);" ><h3>音乐剧</h3></a>
+				<li class="t11">
+					<a href="javascript:void(0);" ><h3>名家明唱</h3></a>
 				</li>
 			</ul>
 			<div class="classsity-cont">
-				<div class="classsity-nav-show" id="liuxinglist">
+				<div class="classsity-nav-show4" id="liuxinglist">
 					<dl>
 						<dt>
 						<a href="javascript:;" title="纪念邓丽君逝世23周年“今夜想起你”经典金曲-梁竹上海演唱会">
@@ -874,7 +885,7 @@
 		<dl class="tc">
 			<dt>
 				<a href="javascript:;" title="2017-2018朴树“好好地ii”中国巡回演唱会-重庆站">
-				<img src="images/concert2.jpg" alt="2017-2018朴树“好好地ii”中国巡回演唱会-重庆站" >
+				<img src="images/countryshow3.jpg" alt="2017-2018朴树“好好地ii”中国巡回演唱会-重庆站" >
 				<span class="no1"></span></a>			
 			</dt>
 			<dd>
@@ -901,7 +912,7 @@
 
 <!-- 。。。。。。。。。分类：儿童亲子。。。。。。。。。。-->
 <div id="clsaaity">
-<div class="channel children item" id="concert">
+<div class="channel children item " id="child">
 	<!-- left -->
 	<div class="channel-main">
 		<!-- one -->
@@ -913,7 +924,7 @@
 		<dl class="focus">
 			<dt>
 				<a href="javascript:;" title="谭咏麟银河岁月 40 载中国巡回演唱会">
-				<img src="images/concert1.jpg" alt="">
+				<img src="images/citypic10.jpg" alt="">
 				</a>
 			</dt>
 			<dd>
@@ -922,23 +933,20 @@
 		</dl>
 		<!-- three -->
 		<div class="classsity">
-			<ul class="classsity-ul">
-				<li class="t1" id="liuxing">
-					<a href="javascript:void(0);" class="selecte-a"><h3>话剧</h3></a>
+			<ul class="classsity-ul5">
+				<li class="t12">
+					<a href="javascript:void(0);" class="selecte-a"><h3>儿童剧</h3></a>
 				</li>
-				<li class="t2" id="yaogun">
-					<a href="javascript:void(0);" ><h3>歌剧</h3></a>
-				</li>
-				<li class="t3" id="minzu">
-					<a href="javascript:void(0);" ><h3>音乐剧</h3></a>
+				<li class="t13">
+					<a href="javascript:void(0);" ><h3>儿童活动</h3></a>
 				</li>
 			</ul>
 			<div class="classsity-cont">
-				<div class="classsity-nav-show" id="liuxinglist">
+				<div class="classsity-nav-show5" id="liuxinglist">
 					<dl>
 						<dt>
 						<a href="javascript:;" title="纪念邓丽君逝世23周年“今夜想起你”经典金曲-梁竹上海演唱会">
-						<img src="images/concert3.jpg"  alt=""></a>
+						<img src="images/citypic2.jpg"  alt=""></a>
 						</dt>
 						<dd class="title"><a href="javascript:;" javascript:;" title="纪念邓丽君逝世23周年" >
 						[上海] 纪念邓丽君逝世23周年 "今夜想起你"经典金曲-梁竹上海演唱会</a></dd>
@@ -959,7 +967,7 @@
 		<dl class="tc">
 			<dt>
 				<a href="javascript:;" title="2017-2018朴树“好好地ii”中国巡回演唱会-重庆站">
-				<img src="images/concert2.jpg" alt="2017-2018朴树“好好地ii”中国巡回演唱会-重庆站" >
+				<img src="images/countryshow5.jpg" alt="2017-2018朴树“好好地ii”中国巡回演唱会-重庆站" >
 				<span class="no1"></span></a>			
 			</dt>
 			<dd>
@@ -986,7 +994,7 @@
 
 <!-- 。。。。。。分类：体育赛事。。。。。。。。。-->
 <div id="clsaaity">
-<div class="channel pe item" id="concert">
+<div class="channel pe item " id="sport">
 	<!-- left -->
 	<div class="channel-main">
 		<!-- one -->
@@ -998,7 +1006,7 @@
 		<dl class="focus">
 			<dt>
 				<a href="javascript:;" title="谭咏麟银河岁月 40 载中国巡回演唱会">
-				<img src="images/concert1.jpg" alt="">
+				<img src="images/hotpic14.jpg" alt="">
 				</a>
 			</dt>
 			<dd>
@@ -1007,19 +1015,14 @@
 		</dl>
 		<!-- three -->
 		<div class="classsity">
-			<ul class="classsity-ul">
-				<li class="t1" id="liuxing">
-					<a href="javascript:void(0);" class="selecte-a"><h3>话剧</h3></a>
+			<ul class="classsity-ul6">
+				<li class="t14">
+					<a href="javascript:void(0);" class="selecte-a"><h3>竞技体育</h3></a>
 				</li>
-				<li class="t2" id="yaogun">
-					<a href="javascript:void(0);" ><h3>歌剧</h3></a>
-				</li>
-				<li class="t3" id="minzu">
-					<a href="javascript:void(0);" ><h3>音乐剧</h3></a>
-				</li>
+				
 			</ul>
 			<div class="classsity-cont">
-				<div class="classsity-nav-show" id="liuxinglist">
+				<div class="classsity-nav-show6">
 					<dl>
 						<dt>
 						<a href="javascript:;" title="纪念邓丽君逝世23周年“今夜想起你”经典金曲-梁竹上海演唱会">
@@ -1044,7 +1047,7 @@
 		<dl class="tc">
 			<dt>
 				<a href="javascript:;" title="2017-2018朴树“好好地ii”中国巡回演唱会-重庆站">
-				<img src="images/concert2.jpg" alt="2017-2018朴树“好好地ii”中国巡回演唱会-重庆站" >
+				<img src="images/countryshow4.jpg" alt="2017-2018朴树“好好地ii”中国巡回演唱会-重庆站" >
 				<span class="no1"></span></a>			
 			</dt>
 			<dd>
@@ -1068,7 +1071,7 @@
 	</div>
 </div>
 </div>
-<!-- 。。。。。。。。。热门推荐。。。。。。。。。-->
+<!-- 。。。。。。。热门推荐导航。。。。。。。。-->
 <div id="hotUp">
 	<div class="hot-up">
 		<a href="javascript:;" class="g-20 hot-recomd pt20">
@@ -1203,8 +1206,8 @@
 </div>
 <!-- 。。。。。。。。。楼梯。。。。。。。。。-->
 <div class="float-navgation" id="float1">
-	<ul>
-		<li><a href="#stars-x" class="cur1"><p>热门</p><p>巡演</p></a></li>
+	<ul class="stairs">
+		<li><a href="#Hot_Tour"><p>热门</p><p>巡演</p></a></li>
 		<li><a href="#concert"><p>演唱</p><p>会</p></a></li>
 		<li><a href="#drama"><p>话剧</p><p>舞剧</p></a></li>
 		<li><a href="#dance"><p>音乐</p><p>舞蹈</p></a></li>

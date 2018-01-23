@@ -462,7 +462,7 @@ table {
     top: 33px;
     width: 13px;
     height: 14px;
-    z-index: 100;
+    z-index: 900;
     background: url(../images/sprite-iocn.png) no-repeat 0 -417px; }
     #quick-guide .quick-arrow:hover {
       background: url(../images/sprite-iocn.png) no-repeat 0 -436px; }
@@ -674,10 +674,11 @@ table {
   margin: 0 auto 10px auto;
   padding: 20px;
   color: #4c4c4c; }
-  #Container .main .clearfloat .main h1 {
+  #Container .main .clearfloat h1 {
     margin-bottom: 20px;
     font: bold 18px/33px 'Microsoft YaHei','simsun';
-    color: #4c4c4c; }
+    color: #4c4c4c;
+    font-weight: bold; }
   #Container .main .clearfloat .f1 {
     float: left; }
   #Container .main .clearfloat .red {
@@ -738,3 +739,168 @@ table {
         background-position: 0 -468px; }
       #Container .main .main-l .mt10 a:nth-of-type(5) {
         background-position: 0 -2444px; }
+  #Container .main .main-r {
+    float: left;
+    width: 645px;
+    padding-left: 18px; }
+    #Container .main .main-r .pro-info {
+      line-height: 28px;
+      padding-left: 10px;
+      padding-bottom: 15px; }
+      #Container .main .main-r .pro-info label {
+        float: left;
+        padding-right: 5px;
+        color: #a5a5a5; }
+      #Container .main .main-r .pro-info .fl {
+        float: left; }
+      #Container .main .main-r .pro-info .clearfix {
+        display: inline-block; }
+      #Container .main .main-r .pro-info .pro-infob {
+        margin-top: -5px; }
+      #Container .main .main-r .pro-info .pro-own {
+        float: left;
+        width: 450px; }
+        #Container .main .main-r .pro-info .pro-own s {
+          float: left;
+          width: 16px;
+          height: 16px;
+          margin-top: 5px;
+          margin-right: 3px;
+          background: url(../images/pro-common.png) no-repeat; }
+        #Container .main .main-r .pro-info .pro-own s:nth-of-type(1) {
+          background-position: -380px -40px; }
+        #Container .main .main-r .pro-info .pro-own s:nth-of-type(2) {
+          background-position: -380px -80px; }
+        #Container .main .main-r .pro-info .pro-own s:nth-of-type(3) {
+          background-position: -380px -60px; }
+        #Container .main .main-r .pro-info .pro-own s:nth-of-type(4) {
+          background-position: -380px -100px; }
+        #Container .main .main-r .pro-info .pro-own a {
+          float: left;
+          padding-right: 16px; }
+    #Container .main .main-r .favor {
+      margin-top: 25px;
+      position: relative;
+      width: 641px;
+      height: auto;
+      margin-bottom: 15px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      border: 2px solid #ffcc00;
+      background-color: #fefbe8; }
+      #Container .main .main-r .favor ul {
+        width: 560px;
+        line-height: 23px;
+        margin-left: 10px;
+        color: #cc0001; }
+    #Container .main .main-r #wenhuiLogin .price-line {
+      border-top: 1px solid #ebebeb; }
+    #Container .main .main-r #wenhuiLogin .discount-container {
+      line-height: 24px;
+      padding: 12px 0 12px 10px; }
+    #Container .main .main-r #wenhuiLogin .discount-container, #Container .main .main-r #wenhuiLogin .discount-content {
+      float: left;
+      margin-left: 24px; }
+      #Container .main .main-r #wenhuiLogin .discount-container .discount-label, #Container .main .main-r #wenhuiLogin .discount-content .discount-label {
+        float: left;
+        color: #a5a5a5; }
+      #Container .main .main-r #wenhuiLogin .discount-container .content-left, #Container .main .main-r #wenhuiLogin .discount-content .content-left {
+        float: left;
+        width: 3px;
+        height: 26px;
+        background: #fff url(../images/coupon-pro.png) no-repeat 0 0; }
+      #Container .main .main-r #wenhuiLogin .discount-container .content-center, #Container .main .main-r #wenhuiLogin .discount-content .content-center {
+        float: left;
+        width: 178px;
+        height: 24px;
+        text-align: center;
+        border-top: 1px solid #cb0000;
+        border-bottom: 1px solid #cb0000;
+        background-color: #ffdedf;
+        color: #cd2020; }
+      #Container .main .main-r #wenhuiLogin .discount-container .content-right, #Container .main .main-r #wenhuiLogin .discount-content .content-right {
+        float: left;
+        width: 3px;
+        height: 26px;
+        background: #fff url(../images/coupon-pro.png) no-repeat 0 -44px; }
+    #Container .main .main-r .price-line {
+      border-top: 1px solid #ebebeb; }
+    #Container .main .main-r .dateAll .date {
+      margin-top: 20px;
+      padding-left: 10px;
+      padding-bottom: 5px; }
+      #Container .main .main-r .dateAll .date label {
+        float: left;
+        display: inline-block;
+        width: 75px;
+        margin-top: 18px; }
+      #Container .main .main-r .dateAll .date .date-ul {
+        float: left;
+        width: 550px;
+        height: 92px; }
+        #Container .main .main-r .dateAll .date .date-ul li {
+          float: left;
+          width: 98px;
+          height: 37px;
+          overflow: hidden;
+          margin-right: 5px;
+          margin-top: 5px;
+          padding-left: 5px;
+          padding-top: 2px;
+          border: 1px solid #e5e5e5;
+          color: #666;
+          background-color: #fff;
+          cursor: pointer;
+          line-height: 18px; }
+          #Container .main .main-r .dateAll .date .date-ul li .red {
+            color: #cc0001;
+            font-weight: bold; }
+    #Container .main .main-r .cq-more {
+      width: 545px;
+      margin-left: 85px;
+      margin-bottom: 20px;
+      border-top: 1px solid #e5e5e5; }
+      #Container .main .main-r .cq-more .btn-cq-com {
+        width: 99px;
+        height: 24px;
+        margin: 0 auto;
+        display: block;
+        overflow: hidden;
+        background: url(../images/pro-common.png) no-repeat -160px -140px; }
+    #Container .main .main-r .price {
+      margin-top: 5px;
+      margin-top: 20px;
+      padding-left: 10px;
+      padding-bottom: 5px; }
+      #Container .main .main-r .price label {
+        float: left;
+        display: inline-block;
+        width: 75px;
+        margin-top: 18px;
+        color: #a5a5a5; }
+      #Container .main .main-r .price .date-ul {
+        float: left;
+        width: 550px; }
+        #Container .main .main-r .price .date-ul li {
+          float: left;
+          text-align: center;
+          line-height: 40px;
+          width: 100px;
+          height: 40px;
+          border: 1px solid #a5a5a5;
+          margin-right: 5px;
+          margin-bottom: 5px; }
+          #Container .main .main-r .price .date-ul li:hover {
+            background-color: #f6f6f6;
+            border: 1px solid #cd1414; }
+    #Container .main .main-r .buyBtn {
+      margin-top: 25px;
+      margin-left: 85px; }
+      #Container .main .main-r .buyBtn .buy {
+        float: left;
+        margin-right: 10px;
+        width: 121px;
+        height: 40px;
+        display: block;
+        overflow: hidden;
+        background: url(../images/pro-common.png) no-repeat -140px 0; }

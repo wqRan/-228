@@ -1,9 +1,10 @@
 require(["scripts/config.js"],function(){
 	require(["jquery","mini",
-		"input"],function($,mini,input){
+		"input","hot"],function($,mini,input,hot){
 
 			mini.init();
 			input.init();
+			hot.init();
 		})
 		
 })

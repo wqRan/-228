@@ -28,6 +28,7 @@ define(["jquery","cookie"],function($,cookie){
 			this.Check.on("focus",$.proxy(this.tip5,this));
 			this.Check.on("blur",$.proxy(this.check,this));
 			this.yzm = $(".regisiter-yzm");
+			this.yzm.on("click",$.proxy(this.checkCode,this));
 			this.checkCode();
 			// 设置一个标志
 			this.Submit = $("#registsubmit");

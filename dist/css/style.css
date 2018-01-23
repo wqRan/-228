@@ -462,7 +462,7 @@ table {
     top: 33px;
     width: 13px;
     height: 14px;
-    z-index: 100;
+    z-index: 900;
     background: url(../images/sprite-iocn.png) no-repeat 0 -417px; }
     #quick-guide .quick-arrow:hover {
       background: url(../images/sprite-iocn.png) no-repeat 0 -436px; }
@@ -546,8 +546,7 @@ table {
         background: url(../images/sprite-h-f.png) no-repeat -338px -39px;
         overflow: hidden; }
 
-#headTop, #headMiddle, #headFoot,
-#Header_search, #Banner, #Popular,
+#Banner, #Popular,
 #CityShow, #Hot_Tour, #clsaaity,
 #hotUp, #hidden-meun, #Foot {
   background: #f5f5f5;
@@ -607,21 +606,22 @@ table {
   position: relative;
   margin-bottom: 5px; }
 
-.hot-product-list {
+.hot-product-list, .choice-btn {
   width: 65px;
   height: 15px;
   position: absolute;
+  z-index: 99;
   left: 866px;
   top: 24px; }
-  .hot-product-list li {
+  .hot-product-list li, .choice-btn li {
     float: left;
     width: 15px;
     height: 15px;
     margin-right: 4px;
     background: url(../images/sprite-iocn.png) no-repeat 0 -269px; }
-    .hot-product-list li:hover {
+    .hot-product-list li:hover, .choice-btn li:hover {
       background: url(../images/sprite-iocn.png) no-repeat 0 -291px; }
-  .hot-product-list .selected {
+  .hot-product-list .selected, .choice-btn .selected {
     background: url(../images/sprite-iocn.png) no-repeat 0 -246px; }
 
 #Banner {
@@ -961,15 +961,28 @@ table {
         .c_show .showLeft .total .city-product-list dl dt img {
           width: 100%;
           height: 100%; }
-        .c_show .showLeft .total .city-product-list dl .hsfh {
-          color: #cb0101;
-          font-size: 12px !important;
-          overflow: hidden; }
-        .c_show .showLeft .total .city-product-list dl .price {
-          font-size: 16px;
-          color: #cc0000;
-          font-weight: bold;
-          font-family: "Tahoma"; }
+        .c_show .showLeft .total .city-product-list dl .title-main {
+          width: 100%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          display: -webkit-box;
+          height: 42px; }
+          .c_show .showLeft .total .city-product-list dl .title-main a {
+            line-height: 21px;
+            display: inline-block; }
+        .c_show .showLeft .total .city-product-list dl dd {
+          color: #a5a5a5; }
+          .c_show .showLeft .total .city-product-list dl dd .hsfh {
+            color: #cb0101;
+            font-size: 12px !important;
+            overflow: hidden; }
+          .c_show .showLeft .total .city-product-list dl dd .price {
+            font-size: 16px;
+            color: #cc0000;
+            font-weight: bold;
+            font-family: "Tahoma"; }
   .c_show .showRight {
     width: 210px;
     height: 362px;
@@ -981,7 +994,14 @@ table {
     position: relative;
     left: 10px;
     overflow: hidden; }
-    .c_show .showRight .hot-product-list {
+    .c_show .showRight .choice {
+      position: relative; }
+      .c_show .showRight .choice dl {
+        position: absolute;
+        display: none; }
+    .c_show .showRight .mt10 li {
+      line-height: 20px; }
+    .c_show .showRight .choice-btn {
       position: absolute;
       top: 20px;
       left: 160px; }
@@ -1275,14 +1295,16 @@ table {
   height: 391px;
   float: right;
   position: relative; }
-  .classsity .classsity-ul {
+  .classsity .classsity-ul1, .classsity .classsity-ul2, .classsity .classsity-ul3,
+  .classsity .classsity-ul4, .classsity .classsity-ul5, .classsity .classsity-ul6 {
     position: absolute;
     width: 35px;
     height: 245px;
     left: 1px;
     top: 0;
     z-index: 1; }
-    .classsity .classsity-ul li a {
+    .classsity .classsity-ul1 li a, .classsity .classsity-ul2 li a, .classsity .classsity-ul3 li a,
+    .classsity .classsity-ul4 li a, .classsity .classsity-ul5 li a, .classsity .classsity-ul6 li a {
       width: 15px;
       height: 75px;
       display: block;
@@ -1296,24 +1318,41 @@ table {
       position: relative;
       padding-top: 10px;
       background: url(../images/sprite-button-8.png) -40px -315px; }
-      .classsity .classsity-ul li a h3 {
+      .classsity .classsity-ul1 li a h3, .classsity .classsity-ul2 li a h3, .classsity .classsity-ul3 li a h3,
+      .classsity .classsity-ul4 li a h3, .classsity .classsity-ul5 li a h3, .classsity .classsity-ul6 li a h3 {
         font-size: 16px; }
-    .classsity .classsity-ul li .selecte-a {
+    .classsity .classsity-ul1 li .selecte-a, .classsity .classsity-ul2 li .selecte-a, .classsity .classsity-ul3 li .selecte-a,
+    .classsity .classsity-ul4 li .selecte-a, .classsity .classsity-ul5 li .selecte-a, .classsity .classsity-ul6 li .selecte-a {
       z-index: 1000;
       color: #ba1414;
       position: relative;
       text-decoration: none;
       background: url(../images/sprite-button-8.png) 0 -210px; }
-    .classsity .classsity-ul li:hover a {
+    .classsity .classsity-ul1 li:hover a, .classsity .classsity-ul2 li:hover a, .classsity .classsity-ul3 li:hover a,
+    .classsity .classsity-ul4 li:hover a, .classsity .classsity-ul5 li:hover a, .classsity .classsity-ul6 li:hover a {
       background: url(../images/sprite-button-8.png) 0 -210px;
       color: #ba1414; }
-    .classsity .classsity-ul .t1 {
+    .classsity .classsity-ul1 .t1, .classsity .classsity-ul1 .t4, .classsity .classsity-ul1 .t7, .classsity .classsity-ul1 .t10, .classsity .classsity-ul1 .t12, .classsity .classsity-ul1 .t14, .classsity .classsity-ul2 .t1, .classsity .classsity-ul2 .t4, .classsity .classsity-ul2 .t7, .classsity .classsity-ul2 .t10, .classsity .classsity-ul2 .t12, .classsity .classsity-ul2 .t14, .classsity .classsity-ul3 .t1, .classsity .classsity-ul3 .t4, .classsity .classsity-ul3 .t7, .classsity .classsity-ul3 .t10, .classsity .classsity-ul3 .t12, .classsity .classsity-ul3 .t14,
+    .classsity .classsity-ul4 .t1,
+    .classsity .classsity-ul4 .t4,
+    .classsity .classsity-ul4 .t7,
+    .classsity .classsity-ul4 .t10,
+    .classsity .classsity-ul4 .t12,
+    .classsity .classsity-ul4 .t14, .classsity .classsity-ul5 .t1, .classsity .classsity-ul5 .t4, .classsity .classsity-ul5 .t7, .classsity .classsity-ul5 .t10, .classsity .classsity-ul5 .t12, .classsity .classsity-ul5 .t14, .classsity .classsity-ul6 .t1, .classsity .classsity-ul6 .t4, .classsity .classsity-ul6 .t7, .classsity .classsity-ul6 .t10, .classsity .classsity-ul6 .t12, .classsity .classsity-ul6 .t14 {
       position: relative; }
-    .classsity .classsity-ul .t2 {
+    .classsity .classsity-ul1 .t2, .classsity .classsity-ul1 .t5, .classsity .classsity-ul1 .t8, .classsity .classsity-ul1 .t11, .classsity .classsity-ul1 .t13, .classsity .classsity-ul2 .t2, .classsity .classsity-ul2 .t5, .classsity .classsity-ul2 .t8, .classsity .classsity-ul2 .t11, .classsity .classsity-ul2 .t13, .classsity .classsity-ul3 .t2, .classsity .classsity-ul3 .t5, .classsity .classsity-ul3 .t8, .classsity .classsity-ul3 .t11, .classsity .classsity-ul3 .t13,
+    .classsity .classsity-ul4 .t2,
+    .classsity .classsity-ul4 .t5,
+    .classsity .classsity-ul4 .t8,
+    .classsity .classsity-ul4 .t11,
+    .classsity .classsity-ul4 .t13, .classsity .classsity-ul5 .t2, .classsity .classsity-ul5 .t5, .classsity .classsity-ul5 .t8, .classsity .classsity-ul5 .t11, .classsity .classsity-ul5 .t13, .classsity .classsity-ul6 .t2, .classsity .classsity-ul6 .t5, .classsity .classsity-ul6 .t8, .classsity .classsity-ul6 .t11, .classsity .classsity-ul6 .t13 {
       position: relative;
       z-index: 2000;
       top: -6px; }
-    .classsity .classsity-ul .t3 {
+    .classsity .classsity-ul1 .t3, .classsity .classsity-ul1 .t6, .classsity .classsity-ul1 .t9, .classsity .classsity-ul2 .t3, .classsity .classsity-ul2 .t6, .classsity .classsity-ul2 .t9, .classsity .classsity-ul3 .t3, .classsity .classsity-ul3 .t6, .classsity .classsity-ul3 .t9,
+    .classsity .classsity-ul4 .t3,
+    .classsity .classsity-ul4 .t6,
+    .classsity .classsity-ul4 .t9, .classsity .classsity-ul5 .t3, .classsity .classsity-ul5 .t6, .classsity .classsity-ul5 .t9, .classsity .classsity-ul6 .t3, .classsity .classsity-ul6 .t6, .classsity .classsity-ul6 .t9 {
       position: relative;
       top: -6px; }
   .classsity .classsity-cont {
@@ -1541,7 +1580,7 @@ table {
   overflow: hidden;
   border: 1px solid #d5d5d5;
   padding: 20px;
-  display: block;
+  display: none;
   width: 1159px; }
   .hot-city .link_hot {
     padding-bottom: 5px;
@@ -1662,9 +1701,9 @@ table {
       .float-navgation li a p {
         line-height: 14px;
         margin: 0; }
-    .float-navgation li .cur1 {
-      background: #EF3E53;
-      color: #fff; }
+  .float-navgation .cur1 {
+    background: #EF3E53;
+    color: #fff; }
   .float-navgation .topbtn {
     display: block;
     width: 26px;

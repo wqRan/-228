@@ -3,7 +3,7 @@
 @import "mixin";
 
 #headTop{
-	background: #fbfbfb;
+	background:#fbfbfb;
 	height:pxToRem(30px);
 	border-bottom: 1px solid #e0e0e0;
 	.h_top{
@@ -445,7 +445,7 @@
     		top: 33px;
     		width: 13px;
     		height: 14px;
-    		z-index: 100;
+    		z-index: 900;
     		background:url(../images/sprite-iocn.png) no-repeat 0 -417px;
     		&:hover{
     			background:url(../images/sprite-iocn.png) no-repeat 0 -436px;   		

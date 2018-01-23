@@ -12,6 +12,12 @@ requirejs.config({
 		"hot":"scripts/hotRecommend",
 		"resgiter":"scripts/resgiterMain",
 		"login":"scripts/loginMain",
-		"place":"scripts/placeName"
+		"place":"scripts/placeName",
+		"hotCity":"scripts/hotCity",
+		"choice":"scripts/choiceBtn",
+		"classtify":"scripts/classtify",
+		"getDetails":"scripts/getDetails",
+		"details":"scripts/details"
+
 	}
 })

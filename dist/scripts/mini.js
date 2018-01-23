@@ -10,8 +10,18 @@ define(["jquery"],function(){
 			this.arrow.on("mouseover",$.proxy(this.show,this))
 			this.arrow.on("mouseout",$.proxy(this.hide,this))
 
+			// 最底部热门推荐点击时隐藏的菜单显示
+			$(".hot-recomd-i").on("click",$.proxy(this.meunshow,this))
+			$(document).on("click",$.proxy(this.meunhide,this))
+
 			this.cancel();
 			this.headfoot();
+			this.stair();
+
+			$(window).on("scroll",$.proxy(this.scrolltop,this))
+			$("#clsaaity").offset()
+			this.$stairs = $(".stairs").children();
+
 		},
 		//点击按钮使top中部 消失
 		cancel:function(){
@@ -29,10 +39,8 @@ define(["jquery"],function(){
 			$(".undb").css({
 				display:"block"
 			})
-			.parent().css({
-        		border:"1px solid #ccc"
-			})
-
+			// .parent().css({
+			// })		
 		},
 		// 鼠标移开使积分商城消失
 		hide:function(){
@@ -42,6 +50,13 @@ define(["jquery"],function(){
 			.parent().css({
         		border:"none"
 			})
+		},
+		meunshow:function(){
+			$(".hot-city").css({display:"block"})
+			event.stopPropagation();
+		},
+		meunhide:function(){
+			$(".hot-city").css({display:"none"})			
 		},
 		// 点击按钮使图片放大和缩小
 		headfoot:function(){
@@ -61,10 +76,7 @@ define(["jquery"],function(){
 				// 由于延时器为异步操作，所以把每一步分开写，等延时器执行完后判断其类名
 				_this.changClassOn();
 				_this.changClassOff();
-			},3000)
-
-			
-					
+			},3000)			
 			
 		},
 		// 为按钮添加类名 pullc-on
@@ -102,7 +114,58 @@ define(["jquery"],function(){
 				_this.changClassOn();
 				})
 			}
+		},
+		scrolltop:function(){
+			// 两种方法获取scrollTop值
+			// this.scrollTop =document.documentElement.scrollTop || document.body.scrollTop;
+			this.scrollTop = $(document).scrollTop();
+			// console.log(this.scrollTop);
+			var _this = this;
+			setTimeout(function(){
+				if (_this.scrollTop > 450 ) {
+					$(".float-navgation").css({
+						display:"block"
+					})
+				}else{
+					$(".float-navgation").css({
+						display:"none"
+					})
+				}
+				// if (_this.scrollTop > $("#clsaaity").offset().top ){
+				// 	this.$stairs.eq(1).addClass("cur1")
+				// }
+
+			},500)
+		},
+		stair:function(){
+			this.$stairs = $(".stairs").children();
+			// console.log(this.$stairs.length)
+			for(var i = 0 ; i < this.$stairs.length ; i++){
+				this.$stairs[i].index = i;
+				this.$stairs.eq(i).on("click",$.proxy(this.stairsChange,this))
+			}
+
+
+		},
+		stairsChange:function(event){
+			var evt = event || window.event;
+			this.index = $(evt.delegateTarget).index();
+			this.$stairs.eq(this.index).addClass("cur1")
+			.siblings()
+			.removeClass("cur1")
+			.end()
+			.find("a").css({color:"#fff"})
+			.end()
+			.siblings().find("a").css({color:"#000"})
+
 		}
+
+						
+			
+		
+		
+
+
 	}
 
 	return new Mini();

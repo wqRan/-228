@@ -4,91 +4,106 @@
 	"href":"javascript:;",
 	"title":"2018年罗大佑",
 	"src":"images/hotpic3.jpg",
-	"main":"2018年罗大佑“当年离家的年轻人”巡回演唱会深圳..."
+	"main":"2018年罗大佑“当年离家的年轻人”巡回演唱会深圳...",
+	"id":"1"
 	},
 	{
 	"href":"javascript:;",
 	"title":"金玟岐2018",
 	"src":"images/hotpic4.jpg",
-	"main":"金玟岐2018“大七电台”全国巡回演唱会-济南站"
+	"main":"金玟岐2018“大七电台”全国巡回演唱会-济南站",
+	"id":"2"
 	},
 	{
 	"href":"javascript:;",
 	"title":"五月天 LIFE [ 人生无限公司 ] 世界巡回演唱会-沈阳站 2018 MAYDAY LIFE TOUR",
 	"src":"images/hotpic9.jpg",
-	"main":"五月天 LIFE [ 人生无限公司 ] 世界巡回演唱..."
+	"main":"五月天 LIFE [ 人生无限公司 ] 世界巡回演唱...",
+	"id":"3"
 	},
 	{
 	"href":"javascript:;",
 	"title":"谭咏麟银河岁月40载中国巡回演唱会2018-揭阳站",
 	"src":"images/hotpic12.jpg",
-	"main":"谭咏麟银河岁月40载中国巡回演唱会2018-揭阳站"
+	"main":"谭咏麟银河岁月40载中国巡回演唱会2018-揭阳站",
+	"id":"4"
 	},
 	{
 	"href":"javascript:;",
 	"title":"爱尔兰踢踏舞《大河之舞》(Riverdance)经典纪念版巡演·广州站",
 	"src":"images/hotpic14.jpg",
-	"main":"爱尔兰踢踏舞《大河之舞》(Riverdance)经典纪念..."
+	"main":"爱尔兰踢踏舞《大河之舞》(Riverdance)经典纪念...",
+	"id":"5"
 	},
 	{
 	"href":"javascript:;",
 	"title":"加拿大太阳马戏《KOOZA》巡演北京站",
 	"src":"images/hotpic1.jpg",
-	"main":"加拿大太阳马戏《KOOZA》巡演北京站"
+	"main":"加拿大太阳马戏《KOOZA》巡演北京站",
+	"id":"6"
 	},
 	{
 	"href":"javascript:;",
 	"title":"John Legend 2018年中国巡回演唱会--深圳站",
 	"src":"images/hotpic15.jpg",
-	"main":"John Legend 2018年中国巡回演唱会--深圳站"
+	"main":"John Legend 2018年中国巡回演唱会--深圳站",
+	"id":"7"
 	},
 	{
 	"href":"javascript:;",
 	"title":"音术",
 	"src":"images/hotpic8.jpg",
-	"main":"音术"
+	"main":"音术",
+	"id":"8"
 	},
 	{
 	"href":"javascript:;",
 	"title":"郭德纲•德云社新春相声专场",
 	"src":"images/hotpic10.jpg",
-	"main":"郭德纲•德云社新春相声专场"
+	"main":"郭德纲•德云社新春相声专场",
+	"id":"9"
 	},
 	{
 	"href":"javascript:;",
 	"title":"2017-2018朴树",
 	"src":"images/hotpic13.jpg",
-	"main":"2017-2018朴树“好好地II”中国巡回演唱会-重庆..."
+	"main":"2017-2018朴树“好好地II”中国巡回演唱会-重庆...",
+	"id":"10"
 	},
 	{
 	"href":"javascript:;",
 	"title":"《全职高手》官方舞台剧【杭州站】荣耀第八赛季全明星赛",
 	"src":"images/hotpic2.jpg",
-	"main":"《全职高手》官方舞台剧【杭州站】荣耀第八赛季全明星赛"
+	"main":"《全职高手》官方舞台剧【杭州站】荣耀第八赛季全明星赛",
+	"id":"11"
 	},
 	{
 	"href":"javascript:;",
 	"title":"“丝路狂想”马克西姆2018跨界钢琴演奏会·天津站",
 	"src":"images/hotpic6.jpg",
-	"main":"“丝路狂想”马克西姆2018跨界钢琴演奏会·天津站"
+	"main":"“丝路狂想”马克西姆2018跨界钢琴演奏会·天津站",
+	"id":"12"
 	},
 	{
 	"href":"javascript:;",
 	"title":"世界经典原版音乐剧《猫》(CATS)北京站",
 	"src":"images/hotpic7.jpg",
-	"main":"世界经典原版音乐剧《猫》(CATS)北京站"
+	"main":"世界经典原版音乐剧《猫》(CATS)北京站",
+	"id":"13"
 	},
 	{
 	"href":"javascript:;",
 	"title":"2018 FORMULA 1中国大奖赛",
 	"src":"images/hotpic11.jpg",
-	"main":"2018 FORMULA 1中国大奖赛"
+	"main":"2018 FORMULA 1中国大奖赛",
+	"id":"14"
 	},
 	{
 	"href":"javascript:;",
 	"title":"2018新春版朝阳公园大马戏",
 	"src":"images/hotpic5.jpg",
-	"main":"2018新春版朝阳公园大马戏"
+	"main":"2018新春版朝阳公园大马戏",
+	"id":"15"
 	}
 
 ],
@@ -97,7 +112,240 @@
 	{
 	"src":"images/hotpic1.jpg",
 	"main":"加拿大太阳马戏《KOOZA》巡演北京站",
-	"price":"280"
+	"price":"280",
+	"local":"工人体育场",
+	"time":"2018-01-23",
+	"id":"16"
+	},
+	{
+	"src":"images/citypic2.jpg",
+	"main":"东野圭吾奇幻温情巨作：话剧《解忧杂货店》北京...",
+	"price":"200",
+	"local":"话剧中心",
+	"time":"2018-02-18",
+	"id":"17"
+	},
+	{
+	"src":"images/citypic3.jpg",
+	"main":"世界悲剧经典 演绎忠义千秋 -昆剧《赵氏孤儿》首演",
+	"price":"180",
+	"local":"朝阳剧院",
+	"time":"2018-01-28",
+	"id":"18"
+	},
+	{
+	"src":"images/citypic4.jpg",
+	"main":"曹云金鸡年封箱相声专场",
+	"price":"180",
+	"local":"朝阳相声专场",
+	"time":"2018-02-22",
+	"id":"19"
+	},
+	{
+	"src":"images/hotpic5.jpg",
+	"main":"2018新春版朝阳公园大马戏",
+	"price":"100",
+	"local":"朝阳公园",
+	"time":"2018-03-22",
+	"id":"20"
+	},
+	{
+	"src":"images/citypic6.jpg",
+	"main":"玩库亲子科学互动黑光剧《漫游太阳系The solar system》",
+	"price":"280",
+	"local":"国家科技中心",
+	"time":"2018-02-12",
+	"id":"21"
+	},
+	{
+	"src":"images/citypic7.jpg",
+	"main":"华艺星空 一生所爱 浪漫金曲N－STAR乐团情人节音乐会",
+	"price":"80",
+	"local":"国家大剧院",
+	"time":"2018-02-28",
+	"id":"22"
+	},
+	{
+	"src":"images/citypic8.jpg",
+	"main":"百老汇原版摇滚音乐剧《吉屋出租》(RENT)二十周年巡演-上海站",
+	"price":"80",
+	"local":"上海剧院",
+	"time":"2018-02-14",
+	"id":"23"
+	},
+	{
+	"src":"images/citypic9.jpg",
+	"main":"上海歌舞团2018舞剧·舞蹈演出季：舞剧《朱鹮》",
+	"price":"80",
+	"local":"黄龙剧场",
+	"time":"2018-02-15",
+	"id":"24"
+	},
+	{
+	"src":"images/citypic10.jpg",
+	"main":"弗拉门戈舞剧白金版《卡门》",
+	"price":"100",
+	"local":"国家大剧院公园",
+	"time":"2018-01-25",
+	"id":"25"
+	},
+	{
+	"href":"javascript:;",
+	"title":"2018年罗大佑",
+	"src":"images/hotpic3.jpg",
+	"main":"2018年罗大佑“当年离家的年轻人”巡回演唱会深圳...",
+	"price":"380",
+	"local":"深圳工人体育场",
+	"time":"2018-02-02",
+	"id":"26"
+	},
+	{
+	"href":"javascript:;",
+	"title":"金玟岐2018",
+	"src":"images/hotpic4.jpg",
+	"main":"金玟岐2018“大七电台”全国巡回演唱会-济南站",
+	"price":"180",
+	"local":"济南工人体育场",
+	"time":"2018-03-22",
+	"id":"27"
+	},
+	{
+	"href":"javascript:;",
+	"title":"五月天 LIFE [ 人生无限公司 ] 世界巡回演唱会-沈阳站 2018 MAYDAY LIFE TOUR",
+	"src":"images/hotpic9.jpg",
+	"main":"五月天 LIFE [ 人生无限公司 ] 世界巡回演唱...",
+	"price":"380",
+	"local":"沈阳奥体",
+	"time":"2018-02-05",
+	"id":"28"
+	},
+	{
+	"href":"javascript:;",
+	"title":"谭咏麟银河岁月40载中国巡回演唱会2018-揭阳站",
+	"src":"images/hotpic12.jpg",
+	"main":"谭咏麟银河岁月40载中国巡回演唱会2018-揭阳站",
+	"price":"480",
+	"local":"揭阳体育馆",
+	"time":"2018-04-22",
+	"id":"29"
+	},
+	{
+	"href":"javascript:;",
+	"title":"爱尔兰踢踏舞《大河之舞》(Riverdance)经典纪念版巡演·广州站",
+	"src":"images/hotpic14.jpg",
+	"main":"爱尔兰踢踏舞《大河之舞》(Riverdance)经典纪念...",
+	"price":"200",
+	"local":"人民剧场",
+	"time":"2018-01-30",
+	"id":"30"
+	},
+	{
+	"href":"javascript:;",
+	"title":"加拿大太阳马戏《KOOZA》巡演北京站",
+	"src":"images/hotpic1.jpg",
+	"main":"加拿大太阳马戏《KOOZA》巡演北京站",
+	"price":"320",
+	"local":"北京剧场",
+	"time":"2018-02-19",
+	"id":"31"
+	},
+	{
+	"href":"javascript:;",
+	"title":"John Legend 2018年中国巡回演唱会--深圳站",
+	"src":"images/hotpic15.jpg",
+	"main":"John Legend 2018年中国巡回演唱会--深圳站",
+	"price":"480",
+	"local":"深圳体育馆",
+	"time":"2018-04-08",
+	"id":"31"
+	},
+	{
+	"href":"javascript:;",
+	"title":"音术",
+	"src":"images/hotpic8.jpg",
+	"main":"音术",
+	"price":"180",
+	"local":"798艺术区",
+	"time":"2018-03-16",
+	"id":"32"
+	},
+	{
+	"href":"javascript:;",
+	"title":"郭德纲•德云社新春相声专场",
+	"src":"images/hotpic10.jpg",
+	"main":"郭德纲•德云社新春相声专场",
+	"price":"250",
+	"local":"德云社",
+	"time":"2018-02-09",
+	"id":"33"
+	},
+	{
+	"href":"javascript:;",
+	"title":"2017-2018朴树",
+	"src":"images/hotpic13.jpg",
+	"main":"2017-2018朴树“好好地II”中国巡回演唱会-重庆...",
+	"price":"380",
+	"local":"重庆工人体育场",
+	"time":"2018-03-22",
+	"id":"34"
+	},
+	{
+	"href":"javascript:;",
+	"title":"《全职高手》官方舞台剧【杭州站】荣耀第八赛季全明星赛",
+	"src":"images/hotpic2.jpg",
+	"main":"《全职高手》官方舞台剧【杭州站】荣耀第八赛季全明星赛",
+	"price":"260",
+	"local":"杭州剧场",
+	"time":"2018-04-13",
+	"id":"35"
+	},
+	{
+	"href":"javascript:;",
+	"title":"“丝路狂想”马克西姆2018跨界钢琴演奏会·天津站",
+	"src":"images/hotpic6.jpg",
+	"main":"“丝路狂想”马克西姆2018跨界钢琴演奏会·天津站",
+	"price":"440",
+	"local":"天津奥体",
+	"time":"2018-04-03",
+	"id":"36"
+	},
+	{
+	"href":"javascript:;",
+	"title":"世界经典原版音乐剧《猫》(CATS)北京站",
+	"src":"images/hotpic7.jpg",
+	"main":"世界经典原版音乐剧《猫》(CATS)北京站",
+	"price":"120",
+	"local":"北京剧院",
+	"time":"2018-01-29",
+	"id":"37"
+	},
+	{
+	"href":"javascript:;",
+	"title":"2018 FORMULA 1中国大奖赛",
+	"src":"images/hotpic11.jpg",
+	"main":"2018 FORMULA 1中国大奖赛"
+	,"price":"200",
+	"local":"朝阳公园",
+	"time":"2018-03-22",
+	"id":"38"
+	},
+	{
+	"href":"javascript:;",
+	"title":"2018新春版朝阳公园大马戏",
+	"src":"images/hotpic5.jpg",
+	"main":"2018新春版朝阳公园大马戏",
+	"price":"180",
+	"local":"朝阳公园",
+	"time":"2018-03-22",
+	"id":"39"
+	},
+	{
+	"src":"images/hotpic1.jpg",
+	"main":"加拿大太阳马戏《KOOZA》巡演北京站",
+	"price":"280",
+	"local":"朝阳公园",
+	"time":"2018-03-22",
+	"id":"40"
 	},
 	{
 	"src":"images/citypic2.jpg",
@@ -143,6 +391,111 @@
 	"src":"images/citypic10.jpg",
 	"main":"弗拉门戈舞剧白金版《卡门》",
 	"price":"100"
+	},
+	{
+	"href":"javascript:;",
+	"title":"2018年罗大佑",
+	"src":"images/hotpic3.jpg",
+	"main":"2018年罗大佑“当年离家的年轻人”巡回演唱会深圳...",
+	"price":"380"
+	},
+	{
+	"href":"javascript:;",
+	"title":"金玟岐2018",
+	"src":"images/hotpic4.jpg",
+	"main":"金玟岐2018“大七电台”全国巡回演唱会-济南站",
+	"price":"180"
+	},
+	{
+	"href":"javascript:;",
+	"title":"五月天 LIFE [ 人生无限公司 ] 世界巡回演唱会-沈阳站 2018 MAYDAY LIFE TOUR",
+	"src":"images/hotpic9.jpg",
+	"main":"五月天 LIFE [ 人生无限公司 ] 世界巡回演唱...",
+	"price":"380"
+	},
+	{
+	"href":"javascript:;",
+	"title":"谭咏麟银河岁月40载中国巡回演唱会2018-揭阳站",
+	"src":"images/hotpic12.jpg",
+	"main":"谭咏麟银河岁月40载中国巡回演唱会2018-揭阳站",
+	"price":"480"
+	},
+	{
+	"href":"javascript:;",
+	"title":"爱尔兰踢踏舞《大河之舞》(Riverdance)经典纪念版巡演·广州站",
+	"src":"images/hotpic14.jpg",
+	"main":"爱尔兰踢踏舞《大河之舞》(Riverdance)经典纪念...",
+	"price":"200"
+	},
+	{
+	"href":"javascript:;",
+	"title":"加拿大太阳马戏《KOOZA》巡演北京站",
+	"src":"images/hotpic1.jpg",
+	"main":"加拿大太阳马戏《KOOZA》巡演北京站",
+	"price":"320"
+	},
+	{
+	"href":"javascript:;",
+	"title":"John Legend 2018年中国巡回演唱会--深圳站",
+	"src":"images/hotpic15.jpg",
+	"main":"John Legend 2018年中国巡回演唱会--深圳站",
+	"price":"480"
+	},
+	{
+	"href":"javascript:;",
+	"title":"音术",
+	"src":"images/hotpic8.jpg",
+	"main":"音术",
+	"price":"180"
+	},
+	{
+	"href":"javascript:;",
+	"title":"郭德纲•德云社新春相声专场",
+	"src":"images/hotpic10.jpg",
+	"main":"郭德纲•德云社新春相声专场",
+	"price":"250"
+	},
+	{
+	"href":"javascript:;",
+	"title":"2017-2018朴树",
+	"src":"images/hotpic13.jpg",
+	"main":"2017-2018朴树“好好地II”中国巡回演唱会-重庆...",
+	"price":"380"
+	},
+	{
+	"href":"javascript:;",
+	"title":"《全职高手》官方舞台剧【杭州站】荣耀第八赛季全明星赛",
+	"src":"images/hotpic2.jpg",
+	"main":"《全职高手》官方舞台剧【杭州站】荣耀第八赛季全明星赛",
+	"price":"260"
+	},
+	{
+	"href":"javascript:;",
+	"title":"“丝路狂想”马克西姆2018跨界钢琴演奏会·天津站",
+	"src":"images/hotpic6.jpg",
+	"main":"“丝路狂想”马克西姆2018跨界钢琴演奏会·天津站",
+	"price":"440"
+	},
+	{
+	"href":"javascript:;",
+	"title":"世界经典原版音乐剧《猫》(CATS)北京站",
+	"src":"images/hotpic7.jpg",
+	"main":"世界经典原版音乐剧《猫》(CATS)北京站",
+	"price":"120"
+	},
+	{
+	"href":"javascript:;",
+	"title":"2018 FORMULA 1中国大奖赛",
+	"src":"images/hotpic11.jpg",
+	"main":"2018 FORMULA 1中国大奖赛"
+	,"price":"200"
+	},
+	{
+	"href":"javascript:;",
+	"title":"2018新春版朝阳公园大马戏",
+	"src":"images/hotpic5.jpg",
+	"main":"2018新春版朝阳公园大马戏",
+	"price":"180"
 	}
 ]
 ]

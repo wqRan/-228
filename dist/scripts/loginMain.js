@@ -17,21 +17,31 @@ define(["jquery","cookie"],function($,cookie){
 			var id = this.user.val();
 			var mima = this.pass.val();
 			// 先获取cookie
-			var acookie = $.cookie("logins");
-			var scookie = JSON.parse(acookie);
 			var flag = false;
-			// 判断用户输入的值和cookie是否相等
-			if (scookie.id == id && scookie.user == mima) {
-				flag = true;
-			}else {
-				$(".login-cont-rightb-close").css({display:"inline-block"})				
-			}		
-			console.log(flag);
-			
-			// 如果不相等，阻止页面跳转
-			if (flag == false ) {
+			if($.cookie("logins")) {
+				var acookie = $.cookie("logins");
+				var scookie = JSON.parse(acookie);
+				if (scookie.id == id && scookie.user == mima) {
+					flag = true;
+				}else {
+					$(".login-cont-rightb-close").css({display:"inline-block"});
+					evt.preventDefault();
+					// flag = false;				
+				}
+					// 如果不相等，阻止页面跳转
+					if (flag == false && !id && !mima) {
+						evt.preventDefault();
+					}
+
+			}else{
 				evt.preventDefault();
-			}
+			}			
+			
+			// 判断用户输入的值和cookie是否相等
+			
+			// console.log(flag);
+			
+			
 				
 		}
 
