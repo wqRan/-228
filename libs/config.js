@@ -3,10 +3,7 @@ requirejs.config({
 	paths:{
 		"jquery":"scripts/jquery-3.2.1",		
 		"cookie":"scripts/jquery.cookie",
-		"supperbanner":"scripts/jquery.supperBanner",
 		"pop":"scripts/pop",
-		// "goodlist":"scripts/goodList",
-		// "shop":"scripts/shoppingcart",
 		"mini":"scripts/mini",
 		"input":"scripts/inputSearch",
 		"hot":"scripts/hotRecommend",
@@ -18,7 +15,9 @@ requirejs.config({
 		"classtify":"scripts/classtify",
 		"getDetails":"scripts/getDetails",
 		"commodityHtml":"scripts/commodityHtml",
-		"shopping":"scripts/shopping"
+		"shopping":"scripts/shopping",
+		"Magnifier":"scripts/Magnifier",
+		"myBanner":"scripts/myBanner"
 
 	}
 })

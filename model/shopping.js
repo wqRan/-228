@@ -1,4 +1,4 @@
-// 将首页点击的产品的信息保存为cookie
+// 将商品详情页（Commodi-details.html）点击的产品的信息保存为cookie
 define(["jquery","cookie"],function(){
 	function shoppingCart(){
 
@@ -32,22 +32,25 @@ define(["jquery","cookie"],function(){
 			this.$more.on("click",$.proxy(this.big,this));
 
 			this.useCookie();
+			this.getNews();
 			
 		},
+		// 获取选择的场次时间
 		saveDate:function(event){
 			var evt = event || window.event;
 			var index = evt.target.index;
 			this.$time = this.$date.eq(index).text();
-			console.log(this.$time);
+			onsole.log(this.$time);
 			this.haveCookie();
 		},
+		// 获取选择的票价
 		saveMoney:function(event){
 			var evt = event || window.event;
 			var index = evt.target.index;
 			this.$price = this.$money.eq(index).text();
-			console.log(this.$price);
 			this.haveCookie();
 		},
+		// 设置购买门票最少的数量
 		small:function(){
 			this.$num = $(".yl-order").val();
 			this.$end = --this.$num
@@ -57,6 +60,7 @@ define(["jquery","cookie"],function(){
 			}
 			$(".yl-order").val(this.$end)
 		},
+		// 设置购买门票最多的数量
 		big:function(){
 			this.$num = $(".yl-order").val();
 			this.$end = ++this.$num
@@ -65,12 +69,14 @@ define(["jquery","cookie"],function(){
 			}
 			$(".yl-order").val(this.$end)
 		},
+		// 获取即将保存的cookie信息
 		haveCookie:function(){
 			this.$endTime = $(".relt-1");
 			this.$endTime.html(this.$time);
 			this.$endPrice = $(".relt-2");
 			this.$endPrice.html(this.$price);
 		},
+		// 将获取的信息保存至cookie
 		setCookie:function(event){
 			var evt = event || window.event
 			this.title = this.$img.attr("title");
@@ -91,7 +97,7 @@ define(["jquery","cookie"],function(){
 							flag = true;
 						}
 					})
-					if (!false) {
+					if (!flag) {
 						var item = {
 							id:this.id,
 							title:this.title,
@@ -119,7 +125,7 @@ define(["jquery","cookie"],function(){
 			if ($.cookie("shopping_cart")) {
 				var html = "";
 				var acookie = JSON.parse($.cookie("shopping_cart"))
-				console.log(acookie);
+				// console.log(acookie);
 				acookie.forEach(function(name){
 					$(name).each(function(index,item){
 						var add = item.num * item.price
@@ -146,6 +152,10 @@ define(["jquery","cookie"],function(){
 
 			}
 
+		},
+		getNews:function(){
+			this.$name = $("#doorUserName").val();
+			console.log(this.$name)
 		}
 
 	}

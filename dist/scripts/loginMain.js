@@ -23,17 +23,20 @@ define(["jquery","cookie"],function($,cookie){
 				var scookie = JSON.parse(acookie);
 				if (scookie.id == id && scookie.user == mima) {
 					flag = true;
+					$(".tips").css({display:"none"});
 				}else {
-					$(".login-cont-rightb-close").css({display:"inline-block"});
+					$(".tips").css({display:"inline-block"});					
 					evt.preventDefault();
 					// flag = false;				
 				}
 					// 如果不相等，阻止页面跳转
-					if (flag == false && !id && !mima) {
+					if (flag == false && id =="" && mima == "") {
 						evt.preventDefault();
+						$(".tips").css({display:"inline-block"});
 					}
 
 			}else{
+				$(".tips").css({display:"inline-block"});
 				evt.preventDefault();
 			}			
 			

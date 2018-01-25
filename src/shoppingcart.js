@@ -6,7 +6,7 @@ require(["scripts/config.js"],function(){
 		
 		input.init();
 		shopping.init();
-		$(".submit").on("click",function(){
+		$(".submit").on("click",function(event){
 			pop.init();
 		})
 	})

@@ -114,6 +114,11 @@
 				.login-error-cont {
 				    width: 220px;
 				    margin-top: 10px;
+				    .tips{
+				    	color:#cd1414;
+				    	font-weight:bold;
+				    	display:none;
+				    }
 				    .fr {
 					    float: right;
 					    color: #3399cc;

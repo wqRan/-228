@@ -9,10 +9,15 @@ function Tabs(select_btn,select_show){
 			this.$btn = $(select_btn);
 			this.$show = $(select_show);
 			this.index = 0;
+			this.$parent = this.$btn.parent();
 			// 为按钮绑定事件
 			this.$btn.on("click",$.proxy(this.change,this))
+			// 鼠标移动暂停播放
+			this.$parent.on("mouseover",$.proxy(this.stop,this))
+			// 鼠标移除自动播放
+			this.$parent.on("mouseout",$.proxy(this.go_on,this))
 			// 自动播放功能
-			setInterval( $.proxy(this.autoplay,this),2000)
+			this.timer = setInterval( $.proxy(this.autoplay,this),2300)
 		},
 		autoplay:function(){
 			// 循环按钮下标
@@ -37,6 +42,12 @@ function Tabs(select_btn,select_show){
 			this.$btn.eq(index).addClass("selected")
 			.siblings()
 			.removeClass("selected")
+		},
+		stop:function(){
+			clearInterval(this.timer);
+		},
+		go_on:function(){
+			this.timer = setInterval( $.proxy(this.autoplay,this),2300)
 		}
 		
 		

@@ -1,266 +1,174 @@
+define(["jquery"],function($){
+    // slidePic:为大图片的外层ul
+    // slideItem:底部小图片的外层ul
+    // preBtn,nextBtn分别为向前向后按钮
+    var slidePictures = function(dom1,dom2,dom3,dom4) {
+        var self          = this;
+        this.slidePic     = $(dom1); //内容区域大图片的外层ul
+        this.slideItem    = $(dom2); //底部小图片的外层ul
+        this.slidePic_li  = $(dom1+" li"); //内容区域大图片
+        this.slideItem_li = $(dom2+" li"); //底部小图片
+        this.prevBtn      = $(dom3); //前进按钮
+        this.nextBtn      = $(dom4); //后退按钮
+        this.length       = this.slidePic_li.length; //ul中图片的个数，因为大图和小图是一一对应的，所以个数相同
+        this.speed        = 700; //speed为图片滑动速度，数值越大速度越慢
+        this.index        = 0; //第一次显示的是第一张图片，所以索引为0；表明当前正在显示的图片索引
+        this.timer;            //定义一个定时器参数
+        // 初始化各项参数和属性
+        self.init();
+        // 首先克隆一份第一张图片,并将其添加到外层ul中
+        var clone = this.slidePic_li.first().clone();
+        this.slidePic.append(clone);
+        // 这里需要重新获取一下li,因为之前的this.slidePic_li保存的是克隆前的数据
+        this.length = $(dom1+ " li").length;
+        this.prevBtn.click(function() {
+            self.moveByClick(1);
+        });
+        this.nextBtn.click(function() {
+            self.moveByClick(-1);
+        });
+    }
 
+    slidePictures.prototype = {
+    	
+        // 初始化函数，当页面刚加载完给页面一些默认的样式，或者执行相关函数
+        init: function() {
+            // 首先给外层ul一个left属性为0；
+            this.slidePic.css("left", 0);
+            // 获取每一个图片的宽度
+            this.width = this.slidePic_li.width();
+            // 将第一个小图片透明度默认设为1
+            this.slideItem_li.first().css("opacity", "1");
+            // 给每一个小图片添加一个id属性，用于标识
+            this.giveItemAttrId();
+            this.autoChange();
+            this.cancleTimer();
+            this.mouseoverShowBigPic();
+        },
+        // 突出显示底部小图片，用于标识当前大图位置，id为0即显示第一个
+        showItem: function(id) {
+            // 判断id值
+            var item = id;
+            if (item == this.length - 1) {
+                item = 0;
+            }
+            // 将所有的小图片透明度设为.3
+            // this.slideItem_li.css("opacity", ".3");
+            // 将当前id的小图片透明度设为1
+            this.slideItem_li.eq(item).css("opacity", "1");
+            this.slideItem_li.eq(item).addClass("active")
+            .siblings()
+            .removeClass("active")
 
-		/*
-		v:0.9.0
-		轮播图插件;
-		src:[]         必选参数:传入图片链接数组;
-		create_btn     默认为true,是否创建控空间 激活按钮用 class supperbanner_active;
-		movement_mode  运动模式默认为 fade 提供选项 slide scroll 
-		autoplay       默认为false,自动播放选项;
-		
-		__by:huaizhi 2018年1月10日15:51:39
-	*/
-(function (factory) {
-	if (typeof define === 'function' && define.amd) {
-		// AMD
-		define(['jquery'], factory);
-	} else if (typeof exports === 'object') {
-		// CommonJS
-		factory(require('jquery'));
-	} else {
-		// Browser globals
-		factory(jQuery);
-	}
-})((function($,window){
-		//默认参数;
-		var defaults = {
-			src:[],
-			create_btn:true,
-			movement_mode:"fade",
-			autoplay:false
-		}
-		var index = 0;//默认显示的图片;
-		var prev = 0; //上一张图片;
-		var next = 0; //下一张图片;
-		var out = 0;
-		function Banner(opts,ele){
-			this.init(opts,ele)
-		}
-		Banner.prototype = {
-			constructor:Banner,
-			init:function(opts,ele){
-				// 参数判断;
-				// 让 opt 一定为大于1项的数组;
-				if(!(opts instanceof Object) || opts==undefined || opts == "string"){
-					throw "请输入正确的配置参数，要求配置参数为Object类型";
-				} 
-				if(!(opts.src instanceof Array)){
-					throw "请输入正确的src配置,src必须为大于1项的数组";
-				}
-				//参数合并;
-				this.opts = $.extend(defaults,opts);
-				this.ele = ele;
-				this.callme = "";
-				this.rendring_pag();
-				//console.log(this.$ul,this.$btn_box);
-				this.$btn_box.children().on("mouseenter",$.proxy(this.moveTo,this))
-				/*
-					{
-						"mosueover":function(){},
-						"mosueout":function(){}
-					}
-				*/
-				if(this.opts.autoplay){
-					this.autoplay();
-				}
-			},
-			moveTo:function(e){
-				if(e instanceof Object){
-					var $btn = $(e.target);
-					out = index;//决定谁出厂;
-					if(index == $btn.index()){
-						return 0;
-					}
-					index = $btn.index();//获取当前下标;
-					this.callme = "event";
-				}else{
-					var $btn = this.$btn_box.children().eq(index);
-					this.callme = "interval";
-				}
-				
-				$btn.addClass("supperbanner_active")
-				.siblings()
-				.removeClass("supperbanner_active");
-				switch(this.opts.movement_mode){
-					case "fade":this.fade();break;
-					case "slide":this.slide();break;
-					case "scroll":this.scroll();break;
-				}
-			},
-			rendring_pag:function(){
-				//和forEach一样;
-				this.$ul = $("<ul></ul>");
-				//装按钮的盒子;
-				var $btn_box = $("<div></div>");
-				this.$ul.addClass("supperbanner_img_contants");
-				$btn_box.addClass("supperbanner_btn_wrap");
-				var _this = this;
-				$.each(this.opts.src,function(index,src){
-					var $li = $("<li></li>")
-					var $img = $("<img>")
-					$img.attr("src",src);
-					$li.append($img);
-					_this.$ul.append($li);
-					//按钮；
-					var $span = $("<span></span>");
-					//$span.html(index);
-					$btn_box.append($span);
-				})
-				//console.log($ul[0]);
-				this.ele.append(this.$ul);
-				this.ele.append($btn_box);
+        },
+        // 得到当前透明度为needOpc的图片序号
+        getCurrentShowPic: function(needOpc) {
+            var item = 0;
+            this.slideItem_li.each(function(index, el) {
+                var opc = $(this).css("opacity");
+                if (opc == needOpc) {
+                    item = index;
+                }
+            });
+            return item;
+        },
+        mouseoverShowBigPic:function(){
+            var self = this;
+            this.slideItem_li.on('mouseover',function(){
+                var id = $(this).attr("id");
+                self.showNow(id);//显示大图片
+                self.showItem(id);//显示对应小图片
+            })
+        },
+        // 鼠标划过小图片时显示对应的大图
+        showNow: function(id) {
 
-				this.$btn_box = $btn_box;
-				this.$btn_box.children().eq(index).addClass("supperbanner_active")
+            // 找到当前显示的图片的序号，item为当前序号
+            var item = this.getCurrentShowPic();
+            // 计算需要移动的距离
+            var needMove = id * this.width;
+            // 如果当前显示的图片在鼠标划过的图片的左方，则向左滑动，否则向右滑动
+            if (id > item) {
+                this.slidePic.stop().animate({ left: "-" + needMove + "px" }, this.speed);
+            } else {
+                this.slidePic.stop().animate({ left: "-" + needMove + "px" }, this.speed);
+            }
+            // 更新this.index;
+            this.index = id;
+        },
+        // 每次鼠标点击左右按钮时滑动一张图片
+        moveByClick: function(flag) {
+            //如果没有传入参数则默认为1；
+            var flag = flag||-1;
+            // flag用于标记点击的是左键还是右键,flag > 0为左键，反之为右键
+            // length为图片的个数
+            var length = this.length;
+            var width = this.width;
+            var speed = this.speed;
+            // 当点击的是左键时
+            if (flag > 0) {
+                this.index--;
+                if (this.index == -1) {
+                    this.slidePic.css("left", "-" + (length - 1) * width + "px");
+                    // 突出显示对应的底部小图片
+                    this.index = length - 2;
+                }
+                this.slidePic.stop().animate({ left: "-" + this.index * width + "px" }, speed);
+                this.showItem(this.index);
+                
+            } else { //点击右键时
+                this.index++;
+                /*当index为最后一张图片时，先将外层ul的left值设为0
+                此时最后一张图片为后来克隆添加上的，将left值改为0后实际上显示的是第一张图片了
+                但是由于最后一张和第一张相同，人眼看不出差别，所以以为还没有改变
+                然后再将index设为1，让其切换到下一张图片，从而实现无缝轮播
+                点击左键时原理相同
+                */
+                if (this.index == length) {
+                    this.slidePic.css("left", "0px");
+                    this.index = 1;
+                }
+                this.slidePic.stop().animate({ left: "-" + this.index * width + "px" }, speed);
+                this.showItem(this.index);
+                
+            }
+        },
+        // 将所有的小图片透明度设为需要的值
+        hideAllitem: function(opc) {
+            this.slideItem_li.each(function(index, el) {
+                $(this).css("opacity", opc);
+            });
+            
+        },
+        
+        // 自动切换
+        autoChange: function() {
+            var self = this;
+            this.timer = setInterval(function(){
+                self.moveByClick();
+            },3000);
+        },
+        //当鼠标划过相关区域时，停止自动播放
+        cancleTimer:function(){
+            var self = this;
+            $("#container").on("mouseover",function(){
+                clearInterval(self.timer);
+                $(".wrap").css({display:"block"})
+            });
+            $("#container").on("mouseout",function(){
+            	$(".wrap").css({display:"none"})
+                self.autoChange();
+            })
+        },
+        // 给底部小图片一个id属性，用于标识
+        giveItemAttrId: function() {
+            var self = this;
+            this.slideItem_li.each(function(index, el) {
+                $(this).attr("id", index);
+            });
+        }
 
-				this.reset_ele();//结构结束 =>初始化样式;
-			},
-			reset_ele:function(){
-				//初始化样式;
-				var $ele = this.ele;
-				var $ul = this.ele.find(".supperbanner_img_contants");
-				var $li = $ul.find("li");
-				var $width = $ele.width(); //当前元素的
-				var $height = $ele.height(); //当前元素的
-				$ele.css({
-					position:"relative",
-					overflow:"hidden"
-				})
-				$li.css({
-					width:$width,
-					height:$height
-				})
-				$li.find("img").css({
-					width:$width,
-					height:$height,
-				})
-				//根据不同的动画执行不同的初始化样式方法;
-				if(this.opts.movement_mode == "scroll"){
-					// $ul.width( $width * $li.length);
-					// $li.css({
-					// 	float:"left"
-					// })
-					$li.css({
-						position:"absolute",
-						top:-$li.height()
-					})
-					$li.eq(0).css({
-						top:0
-					})
-
-				}else if(this.opts.movement_mode == "fade" || this.opts.movement_mode == "slide"){
-					$ul.width($width)
-					$li.width($width)
-					$li.css({
-						position:"absolute",
-						left:0,
-						top:0
-					})
-					$li.eq(0).css({
-						zIndex:1
-					})
-					.siblings()
-					.css({
-						display:"none"
-					})
-				}
-			},
-			prev:function(){
-
-			},
-			next:function(){
-
-			},
-			fade:function(){
-				this.$ul.children().eq(index)
-				.stop()
-				.fadeIn()
-				.siblings().stop()
-				.fadeOut()
-			},
-			slide:function(){
-				this.$ul.children().eq(index)
-				.stop()
-				.slideDown()
-				.siblings().stop()
-				.slideUp()
-			},
-			scroll:function(){
-				var $li = this.$ul.children();
-				
-				$li.eq(index).css({
-					top:-$li.height(),
-					zIndex:1
-				}).stop(true).animate({
-					top:0
-				})
-
-				$li.eq(out).css({
-					top:0
-				}).animate({
-					top:$li.height()
-				})
-
-				// this.$ul.animate({
-				// 	marginLeft:-this.$ul.children().eq(0).width() * index
-				// })
-			},
-			autoplay:function(){
-				var _this = this;
-				this.timer = setInterval(function(){
-					if(index == _this.$ul.children().length - 1){
-						index = 0;
-					}else{
-						index++;
-					}
-					_this.rangIndex();
-					//console.log(index,prev,next);
-					_this.moveTo();
-				},2000)
-			},
-			rangIndex:function(){
-				//1.计算出 上一张;
-				//2.计算出下一张;
-				if(index == 0){
-					out = this.$ul.children().length - 1;//最后一张;
-				}else{
-					out = index - 1;
-				}
-				if(index == this.$ul.children().length - 1){
-					next = 0;
-				}else{
-					next = index + 1;
-				}
-			}
-
-		}
-		$.fn.extend({
-			supperBanner:function(opts){
-				return new Banner(opts,this);
-			}
-		})
-	//console.log(`%c
-	 // 　　　　　　　 ┏┓　　  ┏┓
-	 // 　　　　　　　┏┛┻━━━━━┛┻┓
-	 // 　　　　　　　┃　　　　　　┃ 　
-	 // 　　　　　　　┃　　　━　　 ┃
-	 // 　　　　　　　┃　＞　　＜　 ┃
-	 // 　　　　　　　┃　　　　　　 ┃
-	 // 　　　　　　　┃... ⌒ ... ┃
-	 // 　　　　　　　┃　　　　　　┃
-	 // 　　　　　　　┗━┓　　　┏━┛
-	 // 　　　　　　　　 ┃　　　┃　 Code is far away from bug with the animal protecting　　　　　　　　　　
-	 // 　　　　　　　　 ┃　　　┃   神兽保佑,代码无bug
-	 // 　　　　　　　　 ┃　　　┃　　　　　　　　　　　
-	 // 　　　　　　　　 ┃　　　┃  　　　　　　
-	 // 　　　　　　　　 ┃　　　┃
-	 // 　　　　　　　　 ┃　　　┃　　　　　　　　　　　
-	 // 　　　　　　　　 ┃　　　┗━━━┓
-	 // 　　　　　　　　 ┃　　　　　　　┣┓
-	 // 　　　　　　　　 ┃　　　　　　　┏┛
-	 // 　　　　　　　　 ┗┓┓┏━┳┓┏┛
-	 // 　　　　　　　　　┃┫┫　┃┫┫
-	 // 　　　　　　　　　┗┻┛　┗┻┛
-		// 	`,"color:rgba(0,0,0,.5);");
-}))
-	
+    };
+    window["slidePictures"] = slidePictures;
+   		new slidePictures(".pic",".dot",".preBtn",".nextBtn")
+})

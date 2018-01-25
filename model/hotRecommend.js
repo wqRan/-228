@@ -5,26 +5,24 @@ define(["jquery","cookie"],function(){
 	Hot.prototype = {
 		constructor:Hot,
 		init:function(){
+			// 列表
 			this.$list = $(".hot_list");
-			// console.log(this.$list);
+			// 翻页的li
 			this.$li = $(".hot-product-list").children();
-			// console.log(this.$li.length);
+
+			this.$parent = this.$li.parent()
+			// 鼠标移入移除停止继续
+			this.$parent.on("mouseover",$.proxy(this.stop,this))
+			this.$parent.on("mouseout",$.proxy(this.go_on,this))
 			this.index = 0;
 			this.rendring();
-			// 遍历选项卡按钮，绑定点击事件
-			this.$timer = null;
-			// this.$timer = setInterval($.proxy(this.onClick,this),2000);
-			// toggle
 			this.useCookie();			
-			//$.proxy(this.onClick(),this);
 
 			this.$li.on("click",$.proxy(this.show,this))
-			
-
-			setInterval($.proxy(this.autoplay,this),2000)
+			// 自动播放的定时器
+			this.timer = setInterval($.proxy(this.autoplay,this),2000)
 
 		},
-
 		autoplay:function(){
 
 			var max = this.$li.length;
@@ -34,11 +32,7 @@ define(["jquery","cookie"],function(){
 			}else{
 				this.index ++;
 			}
-
-			//console.log(this.index)
-
 			this.$li.eq(this.index).trigger("click")
-
 		},
 		show:function(e){
 			var ele = e.target;
@@ -50,17 +44,22 @@ define(["jquery","cookie"],function(){
 			.removeClass("selected")	
 			this.rendring();		
 		},
+		stop:function(){
+			clearInterval(this.timer)
+		},
+		go_on:function(){
+			this.timer = setInterval($.proxy(this.autoplay,this),2000)
+
+		},
 		// 访问jsonp数据
 		rendring:function(){
 			$.ajax("scripts/hotRecommend.json").then(this.rendring_page.bind(this))
 		},
 		rendring_page:function(res){
-			// console.log(res[0]);
-
+			// 由于json中存了不止一组数据
 			if(!this.res){
 				this.res = res[0];
 			}
-			// console.log(this.res)
 			// 指定每行显示5条数据
 			var rendringArr = [];
 			rendringArr = this.res.slice(this.index * 5 ,(this.index +1)*5);
@@ -92,8 +91,6 @@ define(["jquery","cookie"],function(){
 				this.$img.eq(i).on("click",$.proxy(this.setCookie,this))
 			}
 			
-
-
 		},
 		setCookie:function(event){
 			var evt = event || window.event;
@@ -108,8 +105,11 @@ define(["jquery","cookie"],function(){
 		},
 		useCookie:function(){
 			// console.log($.cookie("details"));
+			// 把存好的cookie放到商品详情页对应的位置上
 			this.$title = $("h1");
 			this.$Img = $("#pbigimg");
+			this.$ImgBig = $("#pbigimgBig");
+			this.$small = $(".grayBox");
 			if ($.cookie("details")) {
 				this.acookie = JSON.parse($.cookie("details"));
 				// console.log(this.acookie);
@@ -118,9 +118,12 @@ define(["jquery","cookie"],function(){
 				this.id = this.acookie.id;
 				this.$title.html(this.title);
 				this.$Img.attr("src",this.src);
+				this.$ImgBig.attr("src",this.src);
 				this.$Img.attr("title",this.title);
-				this.$Img.attr("src",this.src);
 				this.$Img.attr("data-id",this.id);
+				this.$small.css({
+					background:"url("+this.src+")"
+				})
 
 			}
 			

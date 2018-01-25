@@ -20,6 +20,13 @@ define(["jquery"],function(){
 			var evt = event || window.event;
 			// 因为li中绑定了a，所以要用到事件委托，把li的事件同样绑定给a
 			this.index = $(evt.delegateTarget).index()
+			this.$list.eq(this.index).find("a").css({
+				background:"url(../images/sprite-button-8.png) 0 -210px"
+			})
+			.end()
+			.siblings().find("a").css({
+				background:"url(../images/sprite-button-8.png) -40px -315px"
+			})
 			this.rendring(ele2);
 		},
 		rendring:function(ele2){
@@ -82,6 +89,8 @@ define(["jquery"],function(){
 		useCookie:function(){
 			this.$title = $("h1");
 			this.$Img = $("#pbigimg");
+			this.$ImgBig = $("#pbigimgBig");
+			this.$small = $(".grayBox");
 			// 商品详情页调用之前存的cookie
 			if ($.cookie("details")) {
 				this.acookie = JSON.parse($.cookie("details"));
@@ -91,19 +100,14 @@ define(["jquery"],function(){
 				this.$title.html(this.title);
 				this.$Img.attr("src",this.src);
 				this.$Img.attr("title",this.title);
-				this.$Img.attr("src",this.src);
 				this.$Img.attr("data-id",this.id);
+				this.$ImgBig.attr("src",this.src);
+				this.$small.css({
+					background:"url("+this.src+")"
+				})
 
 			}
 		}
-
-
-
-
-
-
-
-
 
 
 	}

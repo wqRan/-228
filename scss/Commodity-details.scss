@@ -193,10 +193,46 @@
 	    .main-l {
 		    float: left;
 		    width: 295px;
-		    img{
+		    .small{
+		    	width:288px;
+		    	height:384px;
+		    	position: relative;
+		    }
+		    .small img{
 		    	width: 288px;
     			height: 384px;
 		    }
+		    .small .wrap{
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				z-index: 999;
+			}
+			.small .grayBox{
+				display: none;
+				width: 100px;
+				height: 100px;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+				position: absolute;
+				left: 0;
+				top: 0;
+				background-size:288px 384px;
+			}
+			.big{
+				width: 288px;
+				height: 384px;
+				position: absolute;
+				z-index:999;
+				left: 400px;
+				top: 75px;
+				border:1px solid #f10;
+				display: none;
+				overflow: hidden;
+			}
+			.big img{
+				position: absolute;
+
+			}
 		    .mt10 {
 			    margin-top: 10px;
 			    .weibo-l {

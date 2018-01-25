@@ -7,6 +7,7 @@ define(["jquery"],function($){
 		init:function(){
 			this.creatMask();
 			this.creatEle();
+			
 		},
 		creatMask:function(){
 			var $div = $("<div></div>")
@@ -25,20 +26,21 @@ define(["jquery"],function($){
 		creatEle:function(){
 			var $div = $("<div></div>")
 			$div.css({
-				width:200,
-				height:200,
+				width:400,
+				height:100,
 				position :"absolute",
 				zIndex:9999,
 				left:"50%",
 				top:"50%",
-				lineHeight:"300px",
+				paddingTop:"300px",
+				// lineHeight:"600px",
 				textAlign:"center",
 				fontSize:"20px",
 				background:"#fff",
-				marginLeft:-100,
+				marginLeft:-200,
 				marginTop:350,
 				fontWeight:"bold",
-				background:"url(../images/pikaqiu.jpg) no-repeat -124px -49px"
+				background:" #fff url(../images/pikaqiu.jpg) no-repeat -40px -20px"
 			})
 			$("body").append($div);
 			this.$span = $div
@@ -46,13 +48,13 @@ define(["jquery"],function($){
 			var $btn = $("<span>x</span>");
 			$btn.css({
 				position:"absolute",
-				top:"-70%",
-				right:"3%",
+				top:"0%",
+				right:"7%",
 				width:30,
 				height:30,
 				color:"red",
 				lineHight:30,
-				fontSize:"18px",
+				fontSize:"24px",
 				textAlign:"center",
 				fontWeight:"bold"
 			})
@@ -69,21 +71,25 @@ define(["jquery"],function($){
 			if ($.cookie("shopping_cart")) {
 				var html = "";
 				var sum = 0;
+				var res = 0;
 				var acookie = JSON.parse($.cookie("shopping_cart"))
 				acookie.forEach(function(name){
+					console.log(name)
 					$(name).each(function(index,item){
 						sum += item.num * item.price
-
+						console.log(item.num)
+						res += parseInt(item.num)
 						
 					})
 				})
 				
-			this.$span.html("共消费"+sum+"元");
+			this.$span.html("共购买"+res+"件商品，消费"+sum+"元</br>亲,别忘记付款哟！");
 			this.$span.append(this.$btn);
 
 			}
 
 		}
+
 	}
 
 	return new Pop();

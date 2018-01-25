@@ -1,7 +1,7 @@
 require(["scripts/config.js"],function(){
-	require(["jquery","mini",
-		"input","hot","commodityHtml","hotCity","classtify","shopping"],
-		function($,mini,input,hot,commodity,hotCity,classtify,shopping){
+	require(["jquery","mini","input","hot","commodityHtml",
+		"hotCity","classtify","shopping","Magnifier"],
+		function($,mini,input,hot,commodity,hotCity,classtify,shopping,Magnifier){
 			// 页面零碎功能
 			mini.init();
 
@@ -34,6 +34,9 @@ require(["scripts/config.js"],function(){
 
 			// 将详情页加入购物车
 			shopping.init();
+
+			// 放大镜
+			Magnifier.init();
 		})
 		
 })

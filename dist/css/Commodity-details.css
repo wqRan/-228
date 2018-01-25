@@ -150,7 +150,6 @@ table {
         border-top: 0 none;
         position: absolute;
         z-index: 1;
-        position: absolute;
         background: #FFF;
         top: 31px;
         width: 78px;
@@ -709,9 +708,39 @@ table {
   #Container .main .main-l {
     float: left;
     width: 295px; }
-    #Container .main .main-l img {
+    #Container .main .main-l .small {
+      width: 288px;
+      height: 384px;
+      position: relative; }
+    #Container .main .main-l .small img {
       width: 288px;
       height: 384px; }
+    #Container .main .main-l .small .wrap {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: 999; }
+    #Container .main .main-l .small .grayBox {
+      display: none;
+      width: 100px;
+      height: 100px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-size: 288px 384px; }
+    #Container .main .main-l .big {
+      width: 288px;
+      height: 384px;
+      position: absolute;
+      z-index: 999;
+      left: 400px;
+      top: 75px;
+      border: 1px solid #f10;
+      display: none;
+      overflow: hidden; }
+    #Container .main .main-l .big img {
+      position: absolute; }
     #Container .main .main-l .mt10 {
       margin-top: 10px; }
       #Container .main .main-l .mt10 .weibo-l {

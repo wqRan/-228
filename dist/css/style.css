@@ -150,7 +150,6 @@ table {
         border-top: 0 none;
         position: absolute;
         z-index: 1;
-        position: absolute;
         background: #FFF;
         top: 31px;
         width: 78px;
@@ -729,51 +728,57 @@ table {
     height: 350px;
     float: left;
     margin: 10px 10px 0 10px; }
-    #Banner .b_center .container {
-      float: left;
+    #Banner .b_center #container {
       position: relative;
       width: 740px;
       height: 350px;
       overflow: hidden;
       zoom: 1; }
-      #Banner .b_center .container .undb {
-        width: 36px;
-        cursor: pointer;
+      #Banner .b_center #container .pic {
         position: absolute;
-        z-index: 66;
-        top: 152px;
-        height: 50px;
-        overflow: hidden;
+        width: 6660px;
+        height: 100%; }
+      #Banner .b_center #container .pic li {
+        width: 740px;
+        float: left; }
+      #Banner .b_center #container .wrap {
+        width: 100%;
+        position: absolute;
+        top: 45%;
         display: none; }
-      #Banner .b_center .container:hover .undb {
-        display: block; }
-      #Banner .b_center .container .prev {
-        left: 20px;
+      #Banner .b_center #container .preBtn {
+        height: 50px;
+        width: 36px;
+        float: left;
+        cursor: pointer;
+        margin-left: 20px;
         background: url(../images/newx-flash.png) no-repeat 0 0; }
-      #Banner .b_center .container .next {
-        right: 10px;
+      #Banner .b_center #container .nextBtn {
+        height: 50px;
+        width: 36px;
+        float: right;
+        cursor: pointer;
+        margin-right: 10px;
         background: url(../images/newx-flash.png) no-repeat -47px 0; }
-    #Banner .b_center .supperbanner_btn_wrap {
-      position: absolute;
-      display: inline;
-      right: 12px;
-      bottom: 12px;
-      height: 19px;
-      z-index: 111; }
-    #Banner .b_center .supperbanner_btn_wrap span {
-      display: inline-block;
-      width: 18px;
-      height: 18px;
-      line-height: 18px;
-      overflow: hidden;
-      margin-left: 7px;
-      color: #333;
-      text-align: center;
-      cursor: pointer;
-      background: url(../images/imgPlayer.png) no-repeat -28px -90px; }
-    #Banner .b_center .supperbanner_btn_wrap span.supperbanner_active {
-      background: url(../images/imgPlayer.png) no-repeat 0px -90px;
-      color: #fff; }
+      #Banner .b_center #container .dot {
+        top: 90%;
+        position: absolute;
+        width: 100%;
+        text-align: right;
+        right: 20px; }
+      #Banner .b_center #container .dot li {
+        display: inline-block;
+        text-align: center;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: blue;
+        margin-left: 5px;
+        font-size: 12px;
+        background: url(../images/imgPlayer.png) no-repeat -28px -90px; }
+      #Banner .b_center #container .dot li.active {
+        background: url(../images/imgPlayer.png) no-repeat 0px -90px;
+        color: #fff; }
   #Banner .b_right {
     width: 210px;
     height: 318px;

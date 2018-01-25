@@ -141,6 +141,10 @@ table {
         #container .loginBox .login-right .cont-rightb .login-error-cont {
           width: 220px;
           margin-top: 10px; }
+          #container .loginBox .login-right .cont-rightb .login-error-cont .tips {
+            color: #cd1414;
+            font-weight: bold;
+            display: none; }
           #container .loginBox .login-right .cont-rightb .login-error-cont .fr {
             float: right;
             color: #3399cc; }

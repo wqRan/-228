@@ -91,6 +91,8 @@ define(["jquery"],function(){
 		useCookie:function(){
 			this.$title = $("h1");
 			this.$Img = $("#pbigimg");
+			this.$ImgBig = $("#pbigimgBig");
+			this.$small = $(".grayBox");
 			// 判断是否存在，如果存在商品详情页使用cookie的信息
 			if ($.cookie("details")) {
 				this.acookie = JSON.parse($.cookie("details"));
@@ -99,9 +101,13 @@ define(["jquery"],function(){
 				this.id = this.acookie.id;
 				this.$title.html(this.title);
 				this.$Img.attr("src",this.src);
+				this.$ImgBig.attr("src",this.src);
 				this.$Img.attr("title",this.title);
 				this.$Img.attr("src",this.src);
 				this.$Img.attr("data-id",this.id);
+				this.$small.css({
+					background:"url("+this.src+")"
+				})
 
 			}
 		}
