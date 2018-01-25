@@ -38,7 +38,7 @@ define(["jquery"],function($){
 				marginLeft:-100,
 				marginTop:350,
 				fontWeight:"bold",
-				background:" url(../images/timg.jpg) no-repeat -124px -49px"
+				background:"url(../images/timg.jpg) no-repeat -124px -49px"
 			})
 			$("body").append($div);
 			this.$span = $div
