@@ -557,401 +557,121 @@ table {
 #Header_search .h_search .logo {
   margin: 19px 20px 0 0; }
 
-#Container .container {
-  position: relative; }
+#Nav .nav .f14 {
+  padding-left: 0; }
 
-#Container .b_left {
-  width: 200px;
-  float: left;
-  z-index: 200;
-  position: relative;
-  top: -43px;
-  z-index: 999; }
-  #Container .b_left .sort-title {
-    width: 200px;
-    height: 43px;
-    font-size: 15px;
-    font-family: "Microsoft YaHei";
-    font-weight: bold;
-    text-align: center;
-    line-height: 43px;
-    color: #fff;
-    background: url(../images/sprite-h-f.png) no-repeat -223px -122px; }
-  #Container .b_left .list {
-    border: 2px solid #AB9F99;
-    border-top: 0;
-    height: 358px;
-    width: 196px;
-    background: #fff;
-    position: absolute;
-    top: 43px;
-    left: 0;
-    z-index: 999;
-    display: none; }
-    #Container .b_left .list .item h3 {
-      position: relative;
-      z-index: 100;
-      width: 196px;
-      height: 39px;
-      line-height: 39px;
-      font-size: 14px;
-      font-family: "Microsoft YaHei";
-      border-top: 1px #EEEEEE solid;
-      background-position: 160px -305px;
-      background-repeat: no-repeat; }
-      #Container .b_left .list .item h3 a {
-        color: #676767;
-        width: 136px;
-        height: 39px;
-        padding-left: 60px;
-        display: block;
-        font-size: 14px; }
-      #Container .b_left .list .item h3 .list-1 {
-        background: url(../images/sprite-nav.png) no-repeat 26px -1px; }
-      #Container .b_left .list .item h3 .list-2 {
-        background: url(../images/sprite-nav.png) no-repeat 26px -78px; }
-      #Container .b_left .list .item h3 .list-3 {
-        background: url(../images/sprite-nav.png) no-repeat 26px -39px; }
-      #Container .b_left .list .item h3 .list-4 {
-        background: url(../images/sprite-nav.png) no-repeat 26px -117px; }
-      #Container .b_left .list .item h3 .list-5 {
-        background: url(../images/sprite-nav.png) no-repeat 26px -156px; }
-      #Container .b_left .list .item h3 .list-6 {
-        background: url(../images/sprite-nav.png) no-repeat 26px -273px; }
-      #Container .b_left .list .item h3 .list-7 {
-        background: url(../images/sprite-nav.png) no-repeat 26px -234px; }
-      #Container .b_left .list .item h3 .list-8 {
-        background: url(../images/sprite-nav.png) no-repeat 26px -195px; }
-      #Container .b_left .list .item h3:hover {
-        background: #88766E; }
-      #Container .b_left .list .item h3:hover .outbox {
-        display: block; }
-      #Container .b_left .list .item h3:nth-of-type(9):hover {
-        background: #fff;
-        height: 37px; }
-      #Container .b_left .list .item h3:hover > a {
-        color: #fff;
-        font-weight: bold; }
-      #Container .b_left .list .item h3:nth-of-type(9):hover a {
-        color: #4c4c4c;
-        font-weight: normal; }
-      #Container .b_left .list .item h3 .outbox {
-        display: none;
-        width: 117px;
-        position: absolute;
-        z-index: 9999;
-        left: 197px;
-        top: 0;
-        border: 1px solid #a5a5a5; }
-        #Container .b_left .list .item h3 .outbox li {
-          height: 32px;
-          background: url(../images/sprite-hf.png) no-repeat -306px -173px;
-          padding: 0 8px;
-          line-height: 32px; }
-          #Container .b_left .list .item h3 .outbox li a {
-            font-size: 13px;
-            color: #888;
-            border-bottom: 1px #b2b2b2 dotted;
-            width: 70px;
-            height: 30px;
-            display: block;
-            padding-left: 32px;
-            overflow: hidden; }
-            #Container .b_left .list .item h3 .outbox li a:hover {
-              color: #cc0001; }
-          #Container .b_left .list .item h3 .outbox li:hover {
-            background: url(../images/sprite-hf.png) no-repeat -306px -393px; }
-
-#Container .common-tit {
-  margin: 10px auto;
-  position: absolute;
-  left: 0; }
-
-#Container .bor {
-  border: 1px solid #ebebeb; }
-
-#Container .main {
-  position: relative;
-  width: 958px;
+.orderSure {
+  width: 998px;
   height: auto;
-  overflow: hidden;
-  margin: 0 auto 10px auto;
-  padding: 20px;
-  color: #4c4c4c; }
-  #Container .main .clearfloat h1 {
-    margin-bottom: 20px;
-    font: bold 18px/33px 'Microsoft YaHei','simsun';
-    color: #4c4c4c;
-    font-weight: bold; }
-  #Container .main .clearfloat .f1 {
-    float: left; }
-  #Container .main .clearfloat .red {
-    font-size: 18px;
-    font-size: bold;
-    vertical-align: middle;
-    color: #cc0001;
-    font-family: 'Microsoft YaHei';
-    font-weight: bold; }
-  #Container .main .clearfloat .like {
-    display: inline-block;
-    position: static;
-    vertical-align: middle;
-    margin-left: 5px;
-    left: 420.188px;
-    top: 19px;
-    width: 94px;
-    height: 30px;
-    background: url(../images/pro-common.png) no-repeat -160px -200px; }
-    #Container .main .clearfloat .like s {
-      line-height: 30px;
-      padding-left: 54px;
-      text-decoration: none; }
-  #Container .main .main-l {
-    float: left;
-    width: 295px; }
-    #Container .main .main-l img {
-      width: 288px;
-      height: 384px; }
-    #Container .main .main-l .mt10 {
-      margin-top: 10px; }
-      #Container .main .main-l .mt10 .weibo-l {
-        float: left;
-        margin-top: 13px;
-        font: 12px 'Microsoft YaHei'; }
-      #Container .main .main-l .mt10 #bds_count {
-        background: url(../images/sc.png) no-repeat 0 -60px;
-        width: 48px; }
-      #Container .main .main-l .mt10 a {
-        float: left;
-        width: 32px;
-        line-height: 32px;
-        height: 32px;
-        background: url(../images/icons_0_32.png);
-        background-repeat: no-repeat;
-        cursor: pointer;
-        margin: 6px 6px 6px 0;
-        text-indent: -100em;
-        overflow: hidden;
-        color: #3a8ceb; }
-      #Container .main .main-l .mt10 a:nth-of-type(1) {
-        background-position: 0 -104px; }
-      #Container .main .main-l .mt10 a:nth-of-type(2) {
-        background-position: 0 -1612px; }
-      #Container .main .main-l .mt10 a:nth-of-type(3) {
-        background-position: 0 -52px; }
-      #Container .main .main-l .mt10 a:nth-of-type(4) {
-        background-position: 0 -468px; }
-      #Container .main .main-l .mt10 a:nth-of-type(5) {
-        background-position: 0 -2444px; }
-  #Container .main .main-r {
-    float: left;
-    width: 645px;
-    padding-left: 18px; }
-    #Container .main .main-r .pro-info {
-      line-height: 28px;
-      padding-left: 10px;
-      padding-bottom: 15px; }
-      #Container .main .main-r .pro-info label {
-        float: left;
-        padding-right: 5px;
-        color: #a5a5a5; }
-      #Container .main .main-r .pro-info .fl {
-        float: left; }
-      #Container .main .main-r .pro-info .clearfix {
-        display: inline-block; }
-      #Container .main .main-r .pro-info .pro-infob {
-        margin-top: -5px; }
-      #Container .main .main-r .pro-info .pro-own {
-        float: left;
-        width: 450px; }
-        #Container .main .main-r .pro-info .pro-own s {
-          float: left;
-          width: 16px;
-          height: 16px;
-          margin-top: 5px;
-          margin-right: 3px;
-          background: url(../images/pro-common.png) no-repeat; }
-        #Container .main .main-r .pro-info .pro-own s:nth-of-type(1) {
-          background-position: -380px -40px; }
-        #Container .main .main-r .pro-info .pro-own s:nth-of-type(2) {
-          background-position: -380px -80px; }
-        #Container .main .main-r .pro-info .pro-own s:nth-of-type(3) {
-          background-position: -380px -60px; }
-        #Container .main .main-r .pro-info .pro-own s:nth-of-type(4) {
-          background-position: -380px -100px; }
-        #Container .main .main-r .pro-info .pro-own a {
-          float: left;
-          padding-right: 16px; }
-    #Container .main .main-r .favor {
-      margin-top: 25px;
-      position: relative;
-      width: 641px;
-      height: auto;
-      margin-bottom: 15px;
-      padding-top: 5px;
-      padding-bottom: 5px;
-      border: 2px solid #ffcc00;
-      background-color: #fefbe8; }
-      #Container .main .main-r .favor ul {
-        width: 560px;
-        line-height: 23px;
-        margin-left: 10px;
+  border: 1px solid #ebebeb;
+  margin: 10px auto 0 auto;
+  color: #4c4c4c;
+  padding-bottom: 30px; }
+  .orderSure .buyCar {
+    margin-top: 30px;
+    margin-left: 20px; }
+  .orderSure .orderSure-title {
+    margin-left: 20px;
+    font-family: "Microsoft YaHei";
+    overflow: hidden;
+    height: 33px;
+    line-height: 33px;
+    background-color: #fafafa;
+    border-top: 1px solid #ededed;
+    width: 960px;
+    margin-top: 30px; }
+    .orderSure .orderSure-title span {
+      display: block;
+      margin-left: 20px;
+      font-size: 16px;
+      color: #000;
+      padding-left: 20px;
+      background: url(../images/newx-mini.png) no-repeat -2px -772px; }
+  .orderSure .orderSure-sendStyles {
+    margin-top: 30px;
+    margin-left: 160px; }
+    .orderSure .orderSure-sendStyles table {
+      border-collapse: collapse;
+      border-spacing: 0;
+      empty-cells: show; }
+      .orderSure .orderSure-sendStyles table tbody {
+        display: table-row-group;
+        vertical-align: middle;
+        border-color: inherit; }
+        .orderSure .orderSure-sendStyles table tbody td {
+          font-weight: normal;
+          text-align: left;
+          width: 35px; }
+        .orderSure .orderSure-sendStyles table tbody .orderSure-sendStyles-pad {
+          padding-right: 110px; }
+          .orderSure .orderSure-sendStyles table tbody .orderSure-sendStyles-pad a {
+            display: inline-block;
+            width: 115px;
+            height: 69px; }
+          .orderSure .orderSure-sendStyles table tbody .orderSure-sendStyles-pad .orderSure-senda {
+            background: url(../images/orderProcess.png) no-repeat -5px -5px; }
+          .orderSure .orderSure-sendStyles table tbody .orderSure-sendStyles-pad p {
+            text-align: center;
+            margin-top: 10px;
+            font-weight: bold; }
+          .orderSure .orderSure-sendStyles table tbody .orderSure-sendStyles-pad .orderSure-sendb {
+            background: url(../images/orderProcess.png) no-repeat -119px -5px; }
+  .orderSure .getNews {
+    margin-left: 60px;
+    margin-top: 20px; }
+    .orderSure .getNews td {
+      padding-bottom: 20px;
+      text-align: left; }
+      .orderSure .getNews td input {
+        border: 1px solid #dfdfdf;
+        height: 28px;
+        outline: none; }
+      .orderSure .getNews td span {
         color: #cc0001; }
-    #Container .main .main-r #wenhuiLogin .price-line {
-      border-top: 1px solid #ebebeb; }
-    #Container .main .main-r #wenhuiLogin .discount-container {
-      line-height: 24px;
-      padding: 12px 0 12px 10px; }
-    #Container .main .main-r #wenhuiLogin .discount-container, #Container .main .main-r #wenhuiLogin .discount-content {
-      float: left;
-      margin-left: 24px; }
-      #Container .main .main-r #wenhuiLogin .discount-container .discount-label, #Container .main .main-r #wenhuiLogin .discount-content .discount-label {
-        float: left;
-        color: #a5a5a5; }
-      #Container .main .main-r #wenhuiLogin .discount-container .content-left, #Container .main .main-r #wenhuiLogin .discount-content .content-left {
-        float: left;
-        width: 3px;
-        height: 26px;
-        background: #fff url(../images/coupon-pro.png) no-repeat 0 0; }
-      #Container .main .main-r #wenhuiLogin .discount-container .content-center, #Container .main .main-r #wenhuiLogin .discount-content .content-center {
-        float: left;
-        width: 178px;
-        height: 24px;
+  .orderSure .commoditylisy {
+    margin-left: 60px; }
+    .orderSure .commoditylisy .buyCar-table {
+      margin-top: 10px;
+      border-collapse: collapse;
+      width: 888px;
+      margin-left: 0; }
+      .orderSure .commoditylisy .buyCar-table th {
+        border: 1px solid #ededed;
+        height: 40px;
         text-align: center;
-        border-top: 1px solid #cb0000;
-        border-bottom: 1px solid #cb0000;
-        background-color: #ffdedf;
-        color: #cd2020; }
-      #Container .main .main-r #wenhuiLogin .discount-container .content-right, #Container .main .main-r #wenhuiLogin .discount-content .content-right {
-        float: left;
-        width: 3px;
-        height: 26px;
-        background: #fff url(../images/coupon-pro.png) no-repeat 0 -44px; }
-    #Container .main .main-r .price-line {
-      border-top: 1px solid #ebebeb; }
-    #Container .main .main-r .dateAll .date {
-      margin-top: 20px;
-      padding-left: 10px;
-      padding-bottom: 5px; }
-      #Container .main .main-r .dateAll .date label {
-        float: left;
-        display: inline-block;
-        width: 75px;
-        margin-top: 18px; }
-      #Container .main .main-r .dateAll .date .date-ul {
-        float: left;
-        width: 550px;
-        height: 92px; }
-        #Container .main .main-r .dateAll .date .date-ul li {
-          float: left;
-          width: 98px;
-          height: 37px;
-          overflow: hidden;
-          margin-right: 5px;
-          margin-top: 5px;
-          padding-left: 5px;
-          padding-top: 2px;
-          border: 1px solid #e5e5e5;
-          color: #666;
-          background-color: #fff;
-          cursor: pointer;
-          line-height: 18px; }
-          #Container .main .main-r .dateAll .date .date-ul li .red {
-            color: #cc0001;
-            font-weight: bold; }
-    #Container .main .main-r .cq-more {
-      width: 545px;
-      margin-left: 85px;
-      margin-bottom: 20px;
-      border-top: 1px solid #e5e5e5; }
-      #Container .main .main-r .cq-more .btn-cq-com {
-        width: 99px;
-        height: 24px;
-        margin: 0 auto;
-        display: block;
-        overflow: hidden;
-        background: url(../images/pro-common.png) no-repeat -160px -140px; }
-    #Container .main .main-r .price {
-      margin-top: 5px;
-      margin-top: 20px;
-      padding-left: 10px;
-      padding-bottom: 5px; }
-      #Container .main .main-r .price label {
-        float: left;
-        display: inline-block;
-        width: 75px;
-        margin-top: 18px;
-        color: #a5a5a5; }
-      #Container .main .main-r .price .date-ul {
-        float: left;
-        width: 550px; }
-        #Container .main .main-r .price .date-ul li {
-          float: left;
-          text-align: center;
-          line-height: 40px;
-          width: 100px;
-          height: 40px;
-          border: 1px solid #a5a5a5;
-          margin-right: 5px;
-          margin-bottom: 5px; }
-          #Container .main .main-r .price .date-ul li:hover {
-            background-color: #f6f6f6;
-            border: 1px solid #cd1414; }
-    #Container .main .main-r .choicedate {
-      margin-top: 20px;
-      padding-left: 10px;
-      padding-bottom: 5px; }
-      #Container .main .main-r .choicedate .mno {
-        margin-top: 3px;
-        float: left;
-        display: inline-block;
-        width: 75px;
-        color: #a5a5a5; }
-      #Container .main .main-r .choicedate .relt-list {
-        float: left;
-        width: 545px;
-        margin-bottom: 15px; }
-        #Container .main .main-r .choicedate .relt-list .relt {
-          margin-bottom: 12px; }
-          #Container .main .main-r .choicedate .relt-list .relt li {
-            float: left;
-            line-height: 25px;
-            margin-right: 40px;
-            color: #cc0001;
-            font-weight: bold; }
-            #Container .main .main-r .choicedate .relt-list .relt li .relt-prev {
-              float: left;
-              width: 16px;
-              height: 25px;
-              display: block;
-              overflow: hidden;
-              background: url(../images/pro-common.png) no-repeat -280px 0; }
-            #Container .main .main-r .choicedate .relt-list .relt li input {
-              float: left;
-              width: 40px;
-              height: 23px;
-              line-height: 23px;
-              border: 1px solid #bdbdbd;
-              border-left: none;
-              border-right: none;
-              text-align: center; }
-            #Container .main .main-r .choicedate .relt-list .relt li .relt-next {
-              float: left;
-              width: 16px;
-              height: 25px;
-              background: url(../images/pro-common.png) no-repeat -300px 0; }
-          #Container .main .main-r .choicedate .relt-list .relt .relt-1 {
-            width: 140px; }
-          #Container .main .main-r .choicedate .relt-list .relt .ok {
-            display: none; }
-    #Container .main .main-r .buyBtn {
-      margin-top: 25px;
-      margin-left: 85px; }
-      #Container .main .main-r .buyBtn .buy {
-        float: left;
-        margin-right: 10px;
-        width: 147px;
-        height: 42px;
-        display: block;
-        overflow: hidden;
-        background: url(../images/pro-common.png) no-repeat 3px -139px; }
+        background-color: #fafafa;
+        color: #a5a5a5;
+        font-weight: bold; }
+      .orderSure .commoditylisy .buyCar-table td {
+        font-size: 14px;
+        height: 50px;
+        border: 1px solid #ededed;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        text-align: center;
+        font-weight: bold; }
+        .orderSure .commoditylisy .buyCar-table td .red {
+          color: #cc0001;
+          font-weight: bold; }
+        .orderSure .commoditylisy .buyCar-table td a {
+          font-size: 14px; }
+      .orderSure .commoditylisy .buyCar-table .buyCar-table-proinfo {
+        text-align: left; }
+      .orderSure .commoditylisy .buyCar-table .noborder {
+        border: none; }
+      .orderSure .commoditylisy .buyCar-table .time {
+        padding: 0 7px; }
+      .orderSure .commoditylisy .buyCar-table .endprice, .orderSure .commoditylisy .buyCar-table .Allprice {
+        color: #cc0001;
+        font-size: 16px;
+        font-weight: bold; }
+  .orderSure .submit {
+    float: right;
+    margin-right: 100px; }
+  .orderSure #saveOrder {
+    display: inline-block;
+    width: 182px;
+    height: 45px;
+    background: url(../images/newproduct.png) no-repeat -160px -725px; }
+    .orderSure #saveOrder:hover {
+      background: url(../images/newproduct.png) no-repeat -160px -772px; }

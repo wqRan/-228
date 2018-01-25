@@ -160,11 +160,6 @@ define(["jquery"],function(){
 
 		}
 
-						
-			
-		
-		
-
 
 	}
 

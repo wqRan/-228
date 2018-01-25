@@ -349,7 +349,7 @@
 			<a href="javascript:;">永乐票务</a> &gt;
 			<a href="javascript:;">戏曲综艺</a> &gt;
 			<a href="javascript:;">北京戏曲综艺</a> &gt;
-			<a href="javascript:;">马戏杂技</a> &gt;加拿大太阳马戏《KOOZA》巡演北京站
+			<a href="javascript:;">马戏杂技</a> &gt;
 		</div>
 		<!-- 商品详情框 -->
 		<div class="main bor">
@@ -366,7 +366,7 @@
 			</div>
 			<!-- 图片信息 -->
 			 <div class="main-l">
-				<img src="" title="" id="pbigimg">
+				<img src="" title="" data-id="" id="pbigimg">
 				<div class="bdsharebuttonbox mt10 bdshare-button-style0-32">
 					<span class="weibo-l">分享到：</span>
 					<a href="#" class="bds_tsina"  title="分享到新浪微博"></a>
@@ -443,7 +443,7 @@
 				<!-- 第五部分 -->
 				<div class="price clear">
 					<label>选择价格：</label>
-					<ul class="date-ul">
+					<ul class="date-ul" id="money">
 						<li>280</li>
 						<li>380</li>
 						<li>580</li>
@@ -454,9 +454,25 @@
 						<li>1980</li>
 					</ul>
 				</div>
+				<!-- 选择数量 -->
+				<div class="choicedate mt30" id="JchoosePrice">
+					<label class="mno">您已选择：</label>
+					<div class="relt-list" id="JreltList">
+					<ul class="relt clear">						
+						<li>
+							<dl><a href="javascript:void(0);" n="6" class="relt-prev"></a>
+								<input type="text" class="yl-order" maxlength="2" value="1" n="6" >
+								<a href="javascript:void(0);" class="relt-next" ></a></dl>
+						</li>
+						<li class="relt-1"></li>
+						<li class="relt-2"></li>
+						<li class="ok">请选择时间和价位</li>
+					</ul>
+					</div>
+				</div>
 				<!-- 购买按钮 -->
 				<div class="buyBtn">
-					<a href="javascript:;" class="buy"></a>
+					<a href="shoppingCart.html" target="_blank" class="buy"></a>
 				</div>
 			</div>
 		</div>
@@ -475,3 +491,27 @@
 <script src="scripts/require.js"></script>
 <script src="scripts/Com-details.js"></script>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

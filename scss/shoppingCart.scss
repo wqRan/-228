@@ -1,0 +1,191 @@
+@import "reset";
+@import "function";
+@import "mixin";
+@import "common";
+
+
+#headTop,#headMiddle,#headFoot,#Container
+{
+    width:$wid;
+}
+
+.h_top,.h_middle,.h_foot,.h_search,.nav,.container{
+	width:pxToRem(1000px);
+	@include block_center;
+}
+// ======搜索框=========
+#Header_search{
+	.h_search{
+		.logo{
+			margin: 19px 20px 0 0;
+		}
+		.logoRight{
+
+		}
+	}
+}
+// ======nav========
+#Nav{
+	.nav{
+		.f14{
+			padding-left:0;
+		}
+	}
+}
+// ======container======
+.orderSure{
+	width: 998px;
+    height: auto;
+    border: 1px solid #ebebeb;
+    margin: 10px auto 0 auto;
+    color: #4c4c4c;
+    padding-bottom: 30px;
+    //1：订单提示信息
+    .buyCar{
+    	margin-top: 30px;
+    	margin-left: 20px;
+    }
+    //2：配送方式
+    .orderSure-title {
+	    margin-left: 20px;
+	    font-family: "Microsoft YaHei";
+	    overflow: hidden;
+	    height: 33px;
+	    line-height: 33px;
+	    background-color: #fafafa;
+	    border-top: 1px solid #ededed;
+	    width: 960px;
+	    margin-top: 30px;
+	    span {
+		    display: block;
+		    margin-left: 20px;
+		    font-size: 16px;
+		    color: #000;
+		    padding-left: 20px;
+		    background: url(../images/newx-mini.png) no-repeat -2px -772px;		}
+	}
+	// 配送选择
+	.orderSure-sendStyles{
+		margin-top: 30px;
+    	margin-left: 160px;
+		table{
+			border-collapse: collapse;
+		    border-spacing: 0;
+		    empty-cells: show;
+		    tbody{
+		        display: table-row-group;
+			    vertical-align: middle;
+			    border-color: inherit;
+			    td {
+				    font-weight: normal;
+				    text-align: left;
+				    width:35px;
+				}
+				.orderSure-sendStyles-pad {
+				    padding-right: 110px;
+				    a{
+				    	display:inline-block;
+					    width: 115px;
+					    height: 69px;
+				    }
+				    .orderSure-senda{				    	
+					    background: url(../images/orderProcess.png) no-repeat -5px -5px;
+					}
+					p{
+					    text-align: center;
+					    margin-top: 10px;
+					    font-weight:bold;
+					}
+					.orderSure-sendb {
+					    background: url(../images/orderProcess.png) no-repeat -119px -5px; 
+					}
+				}
+			}
+		}
+	}	
+	// 3.收货人信息
+	.getNews{
+		margin-left: 60px;
+    	margin-top: 20px;
+    	td {
+		    padding-bottom: 20px;
+		    text-align: left;
+		    input{
+			    border: 1px solid #dfdfdf;
+			    height: 28px;
+			    outline: none;
+			}
+			span{
+			    color: #cc0001;
+			}
+		}
+	}
+	// 4.确认购买信息
+	.commoditylisy{
+		margin-left: 60px;
+		.buyCar-table {
+		    margin-top: 10px;
+		    border-collapse: collapse;
+		    width:888px;
+		    margin-left:0;
+		    th {
+			    border: 1px solid #ededed;
+			    height: 40px;
+			    text-align: center;
+			    background-color: #fafafa;
+			    color: #a5a5a5;
+			    font-weight:bold;
+			}
+			td{
+				font-size:14px;
+				height:50px;
+			    border: 1px solid #ededed;
+			    padding-top: 8px;
+			    padding-bottom: 8px;
+			    text-align:center;
+			    font-weight:bold;
+			    .red {
+				    color: #cc0001;
+				   	font-weight:bold;
+				}
+				a{
+					font-size:14px;
+				}
+			}
+			
+			.buyCar-table-proinfo{
+			text-align:left;
+			
+			}
+			.noborder{
+				border:none;
+			}
+			.time{
+				padding:0 7px;
+			}
+			.endprice,.Allprice{
+				color:#cc0001;
+				font-size:16px;
+				font-weight:bold;
+			}
+		}
+	}
+	// 5.提交订单
+	.submit{
+		float:right;
+		margin-right:100px;
+	}
+	#saveOrder{
+		display:inline-block;
+		width: 182px;
+	    height: 45px;
+	    background: url(../images/newproduct.png) no-repeat  -160px -725px;
+		&:hover{
+		    background: url(../images/newproduct.png) no-repeat  -160px -772px;
+
+		}
+	}
+
+
+	
+}

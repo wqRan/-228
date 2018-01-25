@@ -12,37 +12,40 @@ define(["jquery","cookie"],function(){
 			this.index = 0;
 			this.rendring();
 			// 遍历选项卡按钮，绑定点击事件
-			
-			// var _this = this;
-			// var timer = setInterval(function(){
-			// 		// $.proxy(_this.onClick(),_this);
-			// 		// $.proxy(_this.show(),_this);
-			// 		for(var i = 0 ; i < _this.$li.length;i++ ){
-			// 			_this.$li[i].index = i;
-			// 			console.log(_this.$li[i])
-			// 			_this.$li.eq(i).on("click",$.proxy(_this.show,_this));
-			// 			console.log(i);
-			// 		}
-
-			// 	},3000)	
-			
+			this.$timer = null;
+			// this.$timer = setInterval($.proxy(this.onClick,this),2000);
+			// toggle
 			this.useCookie();			
-			$.proxy(this.onClick(),this);
+			//$.proxy(this.onClick(),this);
+
+			this.$li.on("click",$.proxy(this.show,this))
 			
+
+			setInterval($.proxy(this.autoplay,this),2000)
+
 		},
-		onClick:function(){
-			for(var i = 0 ; i < this.$li.length;i++ ){
-				this.$li[i].index = i;
-				// console.log(this.$li[i])
-				this.$li.eq(i).on("click",$.proxy(this.show,this));
-				// console.log(i);
+
+		autoplay:function(){
+
+			var max = this.$li.length;
+
+			if(this.index == max - 1){
+				this.index = 0;
+			}else{
+				this.index ++;
 			}
+
+			//console.log(this.index)
+
+			this.$li.eq(this.index).trigger("click")
+
 		},
-		show:function(event){
-			var evt = event || window.event;			
-			this.index = evt.target.index;
+		show:function(e){
+			var ele = e.target;
+			var index = $(ele).index()
+
 			// 被点击的按钮添加样式
-			this.$li.eq(this.index).addClass("selected")
+			this.$li.eq(index).addClass("selected")
 			.siblings()
 			.removeClass("selected")	
 			this.rendring();		
@@ -67,7 +70,7 @@ define(["jquery","cookie"],function(){
 			rendringArr.forEach(function(item){
 				main += '<dl class="com_dl_jsop">'+
 						'<dt class="com_dt_jsop">'+
-						'<a  href="Commodity-details.html" title="'+item.title+'">'+
+						'<a  href="Commodity-details.html" target="_blank" title="'+item.title+'">'+
 						'<span class="booking">'+'</span>'+
 						'<img src="'+item.src+'" title="'+item.title+'" data-id="'+item.id+'" alt="">'+'</a>'+
 						'</dt>'+
@@ -79,20 +82,20 @@ define(["jquery","cookie"],function(){
 			});
 			this.$list.html(main);
 
-			this.setCookie();
+			this.findCookie();
 		},
-		setCookie:function(){
+		findCookie:function(){
 			this.$img = $(".hot_list").find("img");
 			// console.log(this.$img);
 			for(var i = 0 ; i < this.$img.length; i++){
 				this.$img[i].index = i;
-				this.$img.eq(i).on("click",$.proxy(this.setcookie,this))
+				this.$img.eq(i).on("click",$.proxy(this.setCookie,this))
 			}
 			
 
 
 		},
-		setcookie:function(event){
+		setCookie:function(event){
 			var evt = event || window.event;
 			this.index = event.target.index;
 			// console.log(this.index)
@@ -100,19 +103,27 @@ define(["jquery","cookie"],function(){
 			this.id = this.$img.eq(this.index).attr("data-id");
 			this.src = this.$img.eq(this.index).attr("src");
 			this.title = this.$img.eq(this.index).attr("title");
-			console.log(this.src);
-			console.log(this.id);
-			console.log(this.title);
 			$.cookie("details",'{"id":"'+this.id+ '","src":"'+this.src+'","title":"'+this.title+'"}')
 			this.useCookie();
 		},
 		useCookie:function(){
-			console.log($.cookie("details"));
+			// console.log($.cookie("details"));
 			this.$title = $("h1");
-			this.acookie = JSON.parse($.cookie("details"));
-			console.log(this.acookie.title);
-			this.title = this.acookie.title;
-			this.$title.html(this.title);
+			this.$Img = $("#pbigimg");
+			if ($.cookie("details")) {
+				this.acookie = JSON.parse($.cookie("details"));
+				// console.log(this.acookie);
+				this.title = this.acookie.title;
+				this.src = this.acookie.src;
+				this.id = this.acookie.id;
+				this.$title.html(this.title);
+				this.$Img.attr("src",this.src);
+				this.$Img.attr("title",this.title);
+				this.$Img.attr("src",this.src);
+				this.$Img.attr("data-id",this.id);
+
+			}
+			
 			
 
 		}

@@ -5,6 +5,7 @@ define(["jquery"],function(){
 	Classtify.prototype = {
 		constructor:Classtify,
 		init:function(ele1,ele2){
+			this.useCookie();
 			this.rendring(ele2);
 			this.index = 0;
 			this.$list = $(ele1).children();
@@ -13,6 +14,7 @@ define(["jquery"],function(){
 				this.$list.eq(i).on("click",this.show.bind(this,ele2))
 			}
 			// $(ele2).html(this.html);
+
 		},
 		show:function(ele2,event){
 			var evt = event || window.event;
@@ -39,8 +41,8 @@ define(["jquery"],function(){
 				html +=
 						'<dl>'+
 						'<dt>'+
-							'<a href="javascript:;" title="'+item.main+'">'+
-							'<img src="'+item.src+'" >'+
+							'<a href="Commodity-details.html" target="_blank" title="'+item.main+'">'+
+							'<img src="'+item.src+'" main="'+item.main+'" data-id="'+item.id+'">'+
 							'</a>'+
 						'</dt>'+
 						'<dd class="title">'+
@@ -56,8 +58,54 @@ define(["jquery"],function(){
 						'</dl>'
 			})
 			$(ele2).html(html);
+			this.findCookie(ele2);
+		},
+		findCookie:function(ele2){
+			this.$img = $(ele2).find("img");
+			for(var i = 0 ; i < this.$img.length; i++){
+				this.$img[i].index = i;
+				this.$img.eq(i).on("click",$.proxy(this.setCookie,this))
+			}
 
+		},
+		setCookie:function(event){
+			var evt = event || window.event;
+			this.index = event.target.index;
+			// console.log(this.index)
+			// 把图片的ID 和 src 存到cookie中
+			this.id = this.$img.eq(this.index).attr("data-id");
+			this.src = this.$img.eq(this.index).attr("src");
+			this.title = this.$img.eq(this.index).attr("main");
+			$.cookie("details",'{"id":"'+this.id+ '","src":"'+this.src+'","title":"'+this.title+'"}')
+			this.useCookie();
+		},
+		useCookie:function(){
+			this.$title = $("h1");
+			this.$Img = $("#pbigimg");
+			// 商品详情页调用之前存的cookie
+			if ($.cookie("details")) {
+				this.acookie = JSON.parse($.cookie("details"));
+				this.title = this.acookie.title;
+				this.src = this.acookie.src;
+				this.id = this.acookie.id;
+				this.$title.html(this.title);
+				this.$Img.attr("src",this.src);
+				this.$Img.attr("title",this.title);
+				this.$Img.attr("src",this.src);
+				this.$Img.attr("data-id",this.id);
+
+			}
 		}
+
+
+
+
+
+
+
+
+
+
 	}
 
 

@@ -61,6 +61,7 @@ define(["jquery","cookie"],function($,cookie){
 		},
 		confirm:function(){
 			this.main2(this.Confirm.val(),this.Pass.val(),".onCorrect4",".email42",".email43",this.Confirm);
+			console.log(this.Confirm.val())
 		},
 		tip5:function(){
 			this.tip(".email51");
@@ -115,7 +116,7 @@ define(["jquery","cookie"],function($,cookie){
 				})
 				dom4.count = false;
 			}
-			if ((res == reg)) {
+			if ((res == reg) && res!="" ) {
 				$(dom1).css({
 					display:"inline-block"
 				})

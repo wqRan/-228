@@ -31,34 +31,59 @@ define(["jquery"],function($){
 				zIndex:9999,
 				left:"50%",
 				top:"50%",
+				lineHeight:"300px",
+				textAlign:"center",
+				fontSize:"20px",
 				background:"#fff",
 				marginLeft:-100,
-				marginTop:-100
+				marginTop:350,
+				fontWeight:"bold",
+				background:" url(../images/timg.jpg) no-repeat -124px -49px"
 			})
 			$("body").append($div);
+			this.$span = $div
 
 			var $btn = $("<span>x</span>");
 			$btn.css({
 				position:"absolute",
-				top:"5%",
-				right:"5%",
+				top:"-70%",
+				right:"3%",
 				width:30,
 				height:30,
 				color:"red",
 				lineHight:30,
-				background:"blue",
+				fontSize:"18px",
 				textAlign:"center",
 				fontWeight:"bold"
 			})
-			$div.append($btn);
+			this.$btn = $btn
+			
 			var _this = this;
 			$btn.on("click",function(){
-				$div.remove();
+				_this.$span.remove();
 				_this.$mask.remove();
 			})
+			this.useCookie();
+		},
+		useCookie:function(){
+			if ($.cookie("shopping_cart")) {
+				var html = "";
+				var sum = 0;
+				var acookie = JSON.parse($.cookie("shopping_cart"))
+				acookie.forEach(function(name){
+					$(name).each(function(index,item){
+						sum += item.num * item.price
+
+						
+					})
+				})
+				
+			this.$span.html("共消费"+sum+"元");
+			this.$span.append(this.$btn);
+
+			}
 
 		}
-
 	}
 
 	return new Pop();

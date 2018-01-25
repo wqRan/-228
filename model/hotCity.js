@@ -23,6 +23,7 @@ define(["jquery"],function(){
 				$(".allcity").css({display:"none"});
 				
 			})
+			this.useCookie();
 			
 
 		},
@@ -49,8 +50,8 @@ define(["jquery"],function(){
 				html +=
 						'<dl class="com_dl_jsop">'+
 						'<dt class="com_dt_jsop" >'+
-							'<a href="javascript:;" title="'+item.main+'">'+
-							'<img src="'+item.src+'" >'+
+							'<a href="Commodity-details.html" target="_blank" title="'+item.main+'">'+
+							'<img src="'+item.src+'" main="'+item.main+'" data-id="'+item.id+'">'+
 							'</a>'+
 						'</dt>'+
 						'<dd class="title-main">'+
@@ -65,6 +66,44 @@ define(["jquery"],function(){
 			// 使对应的地区名字也更换
 			$(".lans").html(this.$list.eq(this.index).find("a").text());
 
+			this.findCookie();
+		},
+		// 找到对应的img
+		findCookie:function(){
+			this.$img = $(".city-product-list").find("img");
+			for(var i = 0 ; i < this.$img.length; i++){
+				this.$img[i].index = i;
+				this.$img.eq(i).on("click",$.proxy(this.setCookie,this))
+			}
+
+		},
+		setCookie:function(event){
+			var evt = event || window.event;
+			this.index = event.target.index;
+			// console.log(this.index)
+			// 把图片的ID 和 src 存到cookie中
+			this.id = this.$img.eq(this.index).attr("data-id");
+			this.src = this.$img.eq(this.index).attr("src");
+			this.title = this.$img.eq(this.index).attr("main");
+			$.cookie("details",'{"id":"'+this.id+ '","src":"'+this.src+'","title":"'+this.title+'"}')
+			this.useCookie();
+		},
+		useCookie:function(){
+			this.$title = $("h1");
+			this.$Img = $("#pbigimg");
+			// 判断是否存在，如果存在商品详情页使用cookie的信息
+			if ($.cookie("details")) {
+				this.acookie = JSON.parse($.cookie("details"));
+				this.title = this.acookie.title;
+				this.src = this.acookie.src;
+				this.id = this.acookie.id;
+				this.$title.html(this.title);
+				this.$Img.attr("src",this.src);
+				this.$Img.attr("title",this.title);
+				this.$Img.attr("src",this.src);
+				this.$Img.attr("data-id",this.id);
+
+			}
 		}
 
 

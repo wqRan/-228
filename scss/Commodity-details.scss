@@ -47,7 +47,7 @@
             width: 200px;
             height: 43px;
             font-size: 15px;
-            font-family: Microsoft YaHei;
+            font-family: "Microsoft YaHei";
             font-weight: bold;
             text-align: center;
             line-height: 43px;
@@ -60,6 +60,10 @@
             height: 358px;
             width: 196px;
             background: #fff;
+            position:absolute;
+            top:43px;
+            left:0;
+            z-index:999;
             display:none;
             .item{          
                 h3{
@@ -435,6 +439,65 @@
 					}
 				}
 			}
+			// 选择数量
+			.choicedate{
+				margin-top: 20px;
+			    padding-left: 10px;
+			    padding-bottom: 5px;
+			    .mno {
+				    margin-top: 3px;
+					float: left;
+				    display: inline-block;
+				    width: 75px;
+				    color: #a5a5a5;
+				}
+				.relt-list {
+				    float: left;
+				    width: 545px;
+				    margin-bottom: 15px;
+				    .relt {
+					    margin-bottom: 12px;
+					    li {
+						    float: left;
+						    line-height: 25px;
+						    margin-right: 40px;
+						    color: #cc0001;
+						    font-weight:bold;
+						    .relt-prev {
+							    float: left;
+							    width: 16px;
+							    height: 25px;
+							    display: block;
+							    overflow: hidden;
+							    background: url(../images/pro-common.png) no-repeat -280px 0;
+							}
+							input{
+							    float: left;
+							    width: 40px;
+							    height: 23px;
+							    line-height: 23px;
+							    border: 1px solid #bdbdbd;
+							    border-left: none;
+							    border-right: none;
+							    text-align: center;
+							}
+							.relt-next {
+							    float: left;
+							    width: 16px;
+							    height: 25px;
+							    background: url(../images/pro-common.png) no-repeat  -300px 0;
+							}
+						}
+						.relt-1 {
+						    width: 140px;						    
+						}
+						.ok{
+							display:none;
+						}
+					}
+				}
+			}
+
 			// 购买按钮
 			.buyBtn{
 				margin-top: 25px;
@@ -442,11 +505,11 @@
     			.buy{
     				float: left;
     				margin-right: 10px;
-    				width: 121px;
-				    height: 40px;
+    				width: 147px;
+				    height: 42px;
 				    display: block;
 				    overflow: hidden;
-				    background: url(../images/pro-common.png) no-repeat -140px 0; 
+				    background: url(../images/pro-common.png) no-repeat 3px -139px; 
     			}
 			}
 		}

@@ -5,8 +5,8 @@ requirejs.config({
 		"cookie":"scripts/jquery.cookie",
 		"supperbanner":"scripts/jquery.supperBanner",
 		"pop":"scripts/pop",
-		"goodlist":"scripts/goodList",
-		"shop":"scripts/shoppingcart",
+		// "goodlist":"scripts/goodList",
+		// "shop":"scripts/shoppingcart",
 		"mini":"scripts/mini",
 		"input":"scripts/inputSearch",
 		"hot":"scripts/hotRecommend",
@@ -17,7 +17,8 @@ requirejs.config({
 		"choice":"scripts/choiceBtn",
 		"classtify":"scripts/classtify",
 		"getDetails":"scripts/getDetails",
-		"details":"scripts/details"
+		"commodityHtml":"scripts/commodityHtml",
+		"shopping":"scripts/shopping"
 
 	}
 })
